@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   font-family: sans-serif;
-  color: var(--black, #000);
+  color: var(--black, #2E2D2D);
   background: var(--white, #fff);
 }
 
@@ -26,62 +26,75 @@ body {
 }
 
 .container {
-  max-width: 1240px;
-  padding: 0 20px;
+  max-width: 1170px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
 .container-fluid {
-  max-width: 1440px;
-  padding: 0 70px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 44px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 110%;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 110%;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 110%;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 100%;
 }
 
 h5 {
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  font-weight: 300;
+  line-height: 130%;
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  font-weight: 300;
+  line-height: 140%;
 }
 
 p {
   font-size: 16px;
   font-style: normal;
+  font-weight: 300;
+  line-height: 140%;
+}
+
+.menu-1 {
+  font-size: 14px;
+  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 120%;
+}
+
+.menu-2 {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
