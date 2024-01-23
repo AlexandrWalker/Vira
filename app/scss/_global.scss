@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   font-family: sans-serif;
+  font-size: 14px;
   color: var(--black, #2E2D2D);
   background: var(--white, #fff);
 }
@@ -71,15 +72,15 @@ h5 {
   line-height: 130%;
 }
 
-h6 {
-  font-size: 14px;
+p {
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
   line-height: 140%;
 }
 
-p {
-  font-size: 16px;
+.small {
+  font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 140%;
