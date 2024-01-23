@@ -33,8 +33,9 @@ function fonts() {
 }
 
 function images() {
-  return src('app/images/src/*.*')
+  return src(['app/images/src/*.*', '!app/images/src/*.svg'])
 
+    .pipe(src('app/images/src/*.*'))
     .pipe(newer('app/images'))
     .pipe(imagemin())
 
