@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -107,16 +107,22 @@ p {
   line-height: 130%;
 }
 
+.colored-text {
+  color: var(--green, #179860);
+}
+
 .btn-green {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: fit-content;
   height: 50px;
   padding: 0 24px;
   color: var(--white, #fff);
   border-radius: 8px;
   background: var(--green, #179860);
+  cursor: pointer;
   transition: all 0.2s ease-out;
 
   &:hover {
@@ -138,11 +144,14 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: fit-content;
   height: 50px;
   padding: 0 24px;
   color: var(--black, #2E2D2D);
   border-radius: 8px;
   background: var(--white, #fff);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
 
 .btn-grey {
@@ -150,11 +159,14 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: fit-content;
   height: 50px;
   padding: 0 24px;
   color: var(--black, #2E2D2D);
   border-radius: 8px;
   background: var(--bg, #F9F9F9);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
 
 .line {
