@@ -184,67 +184,84 @@
         <h5 class="calculation__suptitle">Вы можете заказать каркасный дом в одной из 4-х комплектаций.</h5>
 
         <div class="calculation__body">
-          <img src="images/calculation.png" alt="calculation" class="calculation__img">
+          <div class="calculation__img">
+            <img src="images/calculation.png" alt="calculation">
+          </div>
 
           <div class="calculation__content">
-            <div class="calculation__content-head">
-              <h3 class="calculation__content-title">Расчет стоимости дома</h3>
-              <p class="calculation__content-text">Укажите подходящие вам параметры и получите расчет. Подробный расчет
-                с
-                актуальными ценами вы можете получить у наших консультантов</p>
-            </div>
-
-            <div class="calculation__content-item">
-              <div class="calculation__tab">
-                <button class="calculation__tab-item" type="button">
-                  <h6 class="menu-1">Эконом</h6>
-                </button>
-                <button class="calculation__tab-item tab__active" type="button">
-                  <h6 class="menu-1">Базовая</h6>
-                </button>
-                <button class="calculation__tab-item" type="button">
-                  <h6 class="menu-1">Стандарт</h6>
-                </button>
-                <button class="calculation__tab-item" type="button">
-                  <h6 class="menu-1">Премиум</h6>
-                </button>
+            <div class="calculation__content-body">
+              <div class="calculation__content-head">
+                <h3 class="calculation__content-title">Расчет стоимости дома</h3>
+                <p class="calculation__content-text">Укажите подходящие вам параметры и получите расчет. Подробный
+                  расчет
+                  с
+                  актуальными ценами вы можете получить у наших консультантов</p>
               </div>
 
-              <div class="calculation__desc">
-                <div class="calculation__desc-items">
-                  <div class="calculation__desc-item">
-                    <h6 class="small">Толщина стоек</h6>
-                    <h6 class="small calculation__desc-value">45х95 мм</h6>
+              <div class="calculation__content-item">
+                <div class="calculation__tab">
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Эконом</h6>
+                  </button>
+                  <button class="calculation__tab-item tab__active" type="button">
+                    <h6 class="menu-1">Базовая</h6>
+                  </button>
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Стандарт</h6>
+                  </button>
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Премиум</h6>
+                  </button>
+                </div>
+
+                <div class="calculation__desc">
+                  <div class="calculation__desc-items">
+                    <div class="calculation__desc-item">
+                      <h6 class="small">Толщина стоек</h6>
+                      <h6 class="small calculation__desc-value">45х95 мм</h6>
+                    </div>
+                    <span class="line"></span>
+                    <div class="calculation__desc-item">
+                      <h6 class="small">Утепление</h6>
+                      <h6 class="small calculation__desc-value">45х95 мм</h6>
+                    </div>
+                    <span class="line"></span>
+                    <div class="calculation__desc-item">
+                      <h6 class="small">Кровля</h6>
+                      <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                    </div>
                   </div>
-                  <span class="line"></span>
-                  <div class="calculation__desc-item">
-                    <h6 class="small">Утепление</h6>
-                    <h6 class="small calculation__desc-value">45х95 мм</h6>
-                  </div>
-                  <span class="line"></span>
-                  <div class="calculation__desc-item">
-                    <h6 class="small">Кровля</h6>
-                    <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                  <div class="calculation__gift">
+                    <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
+                    <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
+                        class="colored-text">«Входную дверь»</span></h6>
                   </div>
                 </div>
-                <div class="calculation__gift">
-                  <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
-                  <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
-                      class="colored-text">«Входную дверь»</span></h6>
+              </div>
+
+              <div class="calculation__calc">
+                <div class="calculation__calc-item">
+                  <p class="calculation__calc-text">
+                    Перетащите ползунок, или введите площадь дома вручную
+                  </p>
+                  <p class="calculation__calc-value"><input id="calc" type="number" value="86"> м2</p>
+                </div>
+                <div class="calculation__calc-slider">
+                  <input type="range" min="10" max="300" value="86" class="slider" id="range">
+                  <div class="calculation__calc-lenght">
+                    <h6 class="small">10</h6>
+                    <h6 class="small">300</h6>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="calculation__calc">
-              <div class="calculation__calc-item">
-                <p class="calculation__calc-text">
-                  Перетащите ползунок, или введите площадь дома вручную
-                </p>
-                <p class="calculation__calc-value"><input id="calc" type="number" value="86"> м2</p>
+            <div class="calculation__banner">
+              <div class="calculation__banner-item">
+                <h6 class="small">Предварительная стоимость</h6>
+                <h3>7 500 000 ₽</h3>
               </div>
-              <div class="slidecontainer">
-                <input type="range" min="10" max="300" value="86" class="slider" id="range">
-              </div>
+              <button class="btn-green">Получить консультацию</button>
             </div>
 
           </div>
@@ -341,11 +358,141 @@
     </div>
   </div>
 
+  <div class="stages">
+    <div class="container">
+      <div class="stages__inner">
+        <div class="stages__head">
+          <h2 class="stages__title">Ваш дом от 48 дней</h2>
+          <h5 class="stages__suptitle">Все работы проводятся сертифицированными специалистами</h5>
+        </div>
+
+        <div class="stages__slider">
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">01</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Проектирование</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 2 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">02</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Фундамент</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 2 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">03</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Каркас</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 10 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">04</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Утепление и монтаж кровли</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 10 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">05</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Монтажные работы</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 15 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">06</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Монтаж коммуникаций в доме</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 15 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">07</h6>
+              <div class="stages__item-text">
+                <h3 class="stages__item-title">Внутренняя отделка дома</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 7 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="foundation">
+          <div class="foundation__item">
+            <p class="foundation__text">
+              Задача фундамента любой строительной конструкции — обеспечение устойчивости и равномерное распределение
+              нагрузки на основание. Залив фундамента требует строгого соблюдения технологии установки и укладки.
+            </p>
+            <button class="btn-white">Подробнее про фундамент</button>
+          </div>
+          <img class="foundation__img" src="images/foundation.png" alt="foundation">
+        </div>
+
+        <div class="discount">
+          <div class="discount__item">
+            <h2 class="discount__title">Стать счастливым владельцем дома</h2>
+            <h5 class="discount__suptitle">И получить скидку 20% на мебель от наших партнеров!</h5>
+          </div>
+          <form class="discount__form">
+            <input class="discount__input" type="text">
+            <button class="btn-green" type="submit"></button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <div class="payment">
     <div class="container">
       <div class="payment__inner">
         <h2 class="payment__title">Варианты оплаты</h2>
-        <h5 class="payment__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество современных
+        <h5 class="payment__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество
+          современных
           и удобных способов.</h5>
 
         <ul class="payment__list">

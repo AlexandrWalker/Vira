@@ -11,6 +11,13 @@
       nextArrow: '<button type="button" id="project__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
     });
 
+    $('.stages__slider').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true
+    });
+
     document.getElementById("project__tab1").addEventListener("click", function () {
       document.getElementById("project__tab1").classList.add("active");
       document.getElementById("project__tab2").classList.remove("active");
@@ -45,30 +52,15 @@
 
     let slider = document.getElementById("range");
     let output = document.getElementById("calc");
-    output.innerHTML = slider.value;
+    output.value = slider.value;
+    slider.value = output.value;
 
     slider.oninput = function () {
-      output.innerHTML = this.value;
+      output.value = this.value;
     }
 
-    const calcRange = document.getElementById('calculator-range-1')
-
-    if (calcRange) {
-      noUiSlider.create(calcRange, {
-        start: 86,
-        connect: 'lower',
-        step: 1,
-        range: {
-          'min': 10,
-          'max': 300
-        }
-      });
-
-      const input = document.getElementById('calculator-input-1');
-
-      calcRange.noUiSlider.on('update', function (values) {
-        input.value = Math.round(values);
-      });
+    output.oninput = function () {
+      slider.value = this.value;
     }
 
   });
