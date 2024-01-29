@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vira</title>
+
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- calculation input style -->
+  <style>
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      border: 0;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #eaeaea !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--black, #2E2D2D);
+      background-image: url(../../images/thumb.svg);
+      background-repeat: no-repeat;
+      background-size: 40px 20px;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      margin-top: -8px;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__inner">
+            <h6 class="menu-2">Будние дни с 8 до 21 часа. Выходные с 10 до 18 часов</h6>
+
+            <div class="topbar__item">
+              <a class="topbar__link menu-2" href="mailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+              <h6 class="menu-2">Москва, 2-й Котельнический переулок 3</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="head">
+        <div class="container">
+          <div class="head__inner">
+            <div class="head__logo">
+              <a class="head__logo-link" href="#!">
+                <img class="head__logo-img" src="images/logo.svg" alt="logo">
+              </a>
+              <div class="head__logo-item">
+                <h4 class="head__logo-title">Экологичные</h4>
+                <h6 class="menu-1">каркасные дома в Москве и МО</h6>
+              </div>
+            </div>
+
+            <div class="head__item">
+              <span class="small">от</span>
+              <span class="num">48</span>
+              <span class="menu-1">дней</span>
+              <span class="small">до новоселья</span>
+            </div>
+
+            <a class="burger" href="#!">
+              <h6 class="menu-2">Меню</h6>
+              <span></span>
+            </a>
+
+            <div class="head__social">
+              <a class="head__social-link" href="viber://chat?number=89165562526">
+                <img class="head__social-img" src="images/Viber.svg" alt="viber">
+              </a>
+              <a class="head__social-link" href="https://wa.me/89165562526">
+                <img class="head__social-img" src="images/whatsapp.svg" alt="whatsapp">
+              </a>
+              <a class="head__social-link" href="https://t.me/89165562526">
+                <img class="head__social-img" src="images/telegram.svg" alt="telegram">
+              </a>
+            </div>
+            <div class="head__info">
+              <div class="head__info-item">
+                <a class="head__info-link" href="tel:89165562526">
+                  <h4>+7 (916) 556 25 26</h4>
+                </a>
+                <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+              </div>
+              <div class="head__info-item">
+                <button class="btn-green menu-1" type="button">
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu" class="menu">
+        <div class="container">
+          <div class="menu__inner">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Проекты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Наши работы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">О нас</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Документы</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <form class="menu__search" action="#">
+                  <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                  <label class="menu__search-label">
+                    <img class="menu__img" src="images/search.svg" alt="search">
+                    <input class="menu__link menu-1" type="submit" value="Поиск">
+                  </label>
+                </form>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">
+                  <img class="menu__img" src="images/unlock.svg" alt="unlock">
+                  Личный кабинет
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </header>
+<svg style="display: none;">
+  <symbol id="faq-arrow" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M11 1.5l-5 5-5-5" />
+    </g>
+  </symbol>
+  <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+</svg>
+<main class="main">
+  <div class="hero">
+    <div class="container-fluid">
+      <div class="hero__inner" style="background-image: url(images/hero.png)">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="colored-text">Экологичные каркасные дома</span> от 48 дней с гарантией по договору
+          </h1>
+          <button class="btn-green menu-1">В каталог проектов</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="container">
+      <div class="case__inner">
+        <div class="case__head">
+          <h2 class="case__title">Выберите какой дом вы получите от 48 дней</h2>
+          <h5 class="case__subtitle">Более 18 готовых проектов</h5>
+        </div>
+
+        <div class="case__tab">
+          <button id="case__tab1" class="case__tab-item menu-1 active" type="button">Одноэтажные дома</button>
+          <button id="case__tab2" class="case__tab-item menu-1" type="button">Двухэтажные дома</button>
+        </div>
+
+        <div id="case__slider1" class="case__slider active">
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="case__slider2" class="case__slider">
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>2 этажа</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>2 этажа</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case__slider-item">
+            <div class="case__item">
+              <div class="case__cover">
+                <img src="images/case1.png" alt="case" class="case__cover-img">
+                <span class="case__cover-btn"></span>
+              </div>
+              <div class="case__item-body">
+                <div class="case__item-head">
+                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                  <h2 class="case__item-title">КД-178</h2>
+                </div>
+                <ul class="case__list">
+                  <li class="case__list-item">
+                    <img src="images/этажи.svg" alt="etagi" class="case__list-img">
+                    <p>2 этажа</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/комнаты.svg" alt="room" class="case__list-img">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/метраж.svg" alt="metrazh" class="case__list-img">
+                    <p>106м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/терасса.svg" alt="terassa" class="case__list-img">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/площадь.svg" alt="ploshad" class="case__list-img">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="case__list-item">
+                    <img src="images/сортиры.svg" alt="wc" class="case__list-img">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+                <div class="case__desc">
+                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                </div>
+                <div class="case__btns">
+                  <button class="btn-green">Оставить заявку</button>
+                  <button class="btn-white">Что входит в постройку</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calculation">
+    <img class="decor" src="images/decor.png" alt="">
+    <div class="container">
+      <div class="calculation__inner">
+        <h2 class="calculation__title">Индивидуальный расчет стоимости вашего дома</h2>
+        <h5 class="calculation__suptitle">Вы можете заказать каркасный дом в одной из 4-х комплектаций.</h5>
+
+        <div class="calculation__body">
+          <div class="calculation__img">
+            <img src="images/calculation.png" alt="calculation">
+          </div>
+
+          <div class="calculation__content">
+            <div class="calculation__content-block">
+              <div class="calculation__content-head">
+                <h3 class="calculation__content-title">Расчет стоимости дома</h3>
+                <p class="calculation__content-text">Укажите подходящие вам параметры и получите расчет. Подробный
+                  расчет
+                  с
+                  актуальными ценами вы можете получить у наших консультантов</p>
+              </div>
+
+              <div class="calculation__content-body">
+                <div class="calculation__tab">
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Эконом</h6>
+                  </button>
+                  <button class="calculation__tab-item tab__active" type="button">
+                    <h6 class="menu-1">Базовая</h6>
+                  </button>
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Стандарт</h6>
+                  </button>
+                  <button class="calculation__tab-item" type="button">
+                    <h6 class="menu-1">Премиум</h6>
+                  </button>
+                </div>
+
+                <div class="calculation__content-item">
+                  <div class="calculation__desc">
+                    <div class="calculation__desc-items">
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Толщина стоек</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Утепление</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Кровля</h6>
+                        <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                      </div>
+                    </div>
+                    <div class="calculation__gift">
+                      <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
+                      <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
+                          class="colored-text">«Входную дверь»</span></h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="calculation__calc">
+                  <div class="calculation__calc-item">
+                    <p class="calculation__calc-text">
+                      Перетащите ползунок, или введите площадь дома вручную
+                    </p>
+                    <p class="calculation__calc-value"><input id="calc" type="number" value="86"> м2</p>
+                  </div>
+                  <div class="calculation__calc-slider">
+                    <input type="range" min="10" max="300" value="86" class="slider" id="range">
+                    <div class="calculation__calc-lenght">
+                      <h6 class="small">10</h6>
+                      <h6 class="small">300</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="calculation__banner">
+              <div class="calculation__banner-item">
+                <h6 class="small">Предварительная стоимость</h6>
+                <h3 id="pre-price">7 500 000 ₽</h3>
+              </div>
+              <button class="btn-green">Получить консультацию</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="container">
+      <div class="banner__inner" style="background-image: url(images/banner.png);">
+        <div class="banner__item">
+          <h5 class="banner__suptitle">Успей подписать договор до конца февраля и получи</h5>
+          <h2 class="banner__title">Индивидуальный проект дома</h2>
+        </div>
+        <div class="banner__item">
+          <img class="banner__img" src="images/ribbon.png" alt="">
+          <h2 class="banner__item-title">БЕСПЛАТНО</h2>
+          <button class="btn-green banner__item-btn menu-2">Получить проект дома</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="advantages">
+    <div class="container">
+      <div class="advantages__inner">
+        <div class="advantages__head">
+          <h2 class="advantages__title">Работа с нами это</h2>
+          <h5 class="advantages__suptitle">Не только гарантированное качество услуги и материалов, но и такие моменты как
+          </h5>
+        </div>
+
+        <div class="advantages__block">
+          <img class="advantages__img" src="images/advantages-cover1.png" alt="cover">
+
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages1.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Фиксированная стоимость</h3>
+                <p class="advantages__item-text">При подписании договора формируется окончательная стоимость дома
+                  и она не меняется до завершения работ и сдачи объекта</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages2.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Личный кабинет и видеонаблюдение</h3>
+                <p class="advantages__item-text">На объекте установлена видео-камера и вы в любое время можете наблюдать
+                  строительный процесс</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages3.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Доставка включена</h3>
+                <p class="advantages__item-text">Доставка всех материалов для строительства каркасного дома входит
+                  в стоимость м² каждой комплектации.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="advantages__block">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages4.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Поэтапная оплата</h3>
+                <p class="advantages__item-text">Вы можете оплачивать строительство и закупку материалов поэтапно,
+                  согласно графика выполнения работ и закупок материалов</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages5.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Используем дерево камерной сушки</h3>
+                <p class="advantages__item-text">Усадка такого пиломатериала, практически отсутствует, вес уменьшается
+                  примерно на треть , прочность материала выше, соединения прочнее.</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <img class="advantages__item-img" src="images/advantages6.svg" alt="icon">
+              <div class="advantages__item-body">
+                <h3 class="advantages__item-title">Специалисты своего дела</h3>
+                <p class="advantages__item-text">Для вас мы постоянно повышаем квалификацию наших строителей, каждый
+                  квартал проводятся курсы и переаттестация.</p>
+              </div>
+            </li>
+          </ul>
+
+          <img src="images/advantages-cover2.png" alt="cover" class="advantages__img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stages">
+    <div class="container">
+      <div class="stages__inner">
+        <div class="stages__head">
+          <h2 class="stages__title">Ваш дом от 48 дней</h2>
+          <h5 class="stages__suptitle">Все работы проводятся сертифицированными специалистами</h5>
+        </div>
+
+        <div class="stages__slider">
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">01</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Проектирование</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 2 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">02</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Фундамент</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 2 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">03</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Каркас</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 10 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">04</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Утепление и монтаж кровли</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 10 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">05</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Монтажные работы</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 15 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">06</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Монтаж коммуникаций в доме</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 15 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stages__slider-item">
+            <div class="stages__item">
+              <h6 class="stages__item-num">07</h6>
+              <div class="stages__item-text">
+                <span class="stages__item-line"><img src="images/slider-line.svg" alt="line"></span>
+                <h3 class="stages__item-title">Внутренняя отделка дома</h3>
+                <div class="stages__item-date">
+                  <img class="stages__item-icon" src="images/date-icon.svg" alt="icon">
+                  <p>от 7 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="foundation">
+          <div class="foundation__item">
+            <p class="foundation__text">
+              Задача фундамента любой строительной конструкции — обеспечение устойчивости и равномерное распределение
+              нагрузки на основание. Залив фундамента требует строгого соблюдения технологии установки и укладки.
+            </p>
+            <button class="btn-white">Подробнее про фундамент</button>
+          </div>
+          <img class="foundation__img" src="images/foundation.png" alt="foundation">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="discount">
+    <div class="container">
+      <div class="discount__inner" style="background-image: url(images/discount-texture.png);">
+        <div class="discount__item">
+          <h2 class="discount__title">Стать счастливым владельцем дома</h2>
+          <h5 class="discount__suptitle">И получить <span>скидку 20%</span> на мебель от наших партнеров!</h5>
+        </div>
+        <form class="discount__form">
+          <input class="discount__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Получить скидку</button>
+        </form>
+        <img class="discount__img" src="images/discount-hand.png" alt="hand">
+      </div>
+    </div>
+  </div>
+
+  <div class="projects">
+    <div class="container">
+      <div class="projects__inner">
+        <div class="projects__head">
+          <h2 class="projects__title">Мы построили</h2>
+          <h5 class="projects__suptitle">С нами, за прошлый год въехали в новый дом 95 семей</h5>
+        </div>
+
+        <div class="projects__slider">
+          <div class="projects__slider-item">
+            <div class="projects__item">
+              <img class="projects__item-img" src="images/projects-1.png" alt="projects">
+              <div class="projects__item-content">
+                <h3 class="projects__item-name">Проект КД-178</h3>
+                <p class="projects__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
+                  Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                <div class="projects__item-btns">
+                  <button class="btn-green">Хочу такой дом</button>
+                  <button class="btn-grey">Что входит в постройку</button>
+                </div>
+              </div>
+              <div class="projects__options">
+                <ul class="projects__options-list">
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/этажи.svg" alt="etagi">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/комнаты.svg" alt="room">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/метраж.svg" alt="metrazh">
+                    <p>106м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/терасса.svg" alt="terassa">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/площадь.svg" alt="ploshad">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="projects__slider-item">
+            <div class="projects__item">
+              <img class="projects__item-img" src="images/projects-1.png" alt="projects">
+              <div class="projects__item-content">
+                <h3 class="projects__item-name">Проект КД-178</h3>
+                <p class="projects__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
+                  Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                <div class="projects__item-btns">
+                  <button class="btn-green">Хочу такой дом</button>
+                  <button class="btn-grey">Что входит в постройку</button>
+                </div>
+              </div>
+              <div class="projects__options">
+                <ul class="projects__options-list">
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/этажи.svg" alt="etagi">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/комнаты.svg" alt="room">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/метраж.svg" alt="metrazh">
+                    <p>106м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/терасса.svg" alt="terassa">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/площадь.svg" alt="ploshad">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="projects__slider-item">
+            <div class="projects__item">
+              <img class="projects__item-img" src="images/projects-1.png" alt="projects">
+              <div class="projects__item-content">
+                <h3 class="projects__item-name">Проект КД-178</h3>
+                <p class="projects__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
+                  Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                <div class="projects__item-btns">
+                  <button class="btn-green">Хочу такой дом</button>
+                  <button class="btn-grey">Что входит в постройку</button>
+                </div>
+              </div>
+              <div class="projects__options">
+                <ul class="projects__options-list">
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/этажи.svg" alt="etagi">
+                    <p>1 этаж</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/комнаты.svg" alt="room">
+                    <p>3 комнаты</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/метраж.svg" alt="metrazh">
+                    <p>106м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/терасса.svg" alt="terassa">
+                    <p>Терасса 6х3м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/площадь.svg" alt="ploshad">
+                    <p>10х16м</p>
+                  </li>
+                  <li class="projects__options-item">
+                    <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
+                    <p>2 санузла</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment">
+    <img class="decor" src="images/decor-top-light.png" alt="">
+    <div class="container">
+      <div class="payment__inner">
+        <h2 class="payment__title">Варианты оплаты</h2>
+        <h5 class="payment__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество
+          современных
+          и удобных способов.</h5>
+
+        <ul class="payment__list">
+          <li class="payment__item">
+            <img src="images/payment1.svg" alt="payment" class="payment__item-img">
+            <p class="payment__item-title">Поэтапная оплата</p>
+            <p class="payment__item-text">Мы предлагаем поэтапную оплату для вашего удобства</p>
+          </li>
+          <li class="payment__item">
+            <img src="images/payment2.svg" alt="payment" class="payment__item-img">
+            <p class="payment__item-title">Сотрудничество с банком</p>
+            <p class="payment__item-text">Для физических лиц доступен банковский перевод по реквизитам</p>
+          </li>
+          <li class="payment__item">
+            <img src="images/payment3.svg" alt="payment" class="payment__item-img">
+            <p class="payment__item-title">Дом в ипотеку</p>
+            <p class="payment__item-text">Начните строительство собственного дома, не дожидаясь необходимого объема
+              накоплений</p>
+          </li>
+          <li class="payment__item">
+            <img src="images/payment4.svg" alt="payment" class="payment__item-img">
+            <p class="payment__item-title">Материнский капитал</p>
+            <p class="payment__item-text">Владельцы маткапитала имеют право тратить его на строительство дома</p>
+          </li>
+        </ul>
+
+        <button class="btn-white">Условия оплаты подробнее</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="map">
+    <div class="container">
+      <div class="map__inner">
+        <div class="map__content">
+          <div class="map__head">
+            <h2 class="map__title">Варианты оплаты</h2>
+            <h5 class="map__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество современных
+              и удобных способов.</h5>
+          </div>
+
+          <div class="map__items">
+            <div class="map__item">
+              <h6 class="num">с 2005 г.</h6>
+              <p>Успешно работаем в сфере</p>
+            </div>
+            <div class="map__item">
+              <h6 class="num">5108</h6>
+              <p>Семей живут в наших домах</p>
+            </div>
+            <div class="map__item">
+              <h6 class="num">367</h6>
+              <p>Домов строится прямо сейчас</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map__rec">
+          <div class="map__rec-item">
+            <h6 class="map__rec-value num">93%</h6>
+            <p class="map__rec-text">клиентов рекомендуют нас<span>*</span></p>
+            <p class="map__rec-text"><span>*</span>Мы следим за индексом NPS — уровнем лояльности наших клиентов</p>
+          </div>
+          <button class="btn-green">Готовые проекты</button>
+        </div>
+
+        <img class="map__img" src="images/map.svg" alt="map">
+      </div>
+    </div>
+  </div>
+
+  <div class="blog">
+    <img class="decor" src="images/decor-top.png" alt="">
+    <div class="container">
+      <div class="blog__inner">
+        <div class="blog__head">
+          <h2 class="blog__title">Блог о полезном</h2>
+          <h5 class="blog__suptitle">В данном блоке мы рассказываем про наши проекты, подробно разбираем процессы работ
+            и даем полезные советы</h5>
+        </div>
+        <div class="blog__content">
+          <div class="blog__video">
+            <iframe width="770" height="470"
+              src="https://www.youtube.com/embed/GVT4rTfpsos?si=enwWPAmjVARgCZRg&amp;controls=0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="blog__video-about">
+              <h6 class="blog__video-date small">24 ноября 2023</h6>
+              <h3 class="blog__video-name">Монтаж свайного фундамента | Сюрпризы под землей</h3>
+              <p class="blog__video-desc">Данный объект можем назвать одним из самых интересных и запоминающихся. <br> И
+                вот почему…</p>
+            </div>
+          </div>
+
+          <ul class="blog__list">
+            <li class="blog__item">
+              <h6 class="blog__item-date small">24 ноября 2023</h6>
+              <a class="blog__item-link" href="#!">
+                <p class="blog__item-name">Монтаж свайного фундамента | Сюрпризы под землей</p>
+              </a>
+            </li>
+            <li class="blog__item">
+              <h6 class="blog__item-date small">24 ноября 2023</h6>
+              <a class="blog__item-link" href="#!">
+                <p class="blog__item-name">Отзыв о Каркасном доме КД-145 от компании DSK-VIRA</p>
+              </a>
+            </li>
+            <li class="blog__item">
+              <h6 class="blog__item-date small">24 ноября 2023</h6>
+              <a class="blog__item-link" href="#!">
+                <p class="blog__item-name">Г. Пушкино. Купель и обшивка свайного фундамента.</p>
+              </a>
+            </li>
+            <li class="blog__item">
+              <h6 class="blog__item-date small">24 ноября 2023</h6>
+              <a class="blog__item-link" href="#!">
+                <p class="blog__item-name">Мосты холода | Чем чревата экономия на строительстве</p>
+              </a>
+            </li>
+            <li class="blog__item">
+              <h6 class="blog__item-date small">24 ноября 2023</h6>
+              <a class="blog__item-link" href="#!">
+                <p class="blog__item-name">Отзыв о Каркасном доме КД-145 от компании DSK-VIRA</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callback">
+    <div class="container">
+      <div class="callback__inner" style="background-image: url(images/discount-texture.png);">
+        <div class="callback__item">
+          <h2 class="callback__title">Обязательно поможем</h2>
+          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+        </div>
+        <form class="callback__form">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Отправить</button>
+        </form>
+        <img class="callback__img" src="images/callback.png" alt="hand">
+      </div>
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="container">
+      <div class="faq__inner">
+        <div class="faq__head">
+          <h2 class="faq__title">Популярные вопросы</h2>
+          <h5 class="faq__suptitle">Если не найдёте нужного вам ответа, мы всегда готовы ответить вам в мессенджере
+            или по телефону</h5>
+        </div>
+
+        <div class="faq__content">
+          <ul class="faq__list">
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как начать с вами работать?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А вы строите дома полностью «под ключ»?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как выбрать оптимальный тип фундамента?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как правильно выбрать участок?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Работаете ли вы с кредитами или мат.капиталом?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А у вас можно заказать отдельные виды работ?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А можно строить дом поэтапно?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="ask-question">
+            <h3 class="ask-question__title">Задать вопрос</h3>
+            <p class="ask-question__text">Ответим на любые вопросы, поможем вам проверенным советом, порекомендуем
+              оптимальное!</p>
+            <button class="btn-green">Задать вопрос</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <a class="footer__logo" href="#!">
+          <img class="footer__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+
+        <div class="footer__top-body">
+          <ul class="footer__top-list">
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Проекты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Наши работы</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Вопрос-ответ</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Контакты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">
+                <img class="footer__top-img" src="images/unlock.svg" alt="unlock">
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__top-info">
+            <div class="footer__contact">
+              <a class="footer__contact-link" href="tel:89165562526">
+                <h4>+7 (916) 556 25 26</h4>
+              </a>
+              <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+            </div>
+            <div class="footer__top-btn">
+              <button class="btn-green" type="button">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-block">
+          <h6 class="menu-1">О компании</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Клиентский сервис и гарантии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Партнёры</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Документы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Способы оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu-block">
+          <h6 class="menu-1">Услуги</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Технический надзор</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Барбекю, бани, беседки, забор из дерева</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Строительство</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h6 class="small">Компания</h6>
+          <p class="footer__info-text">ООО «ДСК-Вира»</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Адрес</h6>
+          <p class="footer__info-text">Москва, 2-й Котельнический пер., 3</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Эл. почта</h6>
+          <p class="footer__info-text">
+            <a href="mailto:dsk-vira@yandex.ru" class="footer__info-link">dsk-vira@yandex.ru</a>
+          </p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ИНН</h6>
+          <p class="footer__info-text">5044075669</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ОГРН</h6>
+          <p class="footer__info-text">56695044077436</p>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-item">
+          <a class="footer__bottom-link small" href="#!">
+            Сводная ведомость результатов проведения специальной оценки условий труда
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Политика в отношении обработки персональных данных
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://vk.com/dsk_vira">
+            <img class="footer__social-img" src="images/vk.svg" alt="vk">
+          </a>
+          <a class="footer__social-link" href="https://youtube.com/@dsk-vira2995">
+            <img class="footer__social-img" src="images/youtube.svg" alt="youtube">
+          </a>
+          <span></span>
+          <a class="footer__social-link" href="viber://chat?number=89165562526">
+            <img class="footer__social-img" src="images/Viber.svg" alt="viber">
+          </a>
+          <a class="footer__social-link" href="https://wa.me/89165562526">
+            <img class="footer__social-img" src="images/whatsapp.svg" alt="whatsapp">
+          </a>
+          <a class="footer__social-link" href="https://t.me/89165562526">
+            <img class="footer__social-img" src="images/telegram.svg" alt="telegram">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__inner">
+        <div class="copyright__item">
+          <h6 class="small">2018 - 2023 © «ДСК-Вира»</h6>
+        </div>
+        <div class="copyright__item">
+          <h6 class="small">Создание и продвижение</h6>
+          <a class="copyright__link" href="#!">
+            <img class="copyright__img" src="images/family.svg" alt="Family">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="libs/jquery-3.7.0.js"></script>
+<script src="libs/noUiSlider/nouislider.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>
