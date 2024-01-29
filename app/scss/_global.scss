@@ -152,6 +152,18 @@ p {
   background: var(--white, #fff);
   cursor: pointer;
   transition: all 0.2s ease-out;
+
+  &:hover {
+    color: var(--green, #179860);
+  }
+
+  &:active {
+    color: var(--grey, #A7A7A7);
+  }
+
+  &:disabled {
+    color: var(--grey2, #EFEFEF);
+  }
 }
 
 .btn-grey {
@@ -167,6 +179,20 @@ p {
   background: var(--bg, #F9F9F9);
   cursor: pointer;
   transition: all 0.2s ease-out;
+  
+  &:hover {
+    color: var(--green, #179860);
+  }
+
+  &:active {
+    color: var(--grey, #A7A7A7);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    color: var(--grey, #A7A7A7);
+    background: var(--grey2, #EFEFEF);
+  }
 }
 
 .line {

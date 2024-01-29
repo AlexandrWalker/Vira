@@ -11,6 +11,16 @@
       nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
     });
 
+    $(document).ready(function () {
+      var slider = $('.case__slider');
+
+      slider.slick();
+
+      slider.find('.slick-slide').css('margin', '0 100px 0 0');
+
+      slider.slick('setPosition');
+    });
+
     $('.stages__slider').slick({
       infinite: false,
       slidesToShow: 4,
@@ -59,20 +69,53 @@
       });
     })();
 
+    (function () {
+      var faqItem = document.querySelectorAll('.faq__item'),
+        active = document.getElementsByClassName('faq__item-active');
 
+      Array.from(faqItem).forEach(function (item, i, faqItem) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+            active[0].classList.remove('faq__item-active');
 
+          this.classList.toggle('faq__item-active');
+        });
+      });
+    })();
+
+    let price = document.getElementById("pre-price");
     let slider = document.getElementById("range");
     let output = document.getElementById("calc");
+
+    let basic = 50000;
+
     output.value = slider.value;
     slider.value = output.value;
 
     slider.oninput = function () {
       output.value = this.value;
+      price.innerHTML = slider.value * basic;
     }
 
     output.oninput = function () {
       slider.value = this.value;
-    }
+      price.innerHTML = slider.value * basic;
+    };
+
+    // Menu
+    (function () {
+      var menuLink = document.querySelectorAll('.menu__dropdown'),
+        active = document.getElementsByClassName('menu-active');
+
+      Array.from(menuLink).forEach(function (item, i, menuLink) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+            active[0].classList.remove('menu-active');
+
+          this.classList.toggle('menu-active');
+        });
+      });
+    })();
 
   });
 })();

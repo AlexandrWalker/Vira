@@ -81,13 +81,13 @@
               <span class="small">до новоселья</span>
             </div>
             <div class="head__social">
-              <a class="head__social-link" href="#!">
+              <a class="head__social-link" href="viber://chat?number=89165562526">
                 <img class="head__social-img" src="images/Viber.svg" alt="viber">
               </a>
-              <a class="head__social-link" href="#!">
+              <a class="head__social-link" href="https://wa.me/89165562526">
                 <img class="head__social-img" src="images/whatsapp.svg" alt="whatsapp">
               </a>
-              <a class="head__social-link" href="#!">
+              <a class="head__social-link" href="https://t.me/89165562526">
                 <img class="head__social-img" src="images/telegram.svg" alt="telegram">
               </a>
             </div>
@@ -108,7 +108,7 @@
         </div>
       </div>
 
-      <div class="menu">
+      <div id="menu" class="menu">
         <div class="container">
           <div class="menu__inner">
             <ul class="menu__list">
@@ -116,13 +116,58 @@
                 <a href="#!" class="menu__link menu-1">Проекты</a>
               </li>
               <li class="menu__item">
-                <a href="#!" class="menu__link menu-1">Услуги</a>
+                <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__item">
                 <a href="#!" class="menu__link menu-1">Наши работы</a>
               </li>
               <li class="menu__item">
-                <a href="#!" class="menu__link menu-1">О компании</a>
+                <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">О нас</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Документы</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__item">
                 <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
@@ -134,10 +179,13 @@
 
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#!" class="menu__link menu-1">
-                  <img class="menu__img" src="images/search.svg" alt="search">
-                  Поиск
-                </a>
+                <form class="menu__search" action="#">
+                  <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                  <label class="menu__search-label">
+                    <img class="menu__img" src="images/search.svg" alt="search">
+                    <input class="menu__link menu-1" type="submit" value="Поиск">
+                  </label>
+                </form>
               </li>
               <li class="menu__item">
                 <a href="#!" class="menu__link menu-1">
