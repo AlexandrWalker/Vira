@@ -331,9 +331,11 @@
         <h5 class="calculation__suptitle">Вы можете заказать каркасный дом в одной из 4-х комплектаций.</h5>
 
         <div class="calculation__body">
-          <div class="calculation__img">
-            <img src="images/calculation.png" alt="calculation">
-          </div>
+          <picture class="calculation__img">
+            <source media="(min-width: 769px)" srcset="../images/calculation.png">
+            <source media="(max-width: 768px)" srcset="../images/calculation-mobile.png">
+            <img src="../images/calculation.png" alt="" loading="lazy">
+          </picture>
 
           <div class="calculation__content">
             <div class="calculation__content-block">
@@ -347,21 +349,99 @@
 
               <div class="calculation__content-body">
                 <div class="calculation__tab">
-                  <button class="calculation__tab-item" type="button">
+                  <button class="calculation__tab-item show" data-id="econom" type="button">
                     <h6 class="menu-1">Эконом</h6>
                   </button>
-                  <button class="calculation__tab-item tab__active" type="button">
+                  <button class="calculation__tab-item" data-id="basic" type="button">
                     <h6 class="menu-1">Базовая</h6>
                   </button>
-                  <button class="calculation__tab-item" type="button">
+                  <button class="calculation__tab-item" data-id="standart" type="button">
                     <h6 class="menu-1">Стандарт</h6>
                   </button>
-                  <button class="calculation__tab-item" type="button">
+                  <button class="calculation__tab-item" data-id="premium" type="button">
                     <h6 class="menu-1">Премиум</h6>
                   </button>
                 </div>
 
-                <div class="calculation__content-item">
+                <div id="econom" class="calculation__content-item calculation__show">
+                  <div class="calculation__desc">
+                    <div class="calculation__desc-items">
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Толщина стоек</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Утепление</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Кровля</h6>
+                        <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                      </div>
+                    </div>
+                    <div class="calculation__gift">
+                      <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
+                      <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
+                          class="colored-text">«Входную дверь»</span></h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="basic" class="calculation__content-item">
+                  <div class="calculation__desc">
+                    <div class="calculation__desc-items">
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Толщина стоек</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Утепление</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Кровля</h6>
+                        <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                      </div>
+                    </div>
+                    <div class="calculation__gift">
+                      <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
+                      <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
+                          class="colored-text">«Входную дверь»</span></h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="standart" class="calculation__content-item">
+                  <div class="calculation__desc">
+                    <div class="calculation__desc-items">
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Толщина стоек</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Утепление</h6>
+                        <h6 class="small calculation__desc-value">45х95 мм</h6>
+                      </div>
+                      <span class="line"></span>
+                      <div class="calculation__desc-item">
+                        <h6 class="small">Кровля</h6>
+                        <h6 class="small calculation__desc-value">Металлочерепица 0,45 микрон/Ондулин</h6>
+                      </div>
+                    </div>
+                    <div class="calculation__gift">
+                      <img class="calculation__gift-icon" src="images/gift.svg" alt="gift">
+                      <h6 class="small">При заказе дома в базовой комплектации вы получите в подарок <span
+                          class="colored-text">«Входную дверь»</span></h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="premium" class="calculation__content-item">
                   <div class="calculation__desc">
                     <div class="calculation__desc-items">
                       <div class="calculation__desc-item">
@@ -441,7 +521,8 @@
       <div class="advantages__inner">
         <div class="advantages__head">
           <h2 class="advantages__title">Работа с нами это</h2>
-          <h5 class="advantages__suptitle">Не только гарантированное качество услуги и материалов, но и такие моменты как
+          <h5 class="advantages__suptitle">Не только гарантированное качество услуги и материалов, но и такие моменты
+            как
           </h5>
         </div>
 

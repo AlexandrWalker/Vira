@@ -140,18 +140,9 @@
     padding: 30px 0 80px;
   }
 
-  .calculation {
-    max-height: 623px;
-    min-height: 623px;
-  }
-
   .calculation__content-block {
     gap: 20px;
     padding: 30px;
-  }
-
-  .calculation__inner {
-    padding-top: 80px;
   }
 
   .calculation__desc-items {
@@ -459,6 +450,20 @@
 
   .topbar {
     display: none;
+  }
+
+  .calculation__body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .calculation__img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .calculation__content {
+    width: 100%;
   }
 }
 
