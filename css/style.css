@@ -899,7 +899,7 @@ p {
   padding-top: 100px;
 }
 .calculation__head {
-  margin-bottom: -150px;
+  margin-bottom: -210px;
 }
 .calculation__title {
   margin-bottom: 10px;
@@ -921,6 +921,7 @@ p {
   position: relative;
   top: 250px;
   z-index: 2;
+  width: 100%;
 }
 .calculation__content {
   width: 50%;
@@ -1311,6 +1312,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  z-index: 2;
 }
 .discount__item span {
   font-weight: 700;
@@ -1318,11 +1321,14 @@ p {
 .discount__form {
   display: flex;
   gap: 20px;
+  position: relative;
+  z-index: 2;
 }
 .discount__input {
   padding: 16px 24px 17px;
   border-radius: 8px;
   background: var(--white, #fff);
+  width: fit-content;
 }
 .discount__input::placeholder {
   color: var(--grey, #A7A7A7);
@@ -1331,7 +1337,6 @@ p {
   position: absolute;
   right: 0;
   top: -13px;
-  z-index: 2;
   width: auto;
   height: calc(100% + 13px);
   object-fit: cover;
@@ -2095,6 +2100,9 @@ p {
   .topbar__item {
     gap: 20px;
   }
+  .advantages__block {
+    gap: 30px;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -2113,9 +2121,43 @@ p {
   .calculation__img {
     width: 100%;
     border-radius: 20px;
+    overflow: hidden;
   }
   .calculation__content {
     width: 100%;
+    border-radius: 20px;
+  }
+  .advantages__block {
+    flex-direction: column;
+  }
+  .advantages__block:last-child {
+    flex-direction: column-reverse;
+  }
+  .advantages__img {
+    min-width: 420px;
+    height: 300px;
+    margin: 0;
+    position: relative;
+    right: 0;
+  }
+  .advantages__block:last-child .advantages__img {
+    position: relative;
+    left: 0;
+    margin: 0;
+  }
+  .discount {
+    margin-bottom: 60px;
+  }
+  .stages .foundation {
+    flex-direction: column;
+  }
+  .stages .foundation__item,
+  .stages .foundation__img {
+    width: 100%;
+    height: 180px;
+  }
+  .stages {
+    padding: 60px 0;
   }
 }
 @media (max-width: 600px) {
@@ -2153,6 +2195,22 @@ p {
   }
   .hero__content {
     padding: 0 30px 30px;
+  }
+  .discount {
+    height: calc(100% - 43px);
+  }
+  .discount__inner {
+    flex-direction: column;
+    padding: 30px 30px 221px 30px;
+  }
+  .discount__form {
+    flex-direction: column;
+  }
+  .discount__img {
+    height: 227px;
+    top: unset;
+    bottom: 0;
+    right: 0;
   }
 }
 @media (max-width: 480px) {
