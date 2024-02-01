@@ -896,9 +896,10 @@ p {
   z-index: 1;
 }
 .calculation__inner {
-  position: relative;
-  top: 250px;
-  z-index: 2;
+  padding-top: 100px;
+}
+.calculation__head {
+  margin-bottom: -150px;
 }
 .calculation__title {
   margin-bottom: 10px;
@@ -917,6 +918,9 @@ p {
 .calculation__body {
   display: flex;
   gap: 30px;
+  position: relative;
+  top: 250px;
+  z-index: 2;
 }
 .calculation__content {
   width: 50%;

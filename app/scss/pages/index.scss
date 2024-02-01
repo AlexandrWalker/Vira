@@ -225,9 +225,11 @@
   }
 
   &__inner {
-    position: relative;
-    top: 250px;
-    z-index: 2;
+    padding-top: 100px;
+  }
+
+  &__head {
+    margin-bottom: -150px;
   }
 
   &__title {
@@ -251,6 +253,9 @@
   &__body {
     display: flex;
     gap: 30px;
+    position: relative;
+    top: 250px;
+    z-index: 2;
   }
 
   &__content {
