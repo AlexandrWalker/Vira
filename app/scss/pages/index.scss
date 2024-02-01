@@ -229,7 +229,7 @@
   }
 
   &__head {
-    margin-bottom: -150px;
+    margin-bottom: -210px;
   }
 
   &__title {
@@ -242,6 +242,7 @@
 
   &__img {
     width: 50%;
+
 
     img {
       width: 100%;
@@ -256,6 +257,7 @@
     position: relative;
     top: 250px;
     z-index: 2;
+    width: 100%;
   }
 
   &__content {
@@ -714,6 +716,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    z-index: 2;
 
     span {
       font-weight: 700;
@@ -723,12 +727,15 @@
   &__form {
     display: flex;
     gap: 20px;
+    position: relative;
+    z-index: 2;
   }
 
   &__input {
     padding: 16px 24px 17px;
     border-radius: 8px;
     background: var(--white, #fff);
+    width: fit-content;
 
     &::placeholder {
       color: var(--grey, #A7A7A7);
@@ -739,7 +746,6 @@
     position: absolute;
     right: 0;
     top: -13px;
-    z-index: 2;
     width: auto;
     height: calc(100% + 13px);
     object-fit: cover;

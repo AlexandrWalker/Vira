@@ -436,6 +436,10 @@
   .topbar__item {
     gap: 20px;
   }
+
+  .advantages__block {
+    gap: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -460,10 +464,52 @@
   .calculation__img {
     width: 100%;
     border-radius: 20px;
+    overflow: hidden;
   }
 
   .calculation__content {
     width: 100%;
+    border-radius: 20px;
+  }
+
+  .advantages__block {
+    flex-direction: column;
+  }
+
+  .advantages__block:last-child {
+    flex-direction: column-reverse;
+  }
+
+  .advantages__img {
+    min-width: 420px;
+    height: 300px;
+    margin: 0;
+    position: relative;
+    right: 0;
+  }
+
+  .advantages__block:last-child .advantages__img {
+    position: relative;
+    left: 0;
+    margin: 0;
+  }
+
+  .discount {
+    margin-bottom: 60px;
+  }
+
+  .stages .foundation {
+    flex-direction: column;
+  }
+
+  .stages .foundation__item,
+  .stages .foundation__img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .stages {
+    padding: 60px 0;
   }
 }
 
@@ -510,6 +556,26 @@
 
   .hero__content {
     padding: 0 30px 30px;
+  }
+
+  .discount {
+    height: calc(100% - 43px);
+  }
+
+  .discount__inner {
+    flex-direction: column;
+    padding: 30px 30px 221px 30px;
+  }
+
+  .discount__form {
+    flex-direction: column;
+  }
+
+  .discount__img {
+    height: 227px;
+    top: unset;
+    bottom: 0;
+    right: 0;
   }
 }
 
