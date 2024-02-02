@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vira</title>
+
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- calculation input style -->
+  <style>
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      border: 0;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #eaeaea !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--black, #2E2D2D);
+      background-image: url(../../images/thumb.svg);
+      background-repeat: no-repeat;
+      background-size: 40px 20px;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      margin-top: -8px;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__inner">
+            <h6 class="menu-2">Будние дни с 8 до 21 часа. Выходные с 10 до 18 часов</h6>
+
+            <div class="topbar__item">
+              <a class="topbar__link menu-2" href="mailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+              <h6 class="menu-2">Москва, 2-й Котельнический переулок 3</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="head">
+        <div class="container">
+          <div class="head__inner">
+            <div class="head__logo">
+              <a class="head__logo-link" href="#!">
+                <img class="head__logo-img" src="images/logo.svg" alt="logo">
+              </a>
+              <div class="head__logo-item">
+                <h4 class="head__logo-title">Экологичные</h4>
+                <h6 class="menu-1">каркасные дома в Москве и МО</h6>
+              </div>
+            </div>
+
+            <div class="head__item">
+              <span class="small">от</span>
+              <span class="num">48</span>
+              <span class="menu-1">дней</span>
+              <span class="small">до новоселья</span>
+            </div>
+
+            <a class="burger" href="#!">
+              <h6 class="menu-2">Меню</h6>
+              <span></span>
+            </a>
+
+            <div class="head__social">
+              <a class="head__social-link" href="viber://chat?number=89165562526">
+                <img class="head__social-img" src="images/Viber.svg" alt="viber">
+              </a>
+              <a class="head__social-link" href="https://wa.me/89165562526">
+                <img class="head__social-img" src="images/whatsapp.svg" alt="whatsapp">
+              </a>
+              <a class="head__social-link" href="https://t.me/89165562526">
+                <img class="head__social-img" src="images/telegram.svg" alt="telegram">
+              </a>
+            </div>
+            <div class="head__info">
+              <div class="head__info-item">
+                <a class="head__info-link" href="tel:89165562526">
+                  <h4>+7 (916) 556 25 26</h4>
+                </a>
+                <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+              </div>
+              <div class="head__info-item">
+                <button class="btn-green menu-1" type="button">
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu" class="menu">
+        <div class="container">
+          <div class="menu__inner">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Проекты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Наши работы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">О нас</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Документы</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <form class="menu__search" action="#">
+                  <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                  <label class="menu__search-label">
+                    <img class="menu__img" src="images/search.svg" alt="search">
+                    <input class="menu__link menu-1" type="submit" value="Поиск">
+                  </label>
+                </form>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">
+                  <img class="menu__img" src="images/unlock.svg" alt="unlock">
+                  Личный кабинет
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </header>
+<svg style="display: none;">
+
+  <symbol id="faq-arrow" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M11 1.5l-5 5-5-5" />
+    </g>
+  </symbol>
+  <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+
+  <symbol id="breadcrumbs-arrow" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L2.83727 3.05808C3.05424 3.30114 3.05424 3.69886 2.83727 3.94192L1 6" stroke="#857067"
+      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+</svg>
+<main class="main">
+  <div class="page__head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <svg class="breadcrumbs__arrow">
+              <use xlink:href="#breadcrumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Вопрос - ответ</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="title">Вопрос - ответ</h2>
+    </div>
+  </div>
+
+  <div class="faq block">
+    <div class="container">
+      <div class="faq__inner">
+
+        <div class="faq__content">
+          <ul class="faq__list">
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как начать с вами работать?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А вы строите дома полностью «под ключ»?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как выбрать оптимальный тип фундамента?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Как правильно выбрать участок?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">Работаете ли вы с кредитами или мат.капиталом?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А у вас можно заказать отдельные виды работ?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="faq__item-head">
+                <p class="faq__item-title">А можно строить дом поэтапно?</p>
+                <svg class="faq__item-arrow">
+                  <use xlink:href="#faq-arrow"></use>
+                </svg>
+              </div>
+              <div class="faq__item-body">
+                <p class="faq__item-text">Тип фундамента определяется, исходя из гидрогеологических особенностей
+                  участка,
+                  категории объекта,
+                  этажности, величины постоянных и временных нагрузок от вышележащих конструкций, на основании сбора
+                  которых производится инженерный расчёт и разработка проекта.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="ask-question">
+            <h3 class="ask-question__title">Задать вопрос</h3>
+            <p class="ask-question__text">Ответим на любые вопросы, поможем вам проверенным советом, порекомендуем
+              оптимальное!</p>
+            <button class="btn-green">Задать вопрос</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callback block">
+    <div class="container">
+      <div class="callback__inner" style="background-image: url(images/discount-texture.png);">
+        <div class="callback__item">
+          <h2 class="callback__title">Обязательно поможем</h2>
+          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+        </div>
+        <form class="callback__form">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Отправить</button>
+        </form>
+        <img class="callback__img" src="images/callback.png" alt="hand">
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <a class="footer__logo" href="#!">
+          <img class="footer__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+
+        <div class="footer__top-body">
+          <ul class="footer__top-list">
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Проекты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Наши работы</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Вопрос-ответ</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Контакты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">
+                <img class="footer__top-img" src="images/unlock.svg" alt="unlock">
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__top-info">
+            <div class="footer__contact">
+              <a class="footer__contact-link" href="tel:89165562526">
+                <h4>+7 (916) 556 25 26</h4>
+              </a>
+              <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+            </div>
+            <div class="footer__top-btn">
+              <button class="btn-green" type="button">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-block">
+          <h6 class="menu-1">О компании</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Клиентский сервис и гарантии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Партнёры</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Документы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Способы оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu-block">
+          <h6 class="menu-1">Услуги</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Технический надзор</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Барбекю, бани, беседки, забор из дерева</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Строительство</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h6 class="small">Компания</h6>
+          <p class="footer__info-text">ООО «ДСК-Вира»</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Адрес</h6>
+          <p class="footer__info-text">Москва, 2-й Котельнический пер., 3</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Эл. почта</h6>
+          <p class="footer__info-text">
+            <a href="mailto:dsk-vira@yandex.ru" class="footer__info-link">dsk-vira@yandex.ru</a>
+          </p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ИНН</h6>
+          <p class="footer__info-text">5044075669</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ОГРН</h6>
+          <p class="footer__info-text">56695044077436</p>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-item">
+          <a class="footer__bottom-link small" href="#!">
+            Сводная ведомость результатов проведения специальной оценки условий труда
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Политика в отношении обработки персональных данных
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://vk.com/dsk_vira">
+            <img class="footer__social-img" src="images/vk.svg" alt="vk">
+          </a>
+          <a class="footer__social-link" href="https://youtube.com/@dsk-vira2995">
+            <img class="footer__social-img" src="images/youtube.svg" alt="youtube">
+          </a>
+          <span></span>
+          <a class="footer__social-link" href="viber://chat?number=89165562526">
+            <img class="footer__social-img" src="images/Viber.svg" alt="viber">
+          </a>
+          <a class="footer__social-link" href="https://wa.me/89165562526">
+            <img class="footer__social-img" src="images/whatsapp.svg" alt="whatsapp">
+          </a>
+          <a class="footer__social-link" href="https://t.me/89165562526">
+            <img class="footer__social-img" src="images/telegram.svg" alt="telegram">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__inner">
+        <div class="copyright__item">
+          <h6 class="small">2018 - 2023 © «ДСК-Вира»</h6>
+        </div>
+        <div class="copyright__item">
+          <h6 class="small">Создание и продвижение</h6>
+          <a class="copyright__link" href="#!">
+            <img class="copyright__img" src="images/family.svg" alt="Family">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="libs/jquery-3.7.0.js"></script>
+<script src="libs/noUiSlider/nouislider.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>

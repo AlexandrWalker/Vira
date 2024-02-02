@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vira</title>
+
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- calculation input style -->
+  <style>
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      border: 0;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #eaeaea !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--black, #2E2D2D);
+      background-image: url(../../images/thumb.svg);
+      background-repeat: no-repeat;
+      background-size: 40px 20px;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      margin-top: -8px;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+
+      <div class="topbar">
+        <div class="container">
+          <div class="topbar__inner">
+            <h6 class="menu-2">Будние дни с 8 до 21 часа. Выходные с 10 до 18 часов</h6>
+
+            <div class="topbar__item">
+              <a class="topbar__link menu-2" href="mailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+              <h6 class="menu-2">Москва, 2-й Котельнический переулок 3</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="head">
+        <div class="container">
+          <div class="head__inner">
+            <div class="head__logo">
+              <a class="head__logo-link" href="#!">
+                <img class="head__logo-img" src="images/logo.svg" alt="logo">
+              </a>
+              <div class="head__logo-item">
+                <h4 class="head__logo-title">Экологичные</h4>
+                <h6 class="menu-1">каркасные дома в Москве и МО</h6>
+              </div>
+            </div>
+
+            <div class="head__item">
+              <span class="small">от</span>
+              <span class="num">48</span>
+              <span class="menu-1">дней</span>
+              <span class="small">до новоселья</span>
+            </div>
+
+            <a class="burger" href="#!">
+              <h6 class="menu-2">Меню</h6>
+              <span></span>
+            </a>
+
+            <div class="head__social">
+              <a class="head__social-link" href="viber://chat?number=89165562526">
+                <img class="head__social-img" src="images/Viber.svg" alt="viber">
+              </a>
+              <a class="head__social-link" href="https://wa.me/89165562526">
+                <img class="head__social-img" src="images/whatsapp.svg" alt="whatsapp">
+              </a>
+              <a class="head__social-link" href="https://t.me/89165562526">
+                <img class="head__social-img" src="images/telegram.svg" alt="telegram">
+              </a>
+            </div>
+            <div class="head__info">
+              <div class="head__info-item">
+                <a class="head__info-link" href="tel:89165562526">
+                  <h4>+7 (916) 556 25 26</h4>
+                </a>
+                <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+              </div>
+              <div class="head__info-item">
+                <button class="btn-green menu-1" type="button">
+                  Заказать звонок
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="menu" class="menu">
+        <div class="container">
+          <div class="menu__inner">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Проекты</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Наши работы</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                  <svg class="menu__arrow">
+                    <use xlink:href="#menu-arrow"></use>
+                  </svg>
+                </a>
+                <ul class="menu__items">
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">О нас</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Документы</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                  </li>
+                  <li class="menu__items-item">
+                    <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="menu__list">
+              <li class="menu__item">
+                <form class="menu__search" action="#">
+                  <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                  <label class="menu__search-label">
+                    <img class="menu__img" src="images/search.svg" alt="search">
+                    <input class="menu__link menu-1" type="submit" value="Поиск">
+                  </label>
+                </form>
+              </li>
+              <li class="menu__item">
+                <a href="#!" class="menu__link menu-1">
+                  <img class="menu__img" src="images/unlock.svg" alt="unlock">
+                  Личный кабинет
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </header>
+<svg style="display: none;">
+
+  <symbol id="faq-arrow" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M11 1.5l-5 5-5-5" />
+    </g>
+  </symbol>
+  <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+
+  <symbol id="breadcrumbs-arrow" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L2.83727 3.05808C3.05424 3.30114 3.05424 3.69886 2.83727 3.94192L1 6" stroke="#857067"
+      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+</svg>
+<main class="main">
+  <div class="page__head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <svg class="breadcrumbs__arrow">
+              <use xlink:href="#breadcrumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Политика в отношении обработки персональных данных</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="title">Политика в отношении обработки персональных данных</h2>
+    </div>
+  </div>
+
+  <div class="privacy block">
+    <div class="container">
+      <div class="privacy__inner">
+
+        <h5 class="privacy__text">
+          Настоящая Политика конфиденциальности персональных данных (далее — Политика
+          конфиденциальности) действует в отношении всей информации, которую Интернет-сайт «Vira.ru», расположенный
+          на доменном имени Vira.ru (далее — сайт), может получить о Пользователе во время использования сайта.
+        </h5>
+
+        <p class="privacy__text">1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ
+          1.1 В настоящей Политике конфиденциальности используются следующие термины:
+          1.1.1. «Администрация сайта» – уполномоченные сотрудники для управления сайтом, действующие от имени компании
+          __________, (далее — Компания), которые организуют и (или) осуществляет обработку персональных данных, а также
+          определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия
+          (операции), совершаемые с персональными данными.
+          1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определённому,
+          или определяемому физическому лицу (субъекту персональных данных).
+          1.1.3. «Обработка персональных данных» - любое действие (операция) или совокупность действий (операций),
+          совершаемых с использованием средств автоматизации или без использования таких средств с персональными
+          данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение),
+          извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование,
+          удаление, уничтожение персональных данных.
+          1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным получившим
+          доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта
+          персональных данных или наличия иного законного основания.
+          1.1.5. «Пользователь сайта (далее — Пользователь)» – лицо, имеющее доступ к сайту, посредством сети Интернет
+          и использующее сайт.
+          1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя,
+          который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть
+          страницу соответствующего сайта.
+          1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.
+        </p>
+
+        <p class="privacy__text">2. ОБЩИЕ ПОЛОЖЕНИЯ
+          2.1. Использование Пользователем сайта означает согласие с настоящей Политикой конфиденциальности и условиями
+          обработки персональных данных Пользователя.
+          2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование
+          сайта.
+          2.3. Настоящая Политика конфиденциальности применяется только к текущему сайту. Сайт не контролирует
+          и не несёт ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным
+          на сайте.
+          2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта.
+        </p>
+
+        <p class="privacy__text">3. ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+          3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по неразглашению
+          и обеспечению режима защиты конфиденциальности персональных данных, которые Пользователь предоставляет
+          по запросу Администрации сайта при заполнении форм обратной связи.
+          3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+          предоставляются Пользователем путём заполнения форм обратной связи на сайте в любом разделе сайта и включают
+          в себя следующую информацию:
+          3.2.1. фамилию, имя, отчество Пользователя;
+          3.2.2. контактный телефон Пользователя;
+          3.2.3. адрес электронной почты (email);
+        </p>
+
+        <p class="privacy__text">4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ
+          4.1. Персональные данные Пользователя Администрация сайта может использовать в целях:
+          4.1.1. Установления с Пользователем обратной связи, оказания услуг, обработка запросов и заявок
+          от Пользователя.
+          4.1.2. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.
+          4.1.3. Предоставления Пользователю с его согласия специальных предложений, информации о ценах, новостной
+          рассылки и иных сведений от имени сайта или от имени партнёров сайта.
+          4.1.4. Осуществления рекламной деятельности с согласия Пользователя.
+          4.1.5. Предоставления доступа Пользователю на сайты или сервисы партнёров сайта с целью получения продуктов,
+          обновлений и услуг.
+        </p>
+
+        <p class="privacy__text">5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ
+          5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным способом,
+          в том числе в информационных системах персональных данных с использованием средств автоматизации
+          или без использования таких средств.
+          5.2. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной власти
+          Российской Федерации только по основаниям и в порядке, установленным законодательством Российской Федерации.
+          5.3. При утрате или разглашении персональных данных Администрация сайта информирует Пользователя об утрате
+          или разглашении персональных данных.
+          5.4. Администрация сайта принимает необходимые организационные и технические меры для защиты персональной
+          информации Пользователя от неправомерного или случайного доступа, уничтожения, изменения, блокирования,
+          копирования, распространения, а также от иных неправомерных действий третьих лиц.
+          5.5. Администрация сайта совместно с Пользователем принимает все необходимые меры по предотвращению убытков
+          или иных отрицательных последствий, вызванных утратой или разглашением персональных данных Пользователя.
+        </p>
+
+        <p class="privacy__text">6. ОБЯЗАТЕЛЬСТВА СТОРОН
+          6.1. Пользователь обязан предоставить информацию о персональных данных, необходимую для пользования сайтом.
+          6.2. Администрация сайта обязана:
+          6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей Политики
+          конфиденциальности.
+          6.2.2. Обеспечить хранение конфиденциальной информации в тайне, не разглашать без предварительного письменного
+          разрешения Пользователя, а также не осуществлять продажу, обмен, опубликование, либо разглашение иными
+          возможными способами переданных персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей
+          Политики Конфиденциальности.
+          6.2.3. Принимать меры предосторожности для защиты конфиденциальности персональных данных Пользователя согласно
+          порядку, обычно используемого для защиты такого рода информации в существующем деловом обороте.
+          6.2.4. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с момента
+          обращения или запроса Пользователя, или его законного представителя либо уполномоченного органа по защите прав
+          субъектов персональных данных на период проверки, в случае выявления недостоверных персональных данных
+          или неправомерных действий.
+        </p>
+
+        <p class="privacy__text">7. ОТВЕТСТВЕННОСТЬ СТОРОН
+          7.1. Администрация сайта, не исполнившая свои обязательства, несёт ответственность за убытки, понесённые
+          Пользователем в связи с неправомерным использованием персональных данных, в соответствии с законодательством
+          Российской Федерации, за исключением случаев, предусмотренных п.п. 5.2., 5.3. и 7.2. настоящей Политики
+          Конфиденциальности.
+          7.2. В случае утраты или разглашения Конфиденциальной информации Администрация сайта не несёт ответственность,
+          если данная конфиденциальная информация:
+          7.2.1. Стала публичным достоянием до её утраты или разглашения.
+          7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.
+          7.2.3. Была разглашена с согласия Пользователя.
+        </p>
+
+        <p class="privacy__text">8. РАЗРЕШЕНИЕ СПОРОВ
+          8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта и Администрацией
+          сайта, обязательным является предъявление претензии (письменного предложения о добровольном урегулировании
+          спора).
+          8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно уведомляет
+          заявителя претензии о результатах рассмотрения претензии.
+          8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии
+          с действующим законодательством Российской Федерации.
+          8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта
+          применяется действующее законодательство Российской Федерации.
+        </p>
+
+        <p class="privacy__text">9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ
+          9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без согласия
+          Пользователя.
+          9.2. Новая Политика конфиденциальности вступает в силу с момента её размещения на сайте, если иное
+          не предусмотрено новой редакцией Политики конфиденциальности.
+          9.3. Все предложения или вопросы по настоящей Политике конфиденциальности следует сообщать указать раздел
+          сайта
+          9.4. Действующая Политика конфиденциальности размещена на странице по адресу
+          https://__________________/politika/
+        </p>
+
+        <p class="privacy__text">Обновлено _____________ 2023 г.</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <a class="footer__logo" href="#!">
+          <img class="footer__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+
+        <div class="footer__top-body">
+          <ul class="footer__top-list">
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Проекты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Наши работы</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Вопрос-ответ</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Контакты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">
+                <img class="footer__top-img" src="images/unlock.svg" alt="unlock">
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__top-info">
+            <div class="footer__contact">
+              <a class="footer__contact-link" href="tel:89165562526">
+                <h4>+7 (916) 556 25 26</h4>
+              </a>
+              <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+            </div>
+            <div class="footer__top-btn">
+              <button class="btn-green" type="button">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-block">
+          <h6 class="menu-1">О компании</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Клиентский сервис и гарантии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Партнёры</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Документы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Способы оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu-block">
+          <h6 class="menu-1">Услуги</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Технический надзор</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Барбекю, бани, беседки, забор из дерева</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Строительство</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h6 class="small">Компания</h6>
+          <p class="footer__info-text">ООО «ДСК-Вира»</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Адрес</h6>
+          <p class="footer__info-text">Москва, 2-й Котельнический пер., 3</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Эл. почта</h6>
+          <p class="footer__info-text">
+            <a href="mailto:dsk-vira@yandex.ru" class="footer__info-link">dsk-vira@yandex.ru</a>
+          </p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ИНН</h6>
+          <p class="footer__info-text">5044075669</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ОГРН</h6>
+          <p class="footer__info-text">56695044077436</p>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-item">
+          <a class="footer__bottom-link small" href="#!">
+            Сводная ведомость результатов проведения специальной оценки условий труда
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Политика в отношении обработки персональных данных
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://vk.com/dsk_vira">
+            <img class="footer__social-img" src="images/vk.svg" alt="vk">
+          </a>
+          <a class="footer__social-link" href="https://youtube.com/@dsk-vira2995">
+            <img class="footer__social-img" src="images/youtube.svg" alt="youtube">
+          </a>
+          <span></span>
+          <a class="footer__social-link" href="viber://chat?number=89165562526">
+            <img class="footer__social-img" src="images/Viber.svg" alt="viber">
+          </a>
+          <a class="footer__social-link" href="https://wa.me/89165562526">
+            <img class="footer__social-img" src="images/whatsapp.svg" alt="whatsapp">
+          </a>
+          <a class="footer__social-link" href="https://t.me/89165562526">
+            <img class="footer__social-img" src="images/telegram.svg" alt="telegram">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__inner">
+        <div class="copyright__item">
+          <h6 class="small">2018 - 2023 © «ДСК-Вира»</h6>
+        </div>
+        <div class="copyright__item">
+          <h6 class="small">Создание и продвижение</h6>
+          <a class="copyright__link" href="#!">
+            <img class="copyright__img" src="images/family.svg" alt="Family">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script src="libs/jquery-3.7.0.js"></script>
+<script src="libs/noUiSlider/nouislider.min.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>

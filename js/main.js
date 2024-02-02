@@ -24,20 +24,25 @@
     });
 
     // case tab
-    document.getElementById("case__tab1").addEventListener("click", function () {
-      document.getElementById("case__tab1").classList.add("active");
-      document.getElementById("case__tab2").classList.remove("active");
+    (function () {
+      var case__tab1 = document.getElementById("case__tab1");
+      var case__tab2 = document.getElementById("case__tab2");
 
-      document.getElementById("case__slider1").classList.add("active");
-      document.getElementById("case__slider2").classList.remove("active");
-    });
+      case__tab1.addEventListener("click", function () {
+        case__tab1.classList.add("active");
+        case__tab2.classList.remove("active");
 
-    document.getElementById("case__tab2").addEventListener("click", function () {
-      document.getElementById("case__tab2").classList.add("active");
-      document.getElementById("case__tab1").classList.remove("active");
+        document.getElementById("case__slider1").classList.add("active");
+        document.getElementById("case__slider2").classList.remove("active");
+      });
 
-      document.getElementById("case__slider1").classList.remove("active");
-      document.getElementById("case__slider2").classList.add("active");
+      case__tab2.addEventListener("click", function () {
+        case__tab2.classList.add("active");
+        case__tab1.classList.remove("active");
+
+        document.getElementById("case__slider1").classList.remove("active");
+        document.getElementById("case__slider2").classList.add("active");
+      });
     });
 
     // stages slider
@@ -163,6 +168,16 @@
         });
       });
     })();
+
+    // command slider
+    $('.command__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+    });
 
   });
 })();
