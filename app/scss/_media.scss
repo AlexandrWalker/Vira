@@ -38,8 +38,16 @@
     font-size: 13px;
   }
 
+  .title {
+    margin-bottom: 30px;
+  }
+
   .container {
     max-width: 970px;
+  }
+
+  .block {
+    margin-bottom: 80px;
   }
 
   .head__item {
@@ -68,10 +76,6 @@
     background: var(--white, #fff);
     max-width: 460px;
     padding: 0 20px 20px;
-  }
-
-  .hero {
-    margin-bottom: 80px;
   }
 
   .case__tab-item {
@@ -158,9 +162,6 @@
     padding: 30px;
   }
 
-  .banner {
-    margin-bottom: 80px;
-  }
 
   .banner__inner {
     padding-left: 40px;
@@ -168,10 +169,6 @@
 
   .banner__item:last-child {
     padding: 40px 40px 40px 94px;
-  }
-
-  .advantages {
-    margin-bottom: 80px;
   }
 
   .advantages__head {
@@ -236,10 +233,6 @@
     height: 190px;
   }
 
-  .discount {
-    margin-bottom: 80px;
-  }
-
   .discount__inner {
     padding: 40px;
     gap: 20px;
@@ -248,10 +241,6 @@
   .discount__img {
     width: 290px;
     object-fit: fill;
-  }
-
-  .projects {
-    margin-bottom: 80px;
   }
 
   .projects__item-btns {
@@ -342,10 +331,6 @@
     margin-bottom: 10px;
   }
 
-  .callback {
-    margin-bottom: 80px;
-  }
-
   .callback__inner {
     padding: 40px;
   }
@@ -385,10 +370,6 @@
     padding: 20px;
   }
 
-  .faq {
-    margin-bottom: 80px;
-  }
-
   .footer__inner {
     padding: 20px 0;
     gap: 20px;
@@ -412,6 +393,28 @@
 
   .footer__menu {
     padding: 0 0 0 80px;
+  }
+
+  // sitemap
+  .sitemap__img {
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  .sitemap__blocks {
+    gap: 40px 20px;
+  }
+
+  .sitemap__block {
+    width: calc(25% - 15px);
+  }
+
+  .sitemap__title {
+    margin-bottom: 10px;
+  }
+
+  .sitemap__list {
+    gap: 5px;
   }
 }
 
@@ -443,6 +446,13 @@
 }
 
 @media (max-width: 768px) {
+  .block {
+    margin-bottom: 60px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
 
   .header {
     margin: 20px 0 30px;
@@ -494,10 +504,6 @@
     margin: 0;
   }
 
-  .discount {
-    margin-bottom: 60px;
-  }
-
   .stages .foundation {
     flex-direction: column;
   }
@@ -510,6 +516,20 @@
 
   .stages {
     padding: 60px 0;
+  }
+
+  // sitemap
+  .sitemap__img {
+    height: 370px;
+    margin-bottom: 33px;
+  }
+
+  .sitemap__block {
+    width: calc(33% - 13.34px);
+  }
+
+  .sitemap__block:last-child {
+    width: calc(66% - 7.66px);
   }
 }
 
@@ -542,10 +562,6 @@
     font-size: 0;
   }
 
-  .hero {
-    margin-bottom: 60px;
-  }
-
   .hero__inner {
     padding: 0 30px;
     margin: 0;
@@ -576,6 +592,15 @@
     top: unset;
     bottom: 0;
     right: 0;
+  }
+
+  // sitemap
+  .sitemap__block {
+    width: 100%;
+  }
+
+  .sitemap__block:last-child {
+    width: 100%;
   }
 }
 

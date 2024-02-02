@@ -1,6 +1,4 @@
 .hero {
-  margin-bottom: 100px;
-
   &__inner {
     padding: 0 60px;
     width: 100%;
@@ -427,7 +425,6 @@
 }
 
 .banner {
-  margin-bottom: 100px;
 
   &__inner {
     display: flex;
@@ -472,7 +469,6 @@
 }
 
 .advantages {
-  margin-bottom: 100px;
 
   &__head {
     display: flex;
@@ -696,7 +692,6 @@
 
 .discount {
   background: linear-gradient(to top, transparent 50%, var(--black, #2E2D2D) 50%);
-  margin-bottom: 100px;
   color: var(--white, #fff);
 
   &__inner {
@@ -753,7 +748,6 @@
 }
 
 .projects {
-  margin-bottom: 100px;
 
   &__inner {
     display: flex;
@@ -1100,7 +1094,6 @@
 }
 
 .callback {
-  margin-bottom: 100px;
   color: var(--white, #fff);
 
   &__inner {
@@ -1154,7 +1147,6 @@
 }
 
 .faq {
-  margin-bottom: 100px;
 
   &__inner {}
 

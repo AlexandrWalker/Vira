@@ -37,6 +37,10 @@ body {
   margin: 0 auto;
 }
 
+.block {
+  margin-bottom: 100px;
+}
+
 h1 {
   font-size: 44px;
   font-style: normal;
@@ -179,7 +183,7 @@ p {
   background: var(--bg, #F9F9F9);
   cursor: pointer;
   transition: all 0.2s ease-out;
-  
+
   &:hover {
     color: var(--green, #179860);
   }
@@ -199,4 +203,41 @@ p {
   width: 100%;
   height: 1px;
   background: var(--grey2, #EFEFEF);
+}
+
+.title {}
+
+.breadcrumbs {
+  margin-bottom: 10px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__item {
+    &:first-child .breadcrumbs__link {
+      color: var(--grey, #A7A7A7);
+      pointer-events: none;
+    }
+
+    &:last-child .breadcrumbs__link {
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    color: var(--black, #2E2D2D);
+  }
+
+  &__arrow {
+    display: block;
+    width: 4px;
+    height: 7px;
+  }
+}
+
+.page__head {
+  margin-bottom: 40px;
 }
