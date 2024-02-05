@@ -213,15 +213,20 @@
       <path d="M11 1.5l-5 5-5-5" />
     </g>
   </symbol>
+
   <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
       stroke-linejoin="round" />
   </symbol>
 
-
   <symbol id="breadcrumbs-arrow" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M1 1L2.83727 3.05808C3.05424 3.30114 3.05424 3.69886 2.83727 3.94192L1 6" stroke="#857067"
       stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="filter-arrow" width="8" height="4" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 .5L4.53 2.797a.793.793 0 01-1.06 0L1 .5" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
   </symbol>
 
 </svg>
@@ -239,7 +244,7 @@
     </div>
   </div>
 
-  <div class="case block">
+  <div class="case">
     <div class="container">
       <div class="case__inner">
         <div class="case__head">
@@ -716,7 +721,7 @@
             <div class="calculation__banner">
               <div class="calculation__banner-item">
                 <h6 class="small">Предварительная стоимость</h6>
-                <h3 id="pre-price">7 500 000 ₽</h3>
+                <h3 id="pre-price">₽</h3>
               </div>
               <button class="btn-green">Получить консультацию</button>
             </div>
@@ -754,7 +759,9 @@
         </div>
 
         <div class="advantages__block">
-          <img class="advantages__img" src="images/advantages-cover1.png" alt="cover">
+          <div class="advantages__cover">
+            <img class="advantages__img" src="images/advantages-cover1.png" alt="cover">
+          </div>
 
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -811,8 +818,9 @@
               </div>
             </li>
           </ul>
-
-          <img src="images/advantages-cover2.png" alt="cover" class="advantages__img">
+          <div class="advantages__cover">
+            <img class="advantages__img" src="images/advantages-cover2.png" alt="cover">
+          </div>
         </div>
       </div>
     </div>
