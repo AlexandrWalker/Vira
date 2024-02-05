@@ -69,7 +69,6 @@
 
     &-block {
       display: flex;
-      align-items: center;
       gap: 10px;
 
       h6 {
@@ -80,6 +79,7 @@
 
     &-list {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
 

@@ -1,0 +1,250 @@
+.works {
+  &__inner {}
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    width: calc(50% - 15px);
+    border-radius: 30px 30px 30px 0;
+    overflow: hidden;
+
+    &-block {
+      position: relative;
+    }
+
+    &-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    &:hover .works__content-body {
+      max-height: 100%;
+      transition: all 0.5s ease-out;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 66.66%;
+    height: fit-content;
+    background: var(--white, #fff);
+    border-radius: 0 30px 0 0;
+    padding: 30px 30px 0 0;
+    transition: all 0.2s ease-out;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+      position: absolute;
+      top: -30px;
+      left: 0;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+      position: absolute;
+      bottom: 0;
+      right: -30px;
+      z-index: 2;
+    }
+
+    &-head {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-height: 0;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &-item {
+      display: flex;
+      gap: 8px;
+      width: calc(50% - 5px);
+    }
+
+    &-img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid var(--grey2, #EFEFEF);
+    border-radius: 8px;
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--grey, #A7A7A7);
+      border-radius: 8px;
+      background: transparent;
+      padding: 0 20px;
+      width: 100%;
+
+      &.disabled {
+        pointer-events: none;
+        color: var(--grey2, #EFEFEF);
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__item {
+
+      &-link,
+      &-dots {
+        border-radius: 8px;
+        color: var(--black, #2E2D2D);
+        background: var(--bg, #F9F9F9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__items {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--grey2, #EFEFEF);
+      padding: 8px 15px;
+      background: transparent;
+      color: var(--black, #2E2D2D);
+
+      svg {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: var(--black, #2E2D2D);
+        transition: all 0.2s ease-out;
+      }
+    }
+  }
+
+  .filter__btn-active {
+    border-radius: 8px 8px 0 0;
+    border-bottom: 0;
+
+    svg {
+      stroke: var(--green, #179860);
+      transform: rotate(180deg);
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  .filter__btn-active+.dropdown__list {
+    display: block;
+    transition: all 0.2s ease-out;
+  }
+
+  .dropdown {
+    position: relative;
+
+    &__list {
+      display: none;
+      position: absolute;
+      z-index: 3;
+      background: var(--white, #fff);
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+      transition: all 0.2s ease-out;
+      min-width: 100%;
+      border: 1px solid var(--grey2, #EFEFEF);
+      border-top: 0;
+    }
+
+    &__item {
+      padding: 8px 15px;
+
+      &-link {
+        display: block;
+        color: var(--black, #2E2D2D);
+
+        &:hover {
+          color: var(--green, #179860);
+        }
+      }
+    }
+  }
+}
+
+.works-page .map {
+  margin-bottom: 248px;
+}
+
+.statement {
+
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__suptitle {
+    color: var(--grey, #A7A7A7);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+}

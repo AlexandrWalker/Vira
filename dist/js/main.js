@@ -25,23 +25,25 @@
 
     // case tab
     (function () {
-      var case__tab1 = document.getElementById("case__tab1");
-      var case__tab2 = document.getElementById("case__tab2");
+      const case__tab1 = document.getElementById("case__tab1");
+      const case__tab2 = document.getElementById("case__tab2");
+      const case__slider1 = document.getElementById("case__slider1");
+      const case__slider2 = document.getElementById("case__slider2");
 
       case__tab1.addEventListener("click", function () {
         case__tab1.classList.add("active");
         case__tab2.classList.remove("active");
 
-        document.getElementById("case__slider1").classList.add("active");
-        document.getElementById("case__slider2").classList.remove("active");
+        case__slider1.classList.add("active");
+        case__slider2.classList.remove("active");
       });
 
       case__tab2.addEventListener("click", function () {
-        case__tab2.classList.add("active");
         case__tab1.classList.remove("active");
+        case__tab2.classList.add("active");
 
-        document.getElementById("case__slider1").classList.remove("active");
-        document.getElementById("case__slider2").classList.add("active");
+        case__slider1.classList.remove("active");
+        case__slider2.classList.add("active");
       });
     });
 
@@ -93,7 +95,8 @@
       var calсTab = document.querySelectorAll('.calculation__tab-item'),
         calcItem = document.querySelectorAll('.calculation__content-item'),
         calcShow = document.getElementsByClassName('calculation__show'),
-        show = document.getElementsByClassName('show');
+        show = document.getElementsByClassName('show'),
+        endPrice = 45000;
 
       Array.from(calсTab).forEach(function (item, i, calсTab) {
         item.addEventListener('click', function (e) {
@@ -115,8 +118,6 @@
           let price = document.getElementById("pre-price");
           let slider = document.getElementById("range");
           let output = document.getElementById("calc");
-
-          let endPrice;
 
           if (calcId == 'econom') endPrice = 45000;
           if (calcId == 'basic') endPrice = 50000;
@@ -178,6 +179,40 @@
       prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
     });
+
+    // services slider
+    $('.services__items').slick({
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1.15,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    // filter dropdown
+    (function () {
+      var filterBtn = document.querySelectorAll('.filter__btn'),
+        active = document.getElementsByClassName('filter__btn-active');
+
+      Array.from(filterBtn).forEach(function (item, i, filterBtn) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+            active[0].classList.remove('filter__btn-active');
+
+          this.classList.toggle('filter__btn-active');
+        });
+      });
+    })();
 
   });
 })();
