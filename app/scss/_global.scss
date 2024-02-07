@@ -219,7 +219,6 @@ p {
   &__item {
     &:first-child .breadcrumbs__link {
       color: var(--grey, #A7A7A7);
-      pointer-events: none;
     }
 
     &:last-child .breadcrumbs__link {
@@ -240,4 +239,111 @@ p {
 
 .page__head {
   margin-bottom: 40px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__items {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--grey2, #EFEFEF);
+    padding: 8px 37px 8px 15px;
+    background: transparent;
+    color: var(--black, #2E2D2D);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%) rotate(45deg);
+      display: block;
+      width: 9px;
+      height: 2px;
+      background: var(--black, #2E2D2D);
+      border-radius: 1px;
+      transition: all 0.2s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%) rotate(-45deg);
+      display: block;
+      width: 9px;
+      height: 2px;
+      background: var(--black, #2E2D2D);
+      border-radius: 1px;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  &__list {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background: var(--white, #fff);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    min-width: 100%;
+    border: 1px solid var(--grey2, #EFEFEF);
+    border-top: 0;
+
+    &-item {
+      padding: 8px 15px;
+    }
+
+    &-link {
+      display: block;
+      color: var(--black, #2E2D2D);
+
+      &:hover {
+        color: var(--green, #179860);
+      }
+    }
+  }
+
+  &__item-active {
+
+    .filter__btn {
+      border-radius: 8px 8px 0 0;
+      border-bottom: 0;
+    }
+
+    .filter__btn::before {
+      background: var(--green, #179860);
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-out;
+    }
+
+    .filter__btn::after {
+      background: var(--green, #179860);
+      transform: rotate(45deg);
+      transition: all 0.2s ease-out;
+    }
+
+    .filter__list {
+      display: block;
+      transition: all 0.2s ease-out;
+    }
+  }
 }
