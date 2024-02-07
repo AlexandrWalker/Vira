@@ -201,15 +201,38 @@
 
     // filter dropdown
     (function () {
-      var filterBtn = document.querySelectorAll('.filter__btn'),
-        active = document.getElementsByClassName('filter__btn-active');
+      document.querySelectorAll('.filter__btn').forEach((el) => {
+        el.addEventListener('click', () => {
+          el.classList.toggle('filter__btn-active');
+          el.parentNode.classList.toggle('filter__item-active');
 
-      Array.from(filterBtn).forEach(function (item, i, filterBtn) {
-        item.addEventListener('click', function (e) {
-          if (active.length > 0 && active[0] !== this)
-            active[0].classList.remove('filter__btn-active');
+          let parentElement = el.parentNode;
 
-          this.classList.toggle('filter__btn-active');
+          parentElement.querySelectorAll('.filter__list-link').forEach((elem) => {
+            elem.addEventListener('click', () => {
+              let dataValue = elem.getAttribute('data-value');
+
+              if (isNaN(dataValue)) {
+                el.innerHTML = dataValue;
+              } else {
+                el.innerHTML = "Показать: " + dataValue;
+              }
+
+              el.setAttribute('data-value', dataValue);
+
+              el.classList.remove('filter__btn-active');
+              el.parentNode.classList.remove("filter__item-active");
+            });
+          });
+        });
+
+        el.addEventListener('click', event => {
+          event._isClickWithInMenu = true;
+        });
+        document.body.addEventListener('click', event => {
+          if (event._isClickWithInMenu) return;
+          el.classList.remove('filter__btn-active');
+          el.parentNode.classList.remove("filter__item-active");
         });
       });
     })();
