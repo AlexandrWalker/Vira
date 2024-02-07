@@ -83,6 +83,7 @@ function building() {
   return src([
     'app/css/*.css',
     'app/images/*.*',
+    'app/images/**/*.*',
     'app/fonts/*.*',
     'app/js/*.js',
     'app/libs/**/*.*',
