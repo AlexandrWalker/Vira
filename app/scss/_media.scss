@@ -537,6 +537,33 @@
   .vacancies__items {
     gap: 20px;
   }
+
+  // payment-methods
+  .payment-methods-hero__inner {
+    gap: 30px;
+  }
+
+  .payment-methods-hero__img {
+    height: 330px;
+  }
+
+  .payment-methods__inner {
+    gap: 30px;
+  }
+
+  .payment-methods__item-content {
+    gap: 20px;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  .payment-methods__item {
+    gap: 20px;
+  }
+
+  .payment-methods__item-cover {
+    border-radius: 20px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -839,6 +866,37 @@
 
   .vacancies__head-img {
     height: 240px;
+  }
+
+  // payment-methods
+  .payment-methods-hero__img {
+    aspect-ratio: 1/0.64;
+    height: 230px;
+  }
+
+  .payment-methods__item {
+    flex-direction: column;
+  }
+
+  .payment-methods__inner {
+    gap: 10px;
+  }
+
+  .payment-methods__item-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .payment-methods__item-cover {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1/0.64;
+  }
+
+  .payment-methods__head-img {
+    width: 60px;
+    height: 60px;
   }
 }
 
