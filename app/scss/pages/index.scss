@@ -26,11 +26,10 @@
   &__inner {}
 
   &__head {
-    margin-bottom: 30px;
-  }
-
-  &__title {
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
   }
 
   &__suptitle {
@@ -223,19 +222,16 @@
   }
 
   &__inner {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
   }
 
   &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: -210px;
-  }
-
-  &__title {
-    margin-bottom: 10px;
-  }
-
-  &__suptitle {
-    margin-bottom: 40px;
   }
 
   &__img {
@@ -419,6 +415,12 @@
 
       .small {
         color: var(--grey, #A7A7A7);
+      }
+    }
+
+    &-price {
+      &::after {
+        content: " ₽";
       }
     }
   }
@@ -740,6 +742,10 @@
     &::placeholder {
       color: var(--grey, #A7A7A7);
     }
+  }
+
+  &__btn {
+    height: auto;
   }
 
   &__img {
@@ -1192,7 +1198,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 10px;
-      padding: 30px;
+      padding: 20px 30px;
       background: var(--bg, #F9F9F9);
       transition: all 0.2s ease-out;
     }
@@ -1216,7 +1222,7 @@
     }
 
     &-text {
-      padding: 30px 60px 30px;
+      padding: 30px 60px 30px 30px;
     }
 
     &.faq__item-active {

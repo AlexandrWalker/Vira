@@ -474,10 +474,10 @@
                     <p class="calculation__calc-text">
                       Перетащите ползунок, или введите площадь дома вручную
                     </p>
-                    <p class="calculation__calc-value"><input id="calc" type="number" value="86"> м2</p>
+                    <p class="calculation__calc-value"><input id="calc" type="number" value="10"> м2</p>
                   </div>
                   <div class="calculation__calc-slider">
-                    <input type="range" min="10" max="300" value="86" class="slider" id="range">
+                    <input type="range" min="10" max="300" value="10" class="slider" id="range">
                     <div class="calculation__calc-lenght">
                       <h6 class="small">10</h6>
                       <h6 class="small">300</h6>
@@ -491,7 +491,7 @@
             <div class="calculation__banner">
               <div class="calculation__banner-item">
                 <h6 class="small">Предварительная стоимость</h6>
-                <h3 id="pre-price">₽</h3>
+                <h3 class="calculation__banner-price" id="pre-price">450 000</h3>
               </div>
               <button class="btn-green">Получить консультацию</button>
             </div>
@@ -729,8 +729,8 @@
           <h5 class="discount__suptitle">И получить <span>скидку 20%</span> на мебель от наших партнеров!</h5>
         </div>
         <form class="discount__form">
-          <input class="discount__input small" type="tel" placeholder="Номер телефона">
-          <button class="btn-green" type="submit">Получить скидку</button>
+          <input class="discount__input small" type="tel" maxlength="12" placeholder="Номер телефона" value="+7">
+          <button class="discount__btn btn-green" type="submit">Получить скидку</button>
         </form>
         <img class="discount__img" src="images/discount-hand.png" alt="hand">
       </div>
@@ -920,9 +920,8 @@
       <div class="map__inner">
         <div class="map__content">
           <div class="map__head">
-            <h2 class="map__title">Варианты оплаты</h2>
-            <h5 class="map__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество современных
-              и удобных способов.</h5>
+            <h2 class="map__title">Мы строим</h2>
+            <h5 class="map__suptitle">Современные дома в Москве и Московской области</h5>
           </div>
 
           <div class="map__items">

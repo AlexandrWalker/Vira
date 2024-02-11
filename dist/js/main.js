@@ -45,7 +45,7 @@
         case__slider1.classList.remove("active");
         case__slider2.classList.add("active");
       });
-    });
+    })();
 
     // stages slider
     $('.stages__slider').slick({
@@ -95,10 +95,10 @@
       var calсTab = document.querySelectorAll('.calculation__tab-item'),
         calcItem = document.querySelectorAll('.calculation__content-item'),
         calcShow = document.getElementsByClassName('calculation__show'),
-        show = document.getElementsByClassName('show'),
-        endPrice = 45000;
+        show = document.getElementsByClassName('show');
 
       Array.from(calсTab).forEach(function (item, i, calсTab) {
+
         item.addEventListener('click', function (e) {
           if (show.length > 0 && show[0] !== this)
             show[0].classList.remove('show');
@@ -113,32 +113,49 @@
           let calcId = this.getAttribute('data-id');
           document.getElementById(calcId).classList.add('calculation__show');
 
-
-          // calculator
-          let price = document.getElementById("pre-price");
-          let slider = document.getElementById("range");
-          let output = document.getElementById("calc");
-
-          if (calcId == 'econom') endPrice = 45000;
-          if (calcId == 'basic') endPrice = 50000;
-          if (calcId == 'standart') endPrice = 60000;
-          if (calcId == 'premium') endPrice = 75000;
-
-          output.value = slider.value;
-          slider.value = output.value;
-
-          slider.oninput = function () {
-            output.value = this.value;
-            price.innerHTML = slider.value * endPrice;
-          }
-
-          output.oninput = function () {
-            slider.value = this.value;
-            price.innerHTML = slider.value * endPrice;
-          };
+          calculator(calcId);
         });
       });
     })();
+
+    // calculator
+    function calculator(calcId) {
+      let price = document.getElementById("pre-price");
+      let slider = document.getElementById("range");
+      let output = document.getElementById("calc");
+
+      if (calcId == 'econom') var endPrice = 45000;
+      if (calcId == 'basic') var endPrice = 50000;
+      if (calcId == 'standart') var endPrice = 60000;
+      if (calcId == 'premium') var endPrice = 75000;
+
+      output.value = slider.value;
+      slider.value = output.value;
+
+      slider.oninput = function () {
+        output.value = this.value;
+        let priceValue = slider.value * endPrice;
+
+        function space(priceValue) {
+          var point = "";
+          var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
+
+          x = x.split("").reverse().join("")
+            .replace(/(\d{3})/g, "$1 ")
+            .split("").reverse().join("");
+          return x + point;
+        }
+
+        price.innerHTML = space(priceValue);
+      }
+
+      output.oninput = function () {
+        slider.value = this.value;
+        price.innerHTML = slider.value * endPrice;
+      };
+    };
+
+    calculator('econom');
 
     // faq accardion
     (function () {
