@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --white: #FFFFFF;
   --black: #2E2D2D;
@@ -239,6 +240,10 @@ p {
   height: 50px;
   padding: 0 24px;
   color: var(--white, #fff);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
   border-radius: 8px;
   background: var(--green, #179860);
   cursor: pointer;
@@ -264,6 +269,10 @@ p {
   height: 50px;
   padding: 0 24px;
   color: var(--black, #2E2D2D);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
   border-radius: 8px;
   background: var(--white, #fff);
   cursor: pointer;
@@ -288,6 +297,10 @@ p {
   height: 50px;
   padding: 0 24px;
   color: var(--black, #2E2D2D);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
   border-radius: 8px;
   background: var(--bg, #F9F9F9);
   cursor: pointer;
@@ -847,10 +860,10 @@ p {
 }
 
 .case__head {
-  margin-bottom: 30px;
-}
-.case__title {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 .case__suptitle {
   color: var(--grey, #A7A7A7);
@@ -1015,16 +1028,15 @@ p {
   z-index: 1;
 }
 .calculation__inner {
+  display: flex;
+  flex-direction: column;
   padding-top: 100px;
 }
 .calculation__head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: -210px;
-}
-.calculation__title {
-  margin-bottom: 10px;
-}
-.calculation__suptitle {
-  margin-bottom: 40px;
 }
 .calculation__img {
   width: 50%;
@@ -1181,6 +1193,9 @@ p {
 }
 .calculation__banner-item .small {
   color: var(--grey, #A7A7A7);
+}
+.calculation__banner-price::after {
+  content: " ₽";
 }
 
 .banner__inner {
@@ -1448,6 +1463,9 @@ p {
 }
 .discount__input::placeholder {
   color: var(--grey, #A7A7A7);
+}
+.discount__btn {
+  height: auto;
 }
 .discount__img {
   position: absolute;
@@ -1816,7 +1834,7 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 30px;
+  padding: 20px 30px;
   background: var(--bg, #F9F9F9);
   transition: all 0.2s ease-out;
 }
@@ -1836,7 +1854,7 @@ p {
   pointer-events: none;
 }
 .faq__item-text {
-  padding: 30px 60px 30px;
+  padding: 30px 60px 30px 30px;
 }
 .faq__item.faq__item-active .faq__item-head {
   background: var(--brown, #857067);
@@ -3273,7 +3291,7 @@ p {
     margin-bottom: 20px;
   }
   .header {
-    margin: 20px 0 30px;
+    margin: 20px 0 40px;
   }
   .head__social {
     display: none;
