@@ -127,6 +127,10 @@ body {
   background: var(--white, #fff);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -475,6 +479,9 @@ p {
   display: flex;
   justify-content: space-between;
 }
+.head__inner.active {
+  justify-content: flex-end;
+}
 .head__logo {
   display: flex;
   align-items: center;
@@ -574,15 +581,20 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 .menu__item {
   position: relative;
+}
+.menu__item:nth-last-child(2) {
+  width: 100%;
 }
 .menu__link {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--black, #2E2D2D);
+  white-space: nowrap;
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -644,9 +656,11 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 100%;
 }
 .menu__search-input {
   background: transparent;
+  width: 100%;
 }
 .menu__search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -657,6 +671,11 @@ p {
   gap: 8px;
   color: var(--black, #2E2D2D);
 }
+.menu.active {
+  top: 0;
+  transform: translateY(0%);
+  transition: transform 0.2s ease-out;
+}
 
 .burger {
   display: none;
@@ -666,6 +685,7 @@ p {
   padding: 0 20px;
   border-radius: 10px;
   background: var(--bg, #F9F9F9);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .burger h6 {
   color: var(--black, #2E2D2D);
@@ -697,6 +717,49 @@ p {
   position: absolute;
   top: 4px;
   left: 0;
+}
+.burger.active {
+  position: absolute;
+  top: 40px;
+  z-index: 1001;
+  background: transparent;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+}
+.burger.active h6 {
+  display: none;
+}
+.burger.active span {
+  width: 100%;
+  background: transparent;
+}
+.burger.active span::before {
+  transform: rotate(45deg);
+  top: 0;
+  width: 18px;
+  background: var(--grey, #A7A7A7);
+}
+.burger.active span::after {
+  transform: rotate(-45deg);
+  top: 0;
+  width: 18px;
+  background: var(--grey, #A7A7A7);
+}
+
+.bottombar {
+  display: none;
+  margin: 10px 0;
+}
+.bottombar__inner {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottombar button {
+  width: 100%;
 }
 
 .footer {
@@ -2850,6 +2913,60 @@ p {
     display: flex;
   }
   .menu {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--white, #fff);
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-out;
+  }
+  .menu__inner {
+    background: var(--white, #fff);
+    padding: 40px 0;
+  }
+  .menu__list {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .menu__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu__item:nth-child(2) {
+    order: 8;
+  }
+  .menu__item:nth-child(2) .menu__link {
+    color: var(--green, #179860);
+  }
+  .menu__item:nth-child(4) {
+    order: 7;
+  }
+  .menu__item:nth-child(4) .menu__link {
+    color: var(--green, #179860);
+  }
+  .menu__item:nth-last-child(2) {
+    display: none;
+  }
+  .menu__item:last-child {
+    width: 40%;
+    margin-left: auto;
+  }
+  .menu__items {
+    display: flex;
+    position: relative;
+    top: unset;
+    left: unset;
+    gap: 10px;
+    background: var(--white, #fff);
+  }
+  .menu__items-item {
+    padding: 0;
+  }
+  .menu__arrow {
     display: none;
   }
   .hero__inner {
@@ -2860,6 +2977,14 @@ p {
     margin-right: -18px;
     width: calc(100% + 36px);
     border-radius: 0;
+  }
+  .menu__list::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #D9D9D9;
+    order: 6;
   }
   .hero__content {
     background: var(--white, #fff);
@@ -3299,6 +3424,9 @@ p {
   .topbar {
     display: none;
   }
+  .menu.active .menu__item:last-child {
+    width: 30%;
+  }
   .calculation__body {
     flex-direction: column;
     gap: 10px;
@@ -3510,21 +3638,129 @@ p {
   }
 }
 @media (max-width: 600px) {
+  .head {
+    position: relative;
+    z-index: 1002;
+    background: var(--white, #fff);
+    padding-top: 20px;
+  }
   .head__info-item:last-child {
     display: none;
+  }
+  .head__inner.active {
+    justify-content: space-between;
+  }
+  .menu {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .menu.active {
+    max-height: 100%;
+    height: 100%;
+  }
+  .menu__inner {
+    padding: 20px 0;
+    border-top: 1px solid #EFEFEF;
+    border-radius: 0;
+  }
+  .menu__list {
+    flex-direction: column;
+  }
+  .menu__list::before {
+    display: none;
+  }
+  .menu.active .menu__item:last-child {
+    width: 100%;
+  }
+  .menu__item:last-child {
+    margin: 0;
+    order: 7;
+  }
+  .menu__item:nth-child(4) {
+    order: 4;
+  }
+  .menu__item:nth-child(4) .menu__link {
+    color: inherit;
+  }
+  .menu__item:nth-child(2) {
+    order: 5;
+  }
+  .menu__item:nth-child(2) .menu__link {
+    color: inherit;
+  }
+  .menu__item:nth-child(6) {
+    order: 6;
+  }
+  .menu__items {
+    max-height: 0;
+    overflow: hidden;
+  }
+  .menu__item {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EFEFEF;
+  }
+  .menu__link {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
   }
   .burger {
     order: 1;
     gap: 0;
     padding: 0 14px;
   }
+  .burger.active span,
   .burger span,
   .burger span::before,
   .burger span::after {
     width: 12px;
+    transition: all 0.2s ease-out;
+  }
+  .burger.active span::before,
+  .burger.active span::after {
+    width: 14px;
+    background: var(--green, #179860);
+    transition: all 0.2s ease-out;
   }
   .burger h6 {
     font-size: 0;
+  }
+  .burger.active {
+    position: relative;
+    top: unset;
+    padding: 0 14px;
+    background: var(--bg, #F9F9F9);
+    width: auto;
+    height: auto;
+  }
+  .header.active {
+    overflow: scroll;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+  }
+  .header.active .topbar {
+    display: block;
+    order: 4;
+  }
+  .topbar__inner {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  .topbar__item {
+    flex-direction: column;
+  }
+  .header.active .bottombar {
+    display: block;
+  }
+  .header.active .bottombar .head__social {
+    display: flex;
+    width: fit-content;
+  }
+  .header.active .bottombar .head__info-item:last-child {
+    display: flex;
   }
   .hero__inner {
     padding: 0 30px;
