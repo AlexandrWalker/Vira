@@ -1,8 +1,11 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   margin-bottom: 40px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .topbar {
@@ -194,7 +197,7 @@
 
       color: var(--green, #179860);
 
-      +.menu__items {
+      &+.menu__items {
         display: flex;
       }
 
@@ -359,6 +362,7 @@
 .bottombar {
   display: none;
   margin: 10px 0;
+  position: relative;
 
   &__inner {
     display: flex;
@@ -366,9 +370,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    padding-top: 90px;
   }
 
   button {
     width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
   }
 }

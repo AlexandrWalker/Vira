@@ -20,13 +20,24 @@
     (function () {
       var burgerBtn = document.getElementById('burger');
       var menu = document.getElementById('menu');
+      var header = document.getElementById('header');
 
       burgerBtn.addEventListener('click', function (e) {
         burgerBtn.classList.toggle('active');
         burgerBtn.parentNode.classList.toggle('active');
         menu.classList.toggle('active');
         menu.parentNode.classList.toggle('active');
+        header.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
+      });
+    })();
+
+    // Projects-info
+    (function () {
+      var projectsInfo = document.getElementById('projects-info');
+
+      projectsInfo.addEventListener('click', function (e) {
+        projectsInfo.parentNode.classList.toggle('show');
       });
     })();
 
@@ -38,7 +49,15 @@
       arrows: true,
       centerMode: true,
       prevArrow: false,
-      nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+      nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+          }
+        }
+      ]
     });
 
     // case slide margin
@@ -96,7 +115,8 @@
           breakpoint: 660,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows: false
           }
         },
         {
@@ -116,7 +136,15 @@
       slidesToScroll: 1,
       arrows: true,
       prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
     });
 
     // calculater tab

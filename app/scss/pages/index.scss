@@ -23,7 +23,6 @@
 }
 
 .case {
-  &__inner {}
 
   &__head {
     display: flex;
@@ -70,6 +69,7 @@
     }
 
     .slick-list {
+      padding: 0 !important;
       overflow: visible;
 
       &:active~.slick-arrow {
@@ -85,7 +85,7 @@
 
     .slick-arrow {
       position: absolute;
-      right: -20px;
+      right: -70px;
       top: calc(50% - 30px);
       transform: translateY(-50%);
       width: 70px;
@@ -112,14 +112,20 @@
   }
 
   &__item {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 68.15% auto;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
+  }
+
+  &__btn {
+    padding: 0 20px;
   }
 
   &__cover {
     position: relative;
+    max-width: 1070px;
     width: 100%;
 
     &-img {
@@ -171,7 +177,7 @@
     flex-direction: column;
     gap: 30px;
     padding: 50px 0;
-    width: 30.61%;
+    max-width: 450px;
   }
 
   &__item-head {
@@ -434,28 +440,53 @@
     align-items: center;
     width: 100%;
     color: var(--white, #fff);
-    padding: 0 0 0 60px;
     border-radius: 30px;
     background-color: var(--green, #03844C);
-    background-position: center right;
-    background-size: cover;
     overflow: hidden;
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 60px;
 
-    &:last-child {
-      gap: 20px;
-      padding: 60px 60px 60px 124px;
+    &:nth-child(2) {
+      align-items: flex-end;
+      width: 35%;
+      padding: 60px;
       position: relative;
+      background: var(--brown, #857067);
     }
+  }
 
-    &-btn {
-      width: 100%;
-    }
+  &__suptitle,
+  &__title {
+    z-index: 2;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+    height: 100%;
   }
 
   &__img {
@@ -489,23 +520,18 @@
     &:last-child {
       margin-bottom: 0;
 
-      .advantages__cover {
-        margin: 0 -375px 0 0;
+      .advantages__img {
+        margin: 0 calc((100% - 700px) - 845px) 0 0;
       }
     }
   }
 
-  &__cover {
-    margin: 0 0 0 -375px;
-    width: auto;
-    height: 600px;
-  }
-
   &__img {
-    width: 100%;
-    height: 100%;
+    width: 845px;
+    height: auto;
     object-fit: cover;
     border-radius: 30px;
+    margin: 0 0 0 calc((100% - 700px) - 845px);
   }
 
   &__list {
@@ -527,7 +553,7 @@
       object-fit: cover;
     }
 
-    &__body {
+    &-body {
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -744,9 +770,7 @@
     }
   }
 
-  &__btn {
-    height: auto;
-  }
+  &__btn {}
 
   &__img {
     position: absolute;
@@ -806,12 +830,10 @@
 
   &__item {
     position: relative;
-    height: 500px;
+    border-radius: 30px 30px 30px 0;
+    overflow: hidden;
 
     &-img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -821,7 +843,33 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      z-index: 2;
       max-width: 470px;
+      background: var(--white, #fff);
+      padding: 30px 30px 0 0;
+      border-radius: 0 30px 0 0;
+
+      &::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+        position: absolute;
+        top: -30px;
+        left: 0;
+        z-index: 2;
+      }
+
+      &::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+        position: absolute;
+        bottom: 0;
+        right: -30px;
+        z-index: 2;
+      }
     }
 
     &-name {
@@ -849,6 +897,13 @@
     &-list {
       display: flex;
       gap: 30px;
+
+      &.show .projects__options-item {
+        display: flex;
+        width: 34.4%;
+      }
+
+      &.show .projects__options-info {}
     }
 
     &-item {
@@ -862,6 +917,11 @@
       width: 20px;
       height: 20px;
       object-fit: cover;
+    }
+
+    &-info {
+      display: none;
+      cursor: pointer;
     }
   }
 }
