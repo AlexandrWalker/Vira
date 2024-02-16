@@ -262,8 +262,8 @@
 </svg>
 <main class="main">
   <div class="hero block">
-    <div class="container-fluid">
-      <div class="hero__inner" style="background-image: url(images/hero.png)">
+    <div class="container-fluid" style="background-image: url(images/hero.png)">
+      <div class="hero__inner">
         <div class="hero__content">
           <h1 class="hero__title">
             <span class="colored-text">Экологичные каркасные дома</span> от 48 дней с гарантией по договору
@@ -1043,9 +1043,10 @@
                     <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
                     <p>2 санузла</p>
                   </li>
-                  <li class="projects__options-item projects__options-info" id="projects-info">
+                  <li class="projects__options-item projects__options-info">
                     <img class="projects__options-img" src="../images/info.svg" alt="info">
                     <p>Инфо</p>
+                    <span></span>
                   </li>
                 </ul>
               </div>
@@ -1089,6 +1090,11 @@
                     <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
                     <p>2 санузла</p>
                   </li>
+                  <li class="projects__options-item projects__options-info">
+                    <img class="projects__options-img" src="../images/info.svg" alt="info">
+                    <p>Инфо</p>
+                    <span></span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1130,6 +1136,11 @@
                   <li class="projects__options-item">
                     <img class="projects__options-img" src="images/сортиры.svg" alt="wc">
                     <p>2 санузла</p>
+                  </li>
+                  <li class="projects__options-item projects__options-info">
+                    <img class="projects__options-img" src="../images/info.svg" alt="info">
+                    <p>Инфо</p>
+                    <span></span>
                   </li>
                 </ul>
               </div>
@@ -1144,34 +1155,43 @@
     <img class="decor" src="images/decor-top-light.png" alt="">
     <div class="container">
       <div class="payment__inner">
-        <h2 class="payment__title">Варианты оплаты</h2>
-        <h5 class="payment__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество
-          современных
-          и удобных способов.</h5>
-
-        <ul class="payment__list">
-          <li class="payment__item">
-            <img src="images/payment1.svg" alt="payment" class="payment__item-img">
-            <p class="payment__item-title">Поэтапная оплата</p>
-            <p class="payment__item-text">Мы предлагаем поэтапную оплату для вашего удобства</p>
-          </li>
-          <li class="payment__item">
-            <img src="images/payment2.svg" alt="payment" class="payment__item-img">
-            <p class="payment__item-title">Сотрудничество с банком</p>
-            <p class="payment__item-text">Для физических лиц доступен банковский перевод по реквизитам</p>
-          </li>
-          <li class="payment__item">
-            <img src="images/payment3.svg" alt="payment" class="payment__item-img">
-            <p class="payment__item-title">Дом в ипотеку</p>
-            <p class="payment__item-text">Начните строительство собственного дома, не дожидаясь необходимого объема
-              накоплений</p>
-          </li>
-          <li class="payment__item">
-            <img src="images/payment4.svg" alt="payment" class="payment__item-img">
-            <p class="payment__item-title">Материнский капитал</p>
-            <p class="payment__item-text">Владельцы маткапитала имеют право тратить его на строительство дома</p>
-          </li>
-        </ul>
+        <div class="payment__head">
+          <h2 class="payment__title">Варианты оплаты</h2>
+          <h5 class="payment__suptitle">Совершать оплаты за свой дом легко и просто мы предоставляем множество
+            современных
+            и удобных способов.</h5>
+        </div>
+        <div class="payment__slider">
+          <div class="payment__slider-item">
+            <div class="payment__item">
+              <img src="images/payment1.svg" alt="payment" class="payment__item-img">
+              <p class="payment__item-title">Поэтапная оплата</p>
+              <p class="payment__item-text">Мы предлагаем поэтапную оплату для вашего удобства</p>
+            </div>
+          </div>
+          <div class="payment__slider-item">
+            <div class="payment__item">
+              <img src="images/payment2.svg" alt="payment" class="payment__item-img">
+              <p class="payment__item-title">Сотрудничество с банком</p>
+              <p class="payment__item-text">Для физических лиц доступен банковский перевод по реквизитам</p>
+            </div>
+          </div>
+          <div class="payment__slider-item">
+            <div class="payment__item">
+              <img src="images/payment3.svg" alt="payment" class="payment__item-img">
+              <p class="payment__item-title">Дом в ипотеку</p>
+              <p class="payment__item-text">Начните строительство собственного дома, не дожидаясь необходимого объема
+                накоплений</p>
+            </div>
+          </div>
+          <div class="payment__slider-item">
+            <div class="payment__item">
+              <img src="images/payment4.svg" alt="payment" class="payment__item-img">
+              <p class="payment__item-title">Материнский капитал</p>
+              <p class="payment__item-text">Владельцы маткапитала имеют право тратить его на строительство дома</p>
+            </div>
+          </div>
+        </div>
 
         <button class="btn-white">Условия оплаты подробнее</button>
       </div>

@@ -34,10 +34,10 @@
 
     // Projects-info
     (function () {
-      var projectsInfo = document.getElementById('projects-info');
-
-      projectsInfo.addEventListener('click', function (e) {
-        projectsInfo.parentNode.classList.toggle('show');
+      document.querySelectorAll('.projects__options-info').forEach((element) => {
+        element.addEventListener('click', () => {
+          element.parentNode.classList.toggle('show');
+        });
       });
     })();
 
@@ -141,7 +141,42 @@
         {
           breakpoint: 769,
           settings: {
-            arrows: false
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    // payment slider
+    $('.payment__slider').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 3.2,
+            slidesToScroll: 1,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true
           }
         }
       ]

@@ -363,3 +363,21 @@ p {
     }
   }
 }
+
+.slick-dots {
+  display: flex;
+  gap: 6px;
+
+  button {
+    width: 67.2px;
+    height: 12px;
+    border-radius: 5px;
+    font-size: 0;
+    line-height: 0;
+    background: #e5e5e5;
+  }
+
+  .slick-active button {
+    background: var(--black, #2E2D2D);
+  }
+}
