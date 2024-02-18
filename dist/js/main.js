@@ -249,6 +249,40 @@
 
     calculator('econom');
 
+    // blog slider
+    $('.blog__slider').slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      swipe: false,
+      speed: 0,
+      asNavFor: '.blog__list',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            dots: true,
+            swipe: true,
+            fade: true,
+            speed: 300
+          }
+        }
+      ]
+    });
+
+    $('.blog__list').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true,
+      asNavFor: '.blog__slider',
+    });
+
     // faq accardion
     (function () {
       var faqItem = document.querySelectorAll('.faq__item'),

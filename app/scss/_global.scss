@@ -23,6 +23,8 @@ body {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   flex: 1 0 auto;
 }
 
@@ -367,9 +369,17 @@ p {
 .slick-dots {
   display: flex;
   gap: 6px;
+  font-size: 8px;
+  line-height: 8px;
+  height: 12px;
+
+  li {
+    width: 100%;
+  }
 
   button {
-    width: 67.2px;
+    width: 100%;
+    min-width: 67.2px;
     height: 12px;
     border-radius: 5px;
     font-size: 0;
