@@ -1,17 +1,27 @@
 .hero {
 
-  .container-fluid {
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .container {
+    position: relative;
+  }
+
+  &__bg {
+    display: block;
+    width: 100%;
+    height: 570px;
     border-radius: 30px;
+    overflow: hidden;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__inner {
-    padding: 0 60px;
-    width: 100%;
-    height: auto;
-    min-height: 570px;
+    max-width: 1350px;
+    width: 1350px;
+    margin: 0 -75px;
   }
 
   &__content {
@@ -22,7 +32,9 @@
     max-width: 630px;
     padding: 0 30px 30px;
     border-radius: 0 0 30px 30px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: -15px;
 
     &::before {
       content: "";
@@ -353,11 +365,15 @@
     &-item {
       display: flex;
       justify-content: space-between;
+      gap: 10px;
       color: var(--grey, #A7A7A7);
+
+      h6 {}
     }
 
     &-value {
       color: var(--white, #fff);
+      text-align: right;
     }
   }
 
@@ -629,8 +645,21 @@
       }
     }
 
-    &-item:last-child .stages__item-line {
-      display: none;
+    &-item {
+      &:last-child .stages__item-line {
+        display: none;
+      }
+
+      &.slick-current .stages__item-title {
+        color: var(--green, #03844C);
+        transition: all 0.2s ease-out;
+      }
+
+      &.slick-current .stages__item::before {
+        border-color: var(--white, #fff);
+        background: var(--brown, #857067);
+        transition: all 0.2s ease-out;
+      }
     }
   }
 
@@ -639,17 +668,6 @@
     flex-direction: column;
     position: relative;
     width: calc(100% - 30px);
-
-    &:hover .stages__item-title {
-      color: var(--green, #03844C);
-      transition: all 0.2s ease-out;
-    }
-
-    &:hover::before {
-      border-color: var(--white, #fff);
-      background: var(--brown, #857067);
-      transition: all 0.2s ease-out;
-    }
 
     &::before {
       content: "";
@@ -1106,11 +1124,15 @@
   &__img {
     max-width: 970px;
     width: 83%;
-    height: auto;
-    object-fit: cover;
     position: absolute;
     top: 0;
     right: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
   }
 
   &__rec {

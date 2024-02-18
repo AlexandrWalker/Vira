@@ -41,42 +41,12 @@
       });
     })();
 
-    // case slider
-    $('.case__slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      centerMode: true,
-      prevArrow: false,
-      nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-          }
-        }
-      ]
-    });
-
-    // case slide margin
-    $(document).ready(function () {
-      var slider = $('.case__slider');
-
-      slider.slick();
-
-      slider.find('.slick-slide').css('margin', '0 100px 0 0');
-
-      slider.slick('setPosition');
-    });
-
     // case tab
     (function () {
-      const case__tab1 = document.getElementById("case__tab1");
-      const case__tab2 = document.getElementById("case__tab2");
-      const case__slider1 = document.getElementById("case__slider1");
-      const case__slider2 = document.getElementById("case__slider2");
+      var case__tab1 = document.getElementById("case__tab1"),
+        case__tab2 = document.getElementById("case__tab2"),
+        case__slider1 = document.getElementById("case__slider1"),
+        case__slider2 = document.getElementById("case__slider2");
 
       case__tab1.addEventListener("click", function () {
         case__tab1.classList.add("active");
@@ -94,93 +64,6 @@
         case__slider2.classList.add("active");
       });
     })();
-
-    // stages slider
-    $('.stages__slider').slick({
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 900,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 660,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1.5,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
-    // projects slider
-    $('.projects__slider').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
-    });
-
-    // payment slider
-    $('.payment__slider').slick({
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 850,
-          settings: {
-            slidesToShow: 3.2,
-            slidesToScroll: 1,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 660,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            dots: true
-          }
-        }
-      ]
-    });
 
     // calculater tab
     (function () {
@@ -249,40 +132,6 @@
 
     calculator('econom');
 
-    // blog slider
-    $('.blog__slider').slick({
-      arrows: false,
-      dots: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: false,
-      swipe: false,
-      speed: 0,
-      asNavFor: '.blog__list',
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            dots: true,
-            swipe: true,
-            fade: true,
-            speed: 300
-          }
-        }
-      ]
-    });
-
-    $('.blog__list').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: false,
-      centerMode: true,
-      focusOnSelect: true,
-      asNavFor: '.blog__slider',
-    });
-
     // faq accardion
     (function () {
       var faqItem = document.querySelectorAll('.faq__item'),
@@ -297,35 +146,6 @@
         });
       });
     })();
-
-    // command slider
-    $('.command__slider').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
-    });
-
-    // services slider
-    $('.services__items').slick({
-      responsive: [
-        {
-          breakpoint: 9999,
-          settings: "unslick"
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1.15,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
-        }
-      ]
-    });
 
     // filter dropdown
     (function () {
@@ -365,5 +185,198 @@
       });
     })();
 
+    // case slider
+    $('.case__slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      centerMode: true,
+      prevArrow: false,
+      nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+          }
+        }
+      ]
+    });
+
+    // case slide margin
+    $(document).ready(function () {
+      var slider = $('.case__slider');
+
+      slider.slick();
+
+      slider.find('.slick-slide').css('margin', '0 100px 0 0');
+
+      slider.slick('setPosition');
+    });
+
+    // stages slider
+    $('.stages__slider').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      draggable: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      asNavFor: '.stages__content',
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1,
+            arrows: false
+          }
+        }
+      ]
+    });
+
+    $('.stages__content').slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      swipe: false,
+      fade: true,
+      asNavFor: '.stages__slider',
+    });
+
+    // projects slider
+    $('.projects__slider').slick({
+      infinite: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    // payment slider
+    $('.payment__slider').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 3.2,
+            slidesToScroll: 1,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    // blog slider
+    $('.blog__slider').slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      swipe: false,
+      speed: 0,
+      asNavFor: '.blog__list',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            dots: true,
+            swipe: true,
+            fade: true,
+            speed: 300
+          }
+        }
+      ]
+    });
+    $('.blog__list').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true,
+      asNavFor: '.blog__slider',
+    });
+
+    // command slider
+    $('.command__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+    });
+
+    // services slider
+    $('.services__items').slick({
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 1.15,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
   });
 })();
