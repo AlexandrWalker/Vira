@@ -80,8 +80,8 @@
       asNavFor: '.stages__slider',
     });
 
-    // projects slider
-    $('.projects__slider').slick({
+    // built slider
+    $('.built__slider').slick({
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -93,7 +93,8 @@
           breakpoint: 769,
           settings: {
             arrows: false,
-            dots: true
+            dots: true,
+            centerMode: false,
           }
         }
       ]
@@ -226,9 +227,9 @@
       });
     })();
 
-    // Projects-info
+    // built-info
     (function () {
-      document.querySelectorAll('.projects__options-info').forEach((element) => {
+      document.querySelectorAll('.built__options-info').forEach((element) => {
         element.addEventListener('click', () => {
           element.parentNode.classList.toggle('show');
         });
@@ -304,9 +305,9 @@
 
     // filter dropdown
     (function () {
-      document.querySelectorAll('.filter__btn').forEach((el) => {
+      document.querySelectorAll('.filter__item-btn').forEach((el) => {
         el.addEventListener('click', () => {
-          el.classList.toggle('filter__btn-active');
+          el.classList.toggle('filter__item-btn--active');
           el.parentNode.classList.toggle('filter__item-active');
 
           let parentElement = el.parentNode;
@@ -323,7 +324,7 @@
 
               el.setAttribute('data-value', dataValue);
 
-              el.classList.remove('filter__btn-active');
+              el.classList.remove('filter__item-btn--active');
               el.parentNode.classList.remove("filter__item-active");
             });
           });
@@ -334,11 +335,45 @@
         });
         document.body.addEventListener('click', event => {
           if (event._isClickWithInMenu) return;
-          el.classList.remove('filter__btn-active');
+          el.classList.remove('filter__item-btn--active');
           el.parentNode.classList.remove("filter__item-active");
         });
       });
     })();
+
+    var filterBtn = document.getElementById('filterBtn'),
+      sidebar = document.getElementById('sidebar'),
+      sidebarClose = document.getElementById('sidebarClose');
+
+    filterBtn.onclick = filterOpen;
+    sidebarClose.onclick = filterClose;
+
+    function filterOpen() {
+      sidebar.classList.add('show');
+      document.body.classList.add('no-scroll');
+    };
+
+    function filterClose() {
+      sidebar.classList.remove('show');
+      document.body.classList.remove('no-scroll');
+    };
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === "Escape") {
+        filterClose();
+      }
+    });
+
+    document.getElementById("sidebar").addEventListener('click', event => {
+      event._isClickWithInMenu = true;
+    });
+    document.getElementById("filterBtn").addEventListener('click', event => {
+      event._isClickWithInMenu = true;
+    });
+    document.body.addEventListener('click', event => {
+      if (event._isClickWithInMenu) return;
+      filterClose();
+    });
 
     // calculator
     function calculator(calcId) {
