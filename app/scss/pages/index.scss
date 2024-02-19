@@ -729,7 +729,7 @@
     }
   }
 
-  .foundation {
+  &__block {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -747,20 +747,20 @@
       border-top: 20px solid var(--black, #2E2D2D);
     }
 
-    &__item {
+    &-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 180px;
     }
 
-    &__text {
+    &-text {
       color: var(--grey, #A7A7A7);
     }
 
-    &__img {
-      width: auto;
-      height: 240px;
+    &-img {
+      width: 100%;
+      height: auto;
       object-fit: cover;
       border-radius: 30px;
     }

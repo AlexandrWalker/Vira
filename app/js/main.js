@@ -1,190 +1,6 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
-    // Menu
-    (function () {
-      var menuLink = document.querySelectorAll('.menu__dropdown'),
-        active = document.getElementsByClassName('menu-active');
-
-      Array.from(menuLink).forEach(function (item, i, menuLink) {
-        item.addEventListener('click', function (e) {
-          if (active.length > 0 && active[0] !== this)
-            active[0].classList.remove('menu-active');
-
-          this.classList.toggle('menu-active');
-        });
-      });
-    })();
-
-    // Burger
-    (function () {
-      var burgerBtn = document.getElementById('burger');
-      var menu = document.getElementById('menu');
-      var header = document.getElementById('header');
-
-      burgerBtn.addEventListener('click', function (e) {
-        burgerBtn.classList.toggle('active');
-        burgerBtn.parentNode.classList.toggle('active');
-        menu.classList.toggle('active');
-        menu.parentNode.classList.toggle('active');
-        header.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-      });
-    })();
-
-    // Projects-info
-    (function () {
-      document.querySelectorAll('.projects__options-info').forEach((element) => {
-        element.addEventListener('click', () => {
-          element.parentNode.classList.toggle('show');
-        });
-      });
-    })();
-
-    // case tab
-    (function () {
-      var case__tab1 = document.getElementById("case__tab1"),
-        case__tab2 = document.getElementById("case__tab2"),
-        case__slider1 = document.getElementById("case__slider1"),
-        case__slider2 = document.getElementById("case__slider2");
-
-      case__tab1.addEventListener("click", function () {
-        case__tab1.classList.add("active");
-        case__tab2.classList.remove("active");
-
-        case__slider1.classList.add("active");
-        case__slider2.classList.remove("active");
-      });
-
-      case__tab2.addEventListener("click", function () {
-        case__tab1.classList.remove("active");
-        case__tab2.classList.add("active");
-
-        case__slider1.classList.remove("active");
-        case__slider2.classList.add("active");
-      });
-    })();
-
-    // calculater tab
-    (function () {
-      var calсTab = document.querySelectorAll('.calculation__tab-item'),
-        calcItem = document.querySelectorAll('.calculation__content-item'),
-        calcShow = document.getElementsByClassName('calculation__show'),
-        show = document.getElementsByClassName('show');
-
-      Array.from(calсTab).forEach(function (item, i, calсTab) {
-
-        item.addEventListener('click', function (e) {
-          if (show.length > 0 && show[0] !== this)
-            show[0].classList.remove('show');
-
-          this.classList.add('show');
-
-          Array.from(calcItem).forEach(function (item, i, calcItem) {
-            if (calcShow.length > 0 && calcShow[0] !== this)
-              calcShow[0].classList.remove('calculation__show');
-          });
-
-          let calcId = this.getAttribute('data-id');
-          document.getElementById(calcId).classList.add('calculation__show');
-
-          calculator(calcId);
-        });
-      });
-    })();
-
-    // calculator
-    function calculator(calcId) {
-      let price = document.getElementById("pre-price");
-      let slider = document.getElementById("range");
-      let output = document.getElementById("calc");
-
-      if (calcId == 'econom') var endPrice = 45000;
-      if (calcId == 'basic') var endPrice = 50000;
-      if (calcId == 'standart') var endPrice = 60000;
-      if (calcId == 'premium') var endPrice = 75000;
-
-      output.value = slider.value;
-      slider.value = output.value;
-
-      slider.oninput = function () {
-        output.value = this.value;
-        let priceValue = slider.value * endPrice;
-
-        function space(priceValue) {
-          var point = "";
-          var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
-
-          x = x.split("").reverse().join("")
-            .replace(/(\d{3})/g, "$1 ")
-            .split("").reverse().join("");
-          return x + point;
-        }
-
-        price.innerHTML = space(priceValue);
-      }
-
-      output.oninput = function () {
-        slider.value = this.value;
-        price.innerHTML = slider.value * endPrice;
-      };
-    };
-
-    calculator('econom');
-
-    // faq accardion
-    (function () {
-      var faqItem = document.querySelectorAll('.faq__item'),
-        active = document.getElementsByClassName('faq__item-active');
-
-      Array.from(faqItem).forEach(function (item, i, faqItem) {
-        item.addEventListener('click', function (e) {
-          if (active.length > 0 && active[0] !== this)
-            active[0].classList.remove('faq__item-active');
-
-          this.classList.toggle('faq__item-active');
-        });
-      });
-    })();
-
-    // filter dropdown
-    (function () {
-      document.querySelectorAll('.filter__btn').forEach((el) => {
-        el.addEventListener('click', () => {
-          el.classList.toggle('filter__btn-active');
-          el.parentNode.classList.toggle('filter__item-active');
-
-          let parentElement = el.parentNode;
-
-          parentElement.querySelectorAll('.filter__list-link').forEach((elem) => {
-            elem.addEventListener('click', () => {
-              let dataValue = elem.getAttribute('data-value');
-
-              if (isNaN(dataValue)) {
-                el.innerHTML = dataValue;
-              } else {
-                el.innerHTML = "Показать: " + dataValue;
-              }
-
-              el.setAttribute('data-value', dataValue);
-
-              el.classList.remove('filter__btn-active');
-              el.parentNode.classList.remove("filter__item-active");
-            });
-          });
-        });
-
-        el.addEventListener('click', event => {
-          event._isClickWithInMenu = true;
-        });
-        document.body.addEventListener('click', event => {
-          if (event._isClickWithInMenu) return;
-          el.classList.remove('filter__btn-active');
-          el.parentNode.classList.remove("filter__item-active");
-        });
-      });
-    })();
-
     // case slider
     $('.case__slider').slick({
       infinite: true,
@@ -378,5 +194,190 @@
         }
       ]
     });
+
+    // Menu
+    (function () {
+      var menuLink = document.querySelectorAll('.menu__dropdown'),
+        active = document.getElementsByClassName('menu-active');
+
+      Array.from(menuLink).forEach(function (item, i, menuLink) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+            active[0].classList.remove('menu-active');
+
+          this.classList.toggle('menu-active');
+        });
+      });
+    })();
+
+    // Burger
+    (function () {
+      var burgerBtn = document.getElementById('burger');
+      var menu = document.getElementById('menu');
+      var header = document.getElementById('header');
+
+      burgerBtn.addEventListener('click', function (e) {
+        burgerBtn.classList.toggle('active');
+        burgerBtn.parentNode.classList.toggle('active');
+        menu.classList.toggle('active');
+        menu.parentNode.classList.toggle('active');
+        header.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+      });
+    })();
+
+    // Projects-info
+    (function () {
+      document.querySelectorAll('.projects__options-info').forEach((element) => {
+        element.addEventListener('click', () => {
+          element.parentNode.classList.toggle('show');
+        });
+      });
+    })();
+
+    // case tab
+    $(function () {
+      var case__tab1 = document.getElementById("case__tab1"),
+        case__tab2 = document.getElementById("case__tab2"),
+        case__slider1 = document.getElementById("case__slider1"),
+        case__slider2 = document.getElementById("case__slider2");
+
+      case__tab1.addEventListener("click", function () {
+        case__tab1.classList.add("active");
+        case__tab2.classList.remove("active");
+
+        case__slider1.classList.add("active");
+        case__slider2.classList.remove("active");
+      });
+
+      case__tab2.addEventListener("click", function () {
+        case__tab1.classList.remove("active");
+        case__tab2.classList.add("active");
+
+        case__slider1.classList.remove("active");
+        case__slider2.classList.add("active");
+      });
+    });
+
+    // calculater tab
+    (function () {
+      var calсTab = document.querySelectorAll('.calculation__tab-item'),
+        calcItem = document.querySelectorAll('.calculation__content-item'),
+        calcShow = document.getElementsByClassName('calculation__show'),
+        show = document.getElementsByClassName('show');
+
+      Array.from(calсTab).forEach(function (item, i, calсTab) {
+
+        item.addEventListener('click', function (e) {
+          if (show.length > 0 && show[0] !== this)
+            show[0].classList.remove('show');
+
+          this.classList.add('show');
+
+          Array.from(calcItem).forEach(function (item, i, calcItem) {
+            if (calcShow.length > 0 && calcShow[0] !== this)
+              calcShow[0].classList.remove('calculation__show');
+          });
+
+          let calcId = this.getAttribute('data-id');
+          document.getElementById(calcId).classList.add('calculation__show');
+
+          calculator(calcId);
+        });
+      });
+    })();
+
+    // faq accardion
+    (function () {
+      var faqItem = document.querySelectorAll('.faq__item'),
+        active = document.getElementsByClassName('faq__item-active');
+
+      Array.from(faqItem).forEach(function (item, i, faqItem) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+            active[0].classList.remove('faq__item-active');
+
+          this.classList.toggle('faq__item-active');
+        });
+      });
+    })();
+
+    // filter dropdown
+    (function () {
+      document.querySelectorAll('.filter__btn').forEach((el) => {
+        el.addEventListener('click', () => {
+          el.classList.toggle('filter__btn-active');
+          el.parentNode.classList.toggle('filter__item-active');
+
+          let parentElement = el.parentNode;
+
+          parentElement.querySelectorAll('.filter__list-link').forEach((elem) => {
+            elem.addEventListener('click', () => {
+              let dataValue = elem.getAttribute('data-value');
+
+              if (isNaN(dataValue)) {
+                el.innerHTML = dataValue;
+              } else {
+                el.innerHTML = "Показать: " + dataValue;
+              }
+
+              el.setAttribute('data-value', dataValue);
+
+              el.classList.remove('filter__btn-active');
+              el.parentNode.classList.remove("filter__item-active");
+            });
+          });
+        });
+
+        el.addEventListener('click', event => {
+          event._isClickWithInMenu = true;
+        });
+        document.body.addEventListener('click', event => {
+          if (event._isClickWithInMenu) return;
+          el.classList.remove('filter__btn-active');
+          el.parentNode.classList.remove("filter__item-active");
+        });
+      });
+    })();
+
+    // calculator
+    function calculator(calcId) {
+      let price = document.getElementById("pre-price");
+      let slider = document.getElementById("range");
+      let output = document.getElementById("calc");
+
+      if (calcId == 'econom') var endPrice = 45000;
+      if (calcId == 'basic') var endPrice = 50000;
+      if (calcId == 'standart') var endPrice = 60000;
+      if (calcId == 'premium') var endPrice = 75000;
+
+      output.value = slider.value;
+      slider.value = output.value;
+
+      slider.oninput = function () {
+        output.value = this.value;
+        let priceValue = slider.value * endPrice;
+
+        function space(priceValue) {
+          var point = "";
+          var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
+
+          x = x.split("").reverse().join("")
+            .replace(/(\d{3})/g, "$1 ")
+            .split("").reverse().join("");
+          return x + point;
+        }
+
+        price.innerHTML = space(priceValue);
+      }
+
+      output.oninput = function () {
+        slider.value = this.value;
+        price.innerHTML = slider.value * endPrice;
+      };
+    };
+
+    calculator('econom');
+
   });
 })();
