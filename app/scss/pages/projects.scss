@@ -1,0 +1,235 @@
+.projects {
+
+  &__inner {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .projects__content {
+      transform: translateY(0);
+      transition: transform 0.2s ease-out;
+    }
+
+    &:hover .projects__content::before {
+      transform: translateY(0);
+      transition: transform 0.2s ease-out;
+    }
+
+    &:hover .projects__content::after {
+      transform: translateY(0);
+      transition: transform 0.2s ease-out;
+    }
+  }
+
+  &__img {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 30px 0;
+    border-radius: 30px 30px 0 0;
+    background: var(--white, #fff);
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    transform: translateY(80px);
+    transition: transform 0.2s ease-out;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle at left top, transparent 30px, var(--white, #fff) 30px);
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      z-index: 2;
+      transform: translateY(-80px);
+      transition: transform 0.2s ease-out;
+    }
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+      position: absolute;
+      bottom: 0;
+      right: -30px;
+      z-index: 2;
+      transform: translateY(-80px);
+      transition: transform 0.2s ease-out;
+    }
+
+    &-list {
+      display: flex;
+      gap: 30px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+    }
+
+    &-btns {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+.sidebar {
+  width: 270px;
+
+  &.show {
+    left: 0;
+
+    &::before {
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__head {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__close {
+    width: 14px;
+    height: 1.5px;
+    border-radius: 1.5px;
+    background: transparent;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      border-radius: 1.5px;
+      background: var(--green, #179860);
+      position: absolute;
+      top: -0;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      border-radius: 3px;
+      background: var(--green, #179860);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    background: var(--bg, #F9F9F9);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .banner__items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner__item:nth-child(2) {
+    width: 100%;
+    align-items: flex-start;
+    position: unset;
+  }
+
+  .banner__item {
+    padding: 30px 0 20px 30px;
+    width: 210px;
+  }
+
+  .banner__item:nth-child(2) {
+    padding: 20px 30px 30px 30px;
+  }
+
+  .banner__img {
+    width: 140px;
+    height: auto;
+    right: 0;
+    left: unset;
+    transform: translateX(50%);
+  }
+
+  .banner__content {
+    gap: 10px;
+  }
+
+  .banner__title {
+    font-size: 33px;
+    line-height: 130%;
+  }
+
+  .banner__text {
+    font-weight: 500;
+  }
+}

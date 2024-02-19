@@ -476,7 +476,7 @@
 
 .banner {
 
-  &__inner {
+  &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -513,8 +513,9 @@
   }
 
   &__suptitle,
-  &__title {
-    z-index: 2;
+  &__title,
+  &__text {
+    z-index: 4;
   }
 
   &__btn {
@@ -826,7 +827,7 @@
   }
 }
 
-.projects {
+.built {
 
   &__inner {
     display: flex;
@@ -942,12 +943,12 @@
       display: flex;
       gap: 30px;
 
-      &.show .projects__options-item {
+      &.show .built__options-item {
         display: flex;
         width: calc(50% - 5px);
       }
 
-      &.show .projects__options-info {
+      &.show .built__options-info {
         position: absolute;
         top: 12.5px;
         right: 10px;
@@ -955,15 +956,15 @@
         height: 15px;
       }
 
-      &.show .projects__options-info span {
+      &.show .built__options-info span {
         display: block;
       }
 
-      &.show .projects__options-info .projects__options-img {
+      &.show .built__options-info .built__options-img {
         display: none;
       }
 
-      &.show .projects__options-info p {
+      &.show .built__options-info p {
         display: none;
       }
     }

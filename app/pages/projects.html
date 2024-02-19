@@ -1,0 +1,534 @@
+<!--=include header.html-->
+<!--=include sprite.html-->
+<main class="main projects-page">
+  <div class="page__head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <svg class="breadcrumbs__arrow">
+              <use xlink:href="#breadcrumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Проекты</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="title">Проекты</h2>
+    </div>
+  </div>
+
+  <div class="projects block">
+    <div class="container">
+      <div class="projects__inner">
+
+        <div class="sidebar" id="sidebar">
+          <div class="sidebar__inner">
+            <form class="sidebar__form" action="#" method="post">
+              <div class="sidebar__head">
+                <h3 class="sidebar__head-title">Фильтр</h3>
+                <span class="sidebar__close" id="sidebarClose"></span>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Кол-во этажей</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="etagi" value="1" type="checkbox" id="checkbox1">
+                    <label class="sidebar__label small" for="checkbox1">Один</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="etagi" value="2" type="checkbox" id="checkbox2">
+                    <label class="sidebar__label small" for="checkbox2">Два</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="etagi" value="3" type="checkbox" id="checkbox3">
+                    <label class="sidebar__label small" for="checkbox3">Три</label>
+                  </li>
+                  <li class="sidebar__list-item ">
+                    <input class="sidebar__checkbox" name="etagi" value="4" type="checkbox" id="checkbox4">
+                    <label class="sidebar__label small" for="checkbox4">Больше трех</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Кол-во комнат</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="room" value="1" type="checkbox" id="checkbox5">
+                    <label class="sidebar__label small" for="checkbox5">1 комната</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="room" value="2" type="checkbox" id="checkbox6">
+                    <label class="sidebar__label small" for="checkbox6">2 комната</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="room" value="3" type="checkbox" id="checkbox7">
+                    <label class="sidebar__label small" for="checkbox7">3 комната</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="room" value="4" type="checkbox" id="checkbox8">
+                    <label class="sidebar__label small" for="checkbox8">4 комната</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="room" value="5" type="checkbox" id="checkbox9">
+                    <label class="sidebar__label small" for="checkbox9">5 и более комнат</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Площадь дома</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="ploshad" value="168" type="checkbox" id="checkbox10">
+                    <label class="sidebar__label small" for="checkbox10">14х12 кв. м.</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="ploshad" value="308" type="checkbox" id="checkbox11">
+                    <label class="sidebar__label small" for="checkbox11">22х14 кв. м.</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="ploshad" value="15" type="checkbox" id="checkbox12">
+                    <label class="sidebar__label small" for="checkbox12">6 - 15 кв.м.</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Жилая площадь</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="livingspace" value="50" type="checkbox" id="checkbox13">
+                    <label class="sidebar__label small" for="checkbox13">до 50 кв. м.</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="livingspace" value="100" type="checkbox" id="checkbox14">
+                    <label class="sidebar__label small" for="checkbox14">50 - 100 кв. м.</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="livingspace" value="150" type="checkbox" id="checkbox15">
+                    <label class="sidebar__label small" for="checkbox15">100 - 150 кв.м.</label>
+                  </li>
+                  <li class="sidebar__list-item ">
+                    <input class="sidebar__checkbox" name="livingspace" value="151" type="checkbox" id="checkbox16">
+                    <label class="sidebar__label small" for="checkbox16">Более 150 кв.м.</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Санузел</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="sanuzel" value="1" type="checkbox" id="checkbox17">
+                    <label class="sidebar__label small" for="checkbox17">Один</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="sanuzel" value="2" type="checkbox" id="checkbox18">
+                    <label class="sidebar__label small" for="checkbox18">Два</label>
+                  </li>
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__checkbox" name="sanuzel" value="3" type="checkbox" id="checkbox19">
+                    <label class="sidebar__label small" for="checkbox19">Будка на улице</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="sidebar__item">
+                <p class="sidebar__title">Терасса</p>
+                <ul class="sidebar__list">
+                  <li class="sidebar__list-item">
+                    <input class="sidebar__radio" name="terassa" value="yes" type="radio" id="radio1">
+                    <label class="sidebar__label small" for="radio1">Есть</label>
+                  </li>
+                </ul>
+              </div>
+              <button class="btn-white" type="reset">Сбросить фильтр</button>
+            </form>
+            <div class="banner__items">
+              <div class="banner__item">
+                <h6 class="banner__suptitle small">Успей подписать договор до конца февраля и получи</h6>
+                <p class="banner__text">Индивидуальный проект дома</p>
+              </div>
+              <div class="banner__item">
+                <img class="banner__img" src="images/ribbon-mobile.png" loading="lazy" alt="ribbon">
+                <div class="banner__content">
+                  <h2 class="banner__title">БЕСПЛАТНО</h2>
+                  <button class="banner__btn btn-green menu-2">Получить проект дома</button>
+                </div>
+              </div>
+              <img class="banner__bg" src="images/texture/banner-texture.png" loading="lazy" alt="banner">
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__body">
+          <div class="filter">
+            <div class="filter__items">
+              <div class="filter__item">
+                <button class="filter__btn menu-1" id="filterBtn">
+                  <img class="filter__btn-img" src="images/icons/setting.svg" alt="filter">
+                  Фильтр
+                </button>
+              </div>
+            </div>
+            <div class="filter__items">
+              <div class="filter__item">
+                <button class="filter__item-btn small" data-value="10">Показать: 10</button>
+                <ul class="filter__list">
+                  <li class="filter__list-item">
+                    <a class="filter__list-link small" href="#!" data-value="10">10</a>
+                  </li>
+                  <li class="filter__list-item">
+                    <a class="filter__list-link small" href="#!" data-value="20">20</a>
+                  </li>
+                  <li class="filter__list-item">
+                    <a class="filter__list-link small" href="#!" data-value="30">30</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__items">
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-178</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-244</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-124</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-187</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-47</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-111</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-178</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-244</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-124</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+            <div class="projects__item">
+              <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
+              <div class="projects__content">
+                <div class="projects__content-head">
+                  <h3 class="projects__content-name">Проект КД-187</h3>
+                </div>
+                <ul class="projects__content-list">
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/этажи.svg" loading="lazy" alt="icon">
+                    <p class="small">1 этаж</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/комнаты.svg" loading="lazy" alt="icon">
+                    <p class="small">3 комнаты</p>
+                  </li>
+                  <li class="projects__content-item">
+                    <img class="projects__content-img" src="images/icons/метраж.svg" loading="lazy" alt="icon">
+                    <p class="small">106м</p>
+                  </li>
+                </ul>
+                <div class="projects__content-btns">
+                  <button class="projects__content-btn btn-grey">Что входит</button>
+                  <button class="projects__content-btn btn-green">Хочу такой дом</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a class="pagination__btn pagination__prev small disabled" href="#!">Назад</a>
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a href="#!" class="pagination__item-link menu-1">1</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#!" class="pagination__item-link menu-1">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#!" class="pagination__item-link menu-1">3</a>
+              </li>
+              <li class="pagination__item">
+                <span class="pagination__item-dots menu-1">...</span>
+              </li>
+              <li class="pagination__item">
+                <a href="#!" class="pagination__item-link menu-1">8</a>
+              </li>
+            </ul>
+            <a class="pagination__btn pagination__next small" href="#!">Вперед</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="callback block">
+    <div class="container">
+      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
+        <div class="callback__item">
+          <h2 class="callback__title">Обязательно поможем</h2>
+          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+        </div>
+        <form class="callback__form">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Отправить</button>
+        </form>
+        <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
+      </div>
+    </div>
+  </div>
+
+  <div class="statement block">
+    <div class="container">
+      <div class="statement__inner">
+
+        <div class="statement__head">
+          <h2 class="statement__title">Экологичные дома</h2>
+          <h5 class="statement__suptitle">Это совершенно новое слово в строительстве зданий</h5>
+        </div>
+
+        <div class="statement__body">
+          <p class="statement__text">Вы хотели бы жить где‑нибудь на берегу океана в экологичном доме? Как, вы ничего
+            не слышали об экологичных домах? Может, слышали, но не догадывались, что это именно то, что вам нужно?
+            Вы ведь заботитесь о природе: аккуратно сортируете мусор по разным контейнерам и сменили пластиковый
+            продуктовый пакет на бумажный? Тогда экологичный дом именно для вас!</p>
+
+          <p class="statement__text">Экологичные дома — это совершенно новое слово в строительстве зданий. Это своего
+            рода философия: попытка стать
+            частью природы, минимизировать вред, который неизбежно наносится всему живому на земле в процессе
+            жизнедеятельности человека.</p>
+
+          <p class="statement__text">На сегодняшний день одним из лидеров является древесина. Экологичные дома строят
+            из бруса либо брёвен. В домах
+            из древесины есть свои положительные моменты: в таких домах погибают бактерии и вирусы. Но справедливости
+            ради упомянем о том, что деревянные дома к экологичным многие строители относят с большой натяжкой,
+            так как массовая вырубка лесов наносит непоправимый вред природе. Делая вырубки, человек нарушает
+            экосистему,
+            плодородный слой, оставшийся без деревьев, истощается, погибают звери и птицы. Чтобы восстановить
+            вырубленные
+            леса пройдёт не одно десятилетие</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<!--=include footer.html-->

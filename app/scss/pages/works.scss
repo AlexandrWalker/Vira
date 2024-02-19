@@ -96,50 +96,6 @@
       object-fit: cover;
     }
   }
-
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    border: 1px solid var(--grey2, #EFEFEF);
-    border-radius: 8px;
-
-    &__btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--grey, #A7A7A7);
-      border-radius: 8px;
-      background: transparent;
-      padding: 0 20px;
-      width: 100%;
-
-      &.disabled {
-        pointer-events: none;
-        color: var(--grey2, #EFEFEF);
-      }
-    }
-
-    &__list {
-      display: flex;
-      gap: 10px;
-    }
-
-    &__item {
-
-      &-link,
-      &-dots {
-        border-radius: 8px;
-        color: var(--black, #2E2D2D);
-        background: var(--bg, #F9F9F9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 52px;
-        height: 52px;
-      }
-    }
-  }
 }
 
 .works-page .map {
