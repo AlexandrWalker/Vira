@@ -57,7 +57,7 @@
     height: 45px;
   }
 
-  .title {
+  .page__head {
     margin-bottom: 30px;
   }
 
@@ -1123,6 +1123,77 @@
     background: radial-gradient(circle at right top, transparent 20px, var(--bg, #F9F9F9) 20px);
     right: -20px;
   }
+
+  // partners
+  .partners__items {
+    gap: 20px;
+  }
+
+  .partners__item {
+    width: calc(33% - 13.33px);
+  }
+
+  // guarantee
+  .guarantees__img {
+    border-radius: 20px;
+  }
+
+  .guarantees__text {
+    border-radius: 0 20px 0 0;
+    max-width: 620px;
+  }
+
+  .guarantees__text::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
+    top: -20px;
+  }
+
+  .guarantees__text::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
+    top: 80px;
+    right: -20px;
+  }
+
+  .guarantees-text {
+    padding: 80px 0;
+  }
+
+  .guarantee-cases__head {
+    margin-bottom: 30px;
+  }
+
+  .guarantee-cases__items {
+    gap: 20px;
+  }
+
+  .guarantee-cases__item-img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  // 404
+  .unknown__img {
+    max-width: 460px;
+  }
+
+  .unknown__text {
+    margin-bottom: 30px;
+  }
+
+  .unknown__list {
+    margin-bottom: 30px;
+  }
+
+  .unknown__btns button:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 970px) {
@@ -1378,7 +1449,7 @@
     margin-bottom: 60px;
   }
 
-  .title {
+  .page__head {
     margin-bottom: 20px;
   }
 
@@ -1841,10 +1912,6 @@
     gap: 5px;
   }
 
-  .vacancies__head-img {
-    height: 240px;
-  }
-
   // payment-methods
   .payment-methods-hero__img {
     aspect-ratio: 1/0.64;
@@ -2038,6 +2105,51 @@
 
   .work-text__inner {
     flex-direction: column;
+  }
+
+  // partners
+  .partners__item {
+    width: calc(50% - 10px);
+  }
+
+  // guarantee
+  .guarantee-cases__items {
+    flex-wrap: wrap;
+  }
+
+  .guarantee-cases__item {
+    width: calc(50% - 10px);
+  }
+
+  .guarantee-cases__item:first-child {
+    width: 100%;
+  }
+
+  .guarantees-text__inner {
+    flex-direction: column;
+  }
+
+  // guarantees
+  .guarantees__text {
+    max-width: 480px;
+  }
+
+  // 404
+  .unknown__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unknown__content {
+    max-width: 100%;
+  }
+
+  .unknown__text {
+    margin-bottom: 20px;
+  }
+
+  .unknown__list {
+    margin-bottom: 20px;
   }
 }
 
@@ -2279,6 +2391,15 @@
     height: 60px;
   }
 
+  .vacancies__head-img {
+    height: 240px;
+  }
+
+  // guarantees
+  .guarantees__text {
+    max-width: 300px;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -2326,6 +2447,24 @@
   .pagination,
   .pagination__list {
     gap: 8px;
+  }
+
+  // partners
+  .partners__items {
+    gap: 10px;
+  }
+
+  .partners__item {
+    width: 100%;
+  }
+
+  // guarantee-cases
+  .guarantee-cases__items {
+    flex-direction: column;
+  }
+
+  .guarantee-cases__item {
+    width: 100%;
   }
 }
 

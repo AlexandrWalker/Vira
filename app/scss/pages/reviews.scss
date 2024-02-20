@@ -1,0 +1,50 @@
+.reviews {
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 30px;
+    border-radius: 30px;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px;
+      border-radius: 30px;
+      width: 100%;
+      background: var(--bg, #F9F9F9);
+    }
+
+    &-text {
+      margin-bottom: 10px;
+    }
+
+    &-name {
+      margin-bottom: 10px;
+    }
+
+    &-img {
+      max-width: 470px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-fit: cover;
+      border-radius: 30px;
+    }
+
+    &-date {
+      margin-top: auto;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
