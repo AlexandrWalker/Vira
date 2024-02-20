@@ -9,12 +9,12 @@
       arrows: true,
       centerMode: true,
       prevArrow: false,
-      nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
         {
           breakpoint: 768,
           settings: {
-            nextArrow: '<button type="button" id="case__slider__btn" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+            nextArrow: '<button type="button" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
           }
         }
       ]
@@ -191,6 +191,112 @@
             slidesToScroll: 1,
             arrows: false,
             dots: true
+          }
+        }
+      ]
+    });
+
+    // project slider
+    $('.project__slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      centerMode: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg width="24" height="44" viewBox="0 0 24 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 2L2 22L22 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            prevArrow: '<button type="button" class="slick-prev"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L2 16L16 30" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+            nextArrow: '<button type="button" class="slick-next"><svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L16 16L2 30" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+          }
+        }
+      ]
+    });
+
+    // plan slider
+    $('.plan__slider').slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      asNavFor: '.plan__list',
+    });
+    $('.plan__list').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      vertical: true,
+      asNavFor: '.plan__slider',
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 7L8 2L2 7" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 2L8 7L2 2" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            vertical: false,
+          }
+        }
+      ]
+    });
+
+    // work slider
+    $('.work__slider').slick({
+      arrows: false,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: false,
+      asNavFor: '.work__list',
+    });
+    $('.work__list').slick({
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      vertical: true,
+      asNavFor: '.work__slider',
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 7L8 2L2 7" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 2L8 7L2 2" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            vertical: false,
+          }
+        },
+        {
+          breakpoint: 630,
+          settings: {
+            vertical: false,
+            slidesToShow: 4,
+          }
+        },
+        {
+          breakpoint: 530,
+          settings: {
+            vertical: false,
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 530,
+          settings: {
+            vertical: false,
+            slidesToShow: 2,
           }
         }
       ]
@@ -373,6 +479,45 @@
     document.body.addEventListener('click', event => {
       if (event._isClickWithInMenu) return;
       filterClose();
+    });
+
+    document.querySelectorAll('.sidebar__checkbox').forEach((e) => {
+      e.addEventListener('click', () => {
+
+        var filterEtagi = document.getElementById('filterEtagi');
+
+        if (e.checked) {
+          let name = e.getAttribute('name');
+          let value = e.getAttribute('value');
+
+          if (name == "etagi") {
+            filterEtagi.classList.add('active');
+          }
+
+          if (value == '1') {
+            filterEtagi.innerHTML = 'Один этаж';
+          }
+
+          if (value == '2') {
+            filterEtagi.innerHTML = 'Два этажа';
+          }
+
+          if (value == '3') {
+            filterEtagi.innerHTML = 'Три этажа';
+          }
+
+          if (value == '4') {
+            filterEtagi.innerHTML = 'Больше трех';
+          }
+        } else {
+          filterEtagi.classList.remove('active');
+        }
+
+        filterEtagi.addEventListener('click', function () {
+          filterEtagi.classList.remove('active');
+          e.checked = false;
+        });
+      });
     });
 
     // calculator

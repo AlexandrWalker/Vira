@@ -8,7 +8,6 @@
   <title>Vira</title>
 
   <link rel="stylesheet" href="libs/slick/slick.css">
-  <link rel="stylesheet" href="libs/noUiSlider/nouislider.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- calculation input style -->
   <style>
@@ -425,11 +424,11 @@
         <div class="projects__body">
           <div class="filter">
             <div class="filter__items">
-              <div class="filter__item">
-                <button class="filter__btn menu-1" id="filterBtn">
-                  <img class="filter__btn-img" src="images/icons/setting.svg" alt="filter">
-                  Фильтр
-                </button>
+              <button class="filter__btn menu-1" id="filterBtn">
+                <img class="filter__btn-img" src="images/icons/setting.svg" alt="filter">
+                Фильтр
+              </button>
+              <div class="filter__item-flag" id="filterEtagi">
               </div>
             </div>
             <div class="filter__items">
@@ -451,7 +450,7 @@
           </div>
 
           <div class="projects__items">
-            <div class="projects__item">
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -476,8 +475,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -502,8 +501,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -528,8 +527,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -554,8 +553,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -580,8 +579,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -606,8 +605,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -632,8 +631,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-2.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -658,8 +657,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-3.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -684,8 +683,8 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
-            <div class="projects__item">
+            </a>
+            <a class="projects__item" href="#!">
               <img class="projects__img" src="images/page-projects/projects-1.png" loading="lazy" alt="projects">
               <div class="projects__content">
                 <div class="projects__content-head">
@@ -710,7 +709,7 @@
                   <button class="projects__content-btn btn-green">Хочу такой дом</button>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           <div class="pagination">
@@ -742,7 +741,7 @@
 
   <div class="callback block">
     <div class="container">
-      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
+      <div class="callback__inner" style="background-image: url(../images/texture/discount-texture.png);">
         <div class="callback__item">
           <h2 class="callback__title">Обязательно поможем</h2>
           <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
