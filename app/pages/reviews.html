@@ -68,19 +68,32 @@
 
   <div class="callback block">
     <div class="container">
-      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
+      <div class="callback__inner" style="background-image: url(../images/texture/reviews-texture.png);">
         <div class="callback__item">
-          <h2 class="callback__title">Обязательно поможем</h2>
-          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+          <h2 class="callback__title">Оставить отзыв</h2>
+          <h5 class="callback__suptitle">Нам важно ваше мнение, о проделанной нами работе</h5>
         </div>
         <form class="callback__form">
-          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <textarea class="callback__textarea" name="textarea" id="" cols="30" rows="10"
+            placeholder="Выскажите свое мнение"></textarea>
+          <input class="callback__input callback__input-name small" type="name" placeholder="Ваше имя">
+          <input class="callback__input callback__input-tel small" type="tel" placeholder="Номер телефона">
+          <div class="input__file">
+            <input class="callback__file small" id="input__file" type="file" placeholder="Прикрепить файл">
+            <label class="input__file-btn" for="input__file">
+              <span class="input__file-icon">
+                <img class="input__file-img" src="images/icons/clip.svg" alt="Выбрать файл" width="18">
+              </span>
+              <span class="input__file-text small">Прикрепить файл</span>
+            </label>
+          </div>
           <button class="btn-green" type="submit">Отправить</button>
         </form>
-        <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
+        <img class="callback__img" src="images/page-reviews/reviews-form.png" loading="lazy" alt="hand">
       </div>
     </div>
   </div>
 
 </main>
 <!--=include footer.html-->
+<!--=include modal.html-->

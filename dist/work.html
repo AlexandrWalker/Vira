@@ -105,7 +105,7 @@
                   <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
                 </div>
                 <div class="head__info-item">
-                  <button class="btn-green menu-1" type="button">
+                  <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
                     Заказать звонок
                   </button>
                 </div>
@@ -204,7 +204,7 @@
         <div class="bottombar">
           <div class="container">
             <div class="bottombar__inner">
-              <button class="btn-green menu-1" type="button">
+              <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
                 Заказать звонок
               </button>
               <div class="head__social">
@@ -883,7 +883,7 @@
               <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
             </div>
             <div class="footer__top-btn">
-              <button class="btn-green" type="button">
+              <button class="btn-green modal-call" type="button" data-id="callback">
                 Заказать звонок
               </button>
             </div>
@@ -1022,3 +1022,38 @@
 </body>
 
 </html>
+<div class="modals">
+  <div class="modal" id="callback">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L13 13.5M1 13.5L13 1.5" stroke="#A7A7A7" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal__head">
+        <h2 class="modal__title">Заказать звонок</h2>
+        <h5 class="modal__suptitle">Заполните форму, мы перезвоним вам в течение рабочего дня</h5>
+      </div>
+      <input class="callback__input small" type="tel" placeholder="Номер телефона">
+      <button class="btn-green" type="submit">Получить скидку</button>
+      <img class="modal__img" src="images/callback.png" alt="callback">
+    </div>
+  </div>
+
+  <div class="modal" id="thanks">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+            fill="#333333" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+        </svg>
+      </button>
+      <div class="modal__head">
+        <h2 class="modal__title">Спасибо</h2>
+        <p class="modal__suptitle">За ваше доверие, мы уже набираем ваш номер</p>
+      </div>
+      <button class="btn-green" type="submit">Хорошо, жду</button>
+    </div>
+  </div>
+</div>

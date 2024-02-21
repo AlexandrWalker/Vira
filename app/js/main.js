@@ -12,7 +12,7 @@
       nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             nextArrow: '<button type="button" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
           }
@@ -174,7 +174,26 @@
       slidesToScroll: 1,
       arrows: true,
       prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M8 2L2 8L8 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M2 2L8 8L2 14" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            infinite: false,
+            slidesToShow: 1.3,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
     });
 
     // services slider
@@ -301,6 +320,38 @@
         }
       ]
     });
+
+    // Modal
+    (function () {
+      var close = document.querySelectorAll('.modal__close-btn');
+      var openBtn = document.querySelectorAll('.modal-call');
+
+      Array.from(openBtn, openButton => {
+        openButton.addEventListener('click', e => {
+          let modalId = e.target.getAttribute('data-id');
+          document.getElementById(modalId).classList.add("open");
+
+          Array.from(close, closeButton => {
+            closeButton.addEventListener('click', e => document.getElementById(modalId).classList.remove("open"));
+
+            window.addEventListener('keydown', (e) => {
+              if (e.key === "Escape") {
+                document.getElementById(modalId).classList.remove("open")
+              }
+            });
+
+            document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
+              event._isClickWithInModal = true;
+            });
+
+            document.getElementById(modalId).addEventListener('click', event => {
+              if (event._isClickWithInModal) return;
+              event.currentTarget.classList.remove('open');
+            });
+          });
+        });
+      });
+    })();
 
     // Menu
     (function () {

@@ -6,6 +6,7 @@
 
 @import 'elements/header.scss';
 @import 'elements/footer.scss';
+@import 'elements/modal.scss';
 
 @import 'pages/index.scss';
 @import 'pages/projects.scss';
@@ -13,7 +14,6 @@
 @import 'pages/services.scss';
 @import 'pages/works.scss';
 @import 'pages/work.scss';
-
 @import 'pages/vacancies.scss';
 @import 'pages/partners.scss';
 @import 'pages/guarantees.scss';
@@ -26,6 +26,6 @@
 @import 'pages/technical-supervision.scss';
 @import 'pages/site-map.scss';
 @import 'pages/projection.scss';
-
+@import 'pages/about.scss';
 
 @import 'media';
