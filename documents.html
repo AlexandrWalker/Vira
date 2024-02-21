@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vira</title>
+
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- calculation input style -->
+  <style>
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      border: 0;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #eaeaea !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--black, #2E2D2D);
+      background-image: url(images/icons/thumb.svg);
+      background-repeat: no-repeat;
+      background-size: 40px 20px;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      margin-top: -8px;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="topbar">
+          <div class="container">
+            <div class="topbar__inner">
+              <h6 class="menu-2">Будние дни с 8 до 21 часа. Выходные с 10 до 18 часов</h6>
+
+              <div class="topbar__item">
+                <a class="topbar__link menu-2" href="mailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+                <h6 class="menu-2">Москва, 2-й Котельнический переулок 3</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="head">
+          <div class="container">
+            <div class="head__inner">
+              <div class="head__logo">
+                <a class="head__logo-link" href="#!">
+                  <img class="head__logo-img" src="images/logo.svg" alt="logo">
+                </a>
+                <div class="head__logo-item">
+                  <h4 class="head__logo-title">Экологичные</h4>
+                  <h6 class="menu-1">каркасные дома в Москве и МО</h6>
+                </div>
+              </div>
+
+              <div class="head__item">
+                <span class="small">от</span>
+                <span class="num">48</span>
+                <span class="menu-1">дней</span>
+                <span class="small">до новоселья</span>
+              </div>
+
+              <button class="burger" id="burger">
+                <h6 class="menu-2">Меню</h6>
+                <span></span>
+              </button>
+
+              <div class="head__social">
+                <a class="head__social-link" href="viber://chat?number=89165562526">
+                  <img class="head__social-img" src="images/social/Viber.svg" alt="viber">
+                </a>
+                <a class="head__social-link" href="https://wa.me/89165562526">
+                  <img class="head__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a class="head__social-link" href="https://t.me/89165562526">
+                  <img class="head__social-img" src="images/social/telegram.svg" alt="telegram">
+                </a>
+              </div>
+              <div class="head__info">
+                <div class="head__info-item">
+                  <a class="head__info-link" href="tel:89165562526">
+                    <h4>+7 (916) 556 25 26</h4>
+                  </a>
+                  <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+                </div>
+                <div class="head__info-item">
+                  <button class="btn-green menu-1" type="button">
+                    Заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu" class="menu">
+          <div class="container">
+            <div class="menu__inner">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Проекты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                    <svg class="menu__arrow">
+                      <use xlink:href="#menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <ul class="menu__items">
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Наши работы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                    <svg class="menu__arrow">
+                      <use xlink:href="#menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <ul class="menu__items">
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">О нас</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Документы</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Контакты</a>
+                </li>
+                <li class="menu__item">
+                  <form class="menu__search" action="#">
+                    <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                    <label class="menu__search-label">
+                      <img class="menu__img" src="images/icons/search.svg" alt="search">
+                      <input class="menu__link menu-1" type="submit" value="Поиск">
+                    </label>
+                  </form>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">
+                    <img class="menu__img" src="images/icons/unlock.svg" alt="unlock">
+                    Личный кабинет
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottombar">
+          <div class="container">
+            <div class="bottombar__inner">
+              <button class="btn-green menu-1" type="button">
+                Заказать звонок
+              </button>
+              <div class="head__social">
+                <a class="head__social-link" href="viber://chat?number=89165562526">
+                  <img class="head__social-img" src="images/social/Viber.svg" alt="viber">
+                </a>
+                <a class="head__social-link" href="https://wa.me/89165562526">
+                  <img class="head__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a class="head__social-link" href="https://t.me/89165562526">
+                  <img class="head__social-img" src="images/social/telegram.svg" alt="telegram">
+                </a>
+              </div>
+              <div class="head__info">
+                <div class="head__info-item">
+                  <a class="head__info-link" href="tel:89165562526">
+                    <h4>+7 (916) 556 25 26</h4>
+                  </a>
+                  <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<svg style="display: none;">
+
+  <symbol id="faq-arrow" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M11 1.5l-5 5-5-5" />
+    </g>
+  </symbol>
+
+  <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="breadcrumbs-arrow" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L2.83727 3.05808C3.05424 3.30114 3.05424 3.69886 2.83727 3.94192L1 6" stroke="#857067"
+      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="filter-arrow" width="8" height="4" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 .5L4.53 2.797a.793.793 0 01-1.06 0L1 .5" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="li-arrow" width="12" height="9" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 3.667L5.2 7 10 2" stroke="#179860" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+</svg>
+<main class="main documents-page">
+  <div class="page__head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <svg class="breadcrumbs__arrow">
+              <use xlink:href="#breadcrumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Документы</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="title">Документы</h2>
+    </div>
+  </div>
+
+  <div class="documents">
+    <div class="container">
+      <div class="documents__inner">
+        <h5 class="documents__suptitle">Внутренние документы организации — официальные бумаги компании, предназначенные
+          для регулирования её внутренней деятельности</h5>
+
+        <div class="documents__head">
+          <h3 class="documents__title">Дипломы и благодарности</h3>
+          <p class="documents__text">Наши награды и отзывы компаний которые нам доверились</p>
+        </div>
+        <div class="documents__items">
+          <div class="documents__item">
+            <img class="documents__item-img" src="images/documents/diplom-1.png" loading="lazy" alt="licenses">
+            <h6 class="documents__item-name small">Небольшое название данного письма</h6>
+          </div>
+          <div class="documents__item">
+            <img class="documents__item-img" src="images/documents/diplom-2.png" loading="lazy" alt="licenses">
+            <h6 class="documents__item-name small">Небольшое название данного письма</h6>
+          </div>
+          <div class="documents__item">
+            <img class="documents__item-img" src="images/documents/diplom-3.png" loading="lazy" alt="licenses">
+            <h6 class="documents__item-name small">Небольшое название данного письма</h6>
+          </div>
+          <div class="documents__item">
+            <img class="documents__item-img" src="images/documents/diplom-4.png" loading="lazy" alt="licenses">
+            <h6 class="documents__item-name small">Небольшое название данного письма</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="licenses">
+    <div class="container">
+      <div class="licenses__inner">
+        <div class="licenses__head">
+          <h2 class="licenses__title">Лицензии и сертификаты</h2>
+          <p class="licenses__suptitle">Все любят хвастаться сертификатами, тыкать при каждом удобном случае. У нас они
+            тоже есть и много</p>
+        </div>
+        <div class="licenses__items">
+          <div class="licenses__item">
+            <img class="licenses__item-img" src="images/documents/licenses-1.png" loading="lazy" alt="licenses">
+            <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
+          </div>
+          <div class="licenses__item">
+            <img class="licenses__item-img" src="images/documents/licenses-2.png" loading="lazy" alt="licenses">
+            <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
+          </div>
+          <div class="licenses__item">
+            <img class="licenses__item-img" src="images/documents/licenses-3.png" loading="lazy" alt="licenses">
+            <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="regulations block">
+    <div class="container">
+      <div class="regulations__inner">
+        <div class="regulations__head">
+          <h3 class="regulations__title">Нормативные документы</h3>
+          <p class="regulations__text">Все любят хвастаться сертификатами, тыкать при каждом удобном случае. У нас они
+            тоже есть и много</p>
+        </div>
+        <div class="regulations__items">
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Аттестат аккредитации BY/112 2.4380 от 12.04.2013</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Лицензия на право осуществления деятельности, связанной c контролем
+                радиоактивного загрязнения</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Решение о праве проведения аттестации рабочих мест по условиям труда</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Решение о праве осуществления функций специалиста по охране труда</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Сертификат соответствия оказания услуг в области охраны окружающей среды
+                в соответствии с требованиями СТБ 1803–2007</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+          <div class="regulations__item">
+            <a class="regulations__item-link" href="#!" download="#!">
+              <p class="regulations__item-text">Свидетельство о регистрации юридического лица</p>
+              <p class="regulations__item-format">.PDF</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <a class="footer__logo" href="#!">
+          <img class="footer__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+
+        <div class="footer__top-body">
+          <ul class="footer__top-list">
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Проекты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Наши работы</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Вопрос-ответ</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Контакты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">
+                <img class="footer__top-img" src="images/icons/unlock.svg" alt="unlock">
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__top-info">
+            <div class="footer__contact">
+              <a class="footer__contact-link" href="tel:89165562526">
+                <h4>+7 (916) 556 25 26</h4>
+              </a>
+              <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+            </div>
+            <div class="footer__top-btn">
+              <button class="btn-green" type="button">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-block">
+          <h6 class="menu-1">О компании</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Клиентский сервис и гарантии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Партнёры</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Документы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Способы оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu-block">
+          <h6 class="menu-1">Услуги</h6>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Технический надзор</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Барбекю, бани, беседки, забор из дерева</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Строительство</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h6 class="small">Компания</h6>
+          <p class="footer__info-text">ООО «ДСК-Вира»</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Адрес</h6>
+          <p class="footer__info-text">Москва, 2-й Котельнический пер., 3</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Эл. почта</h6>
+          <p class="footer__info-text">
+            <a href="mailto:dsk-vira@yandex.ru" class="footer__info-link">dsk-vira@yandex.ru</a>
+          </p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ИНН</h6>
+          <p class="footer__info-text">5044075669</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ОГРН</h6>
+          <p class="footer__info-text">56695044077436</p>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-item">
+          <a class="footer__bottom-link small" href="#!">
+            Сводная ведомость результатов проведения специальной оценки условий труда
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Политика в отношении обработки персональных данных
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://vk.com/dsk_vira">
+            <img class="footer__social-img" src="images/social/vk.svg" alt="vk">
+          </a>
+          <a class="footer__social-link" href="https://youtube.com/@dsk-vira2995">
+            <img class="footer__social-img" src="images/social/youtube.svg" alt="youtube">
+          </a>
+          <span></span>
+          <a class="footer__social-link" href="viber://chat?number=89165562526">
+            <img class="footer__social-img" src="images/social/Viber.svg" alt="viber">
+          </a>
+          <a class="footer__social-link" href="https://wa.me/89165562526">
+            <img class="footer__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+          </a>
+          <a class="footer__social-link" href="https://t.me/89165562526">
+            <img class="footer__social-img" src="images/social/telegram.svg" alt="telegram">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__inner">
+        <div class="copyright__item">
+          <h6 class="small">2018 - 2023 © «ДСК-Вира»</h6>
+        </div>
+        <div class="copyright__item">
+          <h6 class="small">Создание и продвижение</h6>
+          <a class="copyright__link" href="#!">
+            <img class="copyright__img" src="images/icons/family.svg" alt="Family">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script defer src="libs/jquery-3.7.0.js"></script>
+<script defer src="libs/slick/slick.min.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>
