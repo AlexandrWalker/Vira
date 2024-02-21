@@ -4899,8 +4899,8 @@ input[type=radio] + label::before {
   .sidebar__inner {
     gap: 0;
   }
-  .sidebar__form,
-  .banner__items {
+  .projects-page .sidebar__form,
+  .projects-page .banner__items {
     border-radius: 0;
   }
   .sidebar__head {
@@ -5475,6 +5475,9 @@ input[type=radio] + label::before {
   }
   .calculation__tab {
     gap: 5px;
+  }
+  .calculation__tab-item {
+    padding: 15px 0 13px;
   }
   .advantages__block {
     flex-direction: column;

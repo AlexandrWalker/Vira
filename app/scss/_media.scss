@@ -787,8 +787,8 @@
     gap: 0;
   }
 
-  .sidebar__form,
-  .banner__items {
+  .projects-page .sidebar__form,
+  .projects-page .banner__items {
     border-radius: 0;
   }
 
@@ -1518,6 +1518,10 @@
 
   .calculation__tab {
     gap: 5px;
+  }
+
+  .calculation__tab-item {
+    padding: 15px 0 13px;
   }
 
   .advantages__block {
