@@ -1,0 +1,91 @@
+<!--=include header.html-->
+<!--=include sprite.html-->
+<main class="main unknown-page">
+  <div class="page__head">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <svg class="breadcrumbs__arrow">
+              <use xlink:href="#breadcrumbs-arrow"></use>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#!" class="breadcrumbs__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <h2 class="title">Контакты</h2>
+    </div>
+  </div>
+
+  <div class="contacts block">
+    <div class="container">
+      <div class="contacts__inner">
+        <div class="contacts__map">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A44bd4cfb8cc552f7234287b4e51649db05cc7d1c87caa8c7e6c2dc31cf8a5f00&amp;width=1170&amp;height=570&amp;lang=ru_RU&amp;scroll=false"></script>
+
+          <div class="contacts__card">
+            <div class="contacts__card-item">
+              <p class="contacts__card-address">Москва, 2-й Котельнический переулок 3</p>
+              <a class="contacts__card-tel" href="tel:+79165562526">
+                <h3>+7 (916) 556 25 26</h3>
+              </a>
+              <a class="contacts__card-link" href="emailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+            </div>
+            <div class="contacts__card-item">
+              <div class="contacts__card-row">
+                <p class="contacts__card-text">Будние дни</p>
+                <p class="contacts__card-text">с 8 до 21 часа</p>
+              </div>
+              <div class="contacts__card-row">
+                <p class="contacts__card-text">Будние дни</p>
+                <p class="contacts__card-text">с 8 до 21 часа</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__info">
+          <div class="contacts__info-items">
+            <div class="contacts__info-item">
+              <p class="contacts__info-text">Индивидуальный предприниматель</p>
+              <p class="contacts__info-text">Швороб Анастасия Романовна</p>
+            </div>
+            <div class="contacts__info-item">
+              <p class="contacts__info-text">ИНН</p>
+              <p class="contacts__info-text">5044075669</p>
+            </div>
+            <div class="contacts__info-item">
+              <p class="contacts__info-text">ОГРН</p>
+              <p class="contacts__info-text">56695044077436</p>
+            </div>
+          </div>
+          <button class="btn-grey">Запросить реквизиты компании</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callback block">
+    <div class="container">
+      <div class="callback__inner" style="background-image: url(../images/texture/discount-texture.png);">
+        <div class="callback__item">
+          <h2 class="callback__title">Обязательно поможем</h2>
+          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+        </div>
+        <form class="callback__form">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Отправить</button>
+        </form>
+        <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
+      </div>
+    </div>
+  </div>
+
+</main>
+<!--=include footer.html-->

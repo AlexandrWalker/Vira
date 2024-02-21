@@ -1194,6 +1194,61 @@
   .unknown__btns button:last-child {
     display: none;
   }
+
+  // reviews
+  .reviews__item-img {
+    max-width: 380px;
+  }
+
+  // documents
+  .documents__items,
+  .licenses__items,
+  .regulations__items {
+    gap: 20px;
+  }
+
+  .documents__item,
+  .licenses__item,
+  .regulations__item {
+    width: calc(25% - 15px);
+    height: 250px;
+  }
+
+  .documents__item-img,
+  .licenses__item-img,
+  .regulations__item-link {
+    padding: 20px;
+  }
+
+  .documents__item-name,
+  .licenses__item-name {
+    padding: 30px 5px;
+  }
+
+  // contacts
+  .contacts__map {
+    border-radius: 20px;
+  }
+
+  .contacts__card {
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .contacts__card::before {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at left top, transparent 20px, var(--white, #fff) 20px);
+    position: absolute;
+    top: -20px;
+  }
+
+  .contacts__card::after {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at left bottom, transparent 20px, var(--white, #fff) 20px);
+    bottom: -20px;
+  }
 }
 
 @media (max-width: 970px) {
@@ -1271,6 +1326,19 @@
 
   .footer__menu {
     padding: 0;
+  }
+
+  // contacts
+  .contacts__info {
+    gap: 30px;
+  }
+
+  .contacts__info-items {
+    gap: 20px;
+  }
+
+  .contacts__map iframe {
+    height: 470px;
   }
 }
 
@@ -2155,6 +2223,63 @@
   .unknown__list {
     margin-bottom: 20px;
   }
+
+  // reviews
+  .reviews__inner {
+    gap: 20px;
+  }
+
+  .reviews__item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .reviews__item-img {
+    max-width: 100%;
+    max-height: 320px;
+    aspect-ratio: 1/0.64;
+    border-radius: 20px;
+  }
+
+  .reviews__item-content {
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  // documents
+  .documents__items,
+  .licenses__items,
+  .regulations__items {
+    gap: 12px;
+  }
+
+  .documents__item,
+  .licenses__item,
+  .regulations__item {
+    width: calc(33% - 8px);
+  }
+
+  .documents__item-name,
+  .licenses__item-name {
+    padding: 20px;
+  }
+
+  // contacts
+  .contacts__info,
+  .contacts__info-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts__card {
+    top: unset;
+    transform: none;
+    bottom: 40px;
+  }
+
+  .contacts__map iframe {
+    height: 560px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2404,6 +2529,12 @@
     max-width: 300px;
   }
 
+  // documents
+  .documents__item,
+  .licenses__item,
+  .regulations__item {
+    width: calc(50% - 12px);
+  }
 }
 
 @media (max-width: 480px) {

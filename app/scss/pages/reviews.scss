@@ -9,7 +9,6 @@
   &__item {
     display: flex;
     gap: 30px;
-    border-radius: 30px;
 
     &-content {
       display: flex;
@@ -19,14 +18,6 @@
       border-radius: 30px;
       width: 100%;
       background: var(--bg, #F9F9F9);
-    }
-
-    &-text {
-      margin-bottom: 10px;
-    }
-
-    &-name {
-      margin-bottom: 10px;
     }
 
     &-img {
