@@ -10,6 +10,8 @@
   --green-hover: #2BAC74;
   --green-active: #03844C;
   --red: #D43E3E;
+  --yellow: #FFB628;
+  --blue: #171831;
   --bg: #F9F9F9;
 }
 
@@ -1163,9 +1165,9 @@ input[type=radio] + label::before {
   flex-direction: column;
   gap: 30px;
   position: relative;
-  width: 570px;
   padding: 60px;
   z-index: 1;
+  width: 570px;
   margin: 30px 15px;
   border-radius: 30px;
   background-color: var(--bg, #F9F9F9);
@@ -1182,6 +1184,9 @@ input[type=radio] + label::before {
   width: 16px;
   height: 16px;
   cursor: pointer;
+}
+.modal .modal__close-btn svg {
+  fill: rgba(255, 255, 255, 0.3);
 }
 .modal.open {
   visibility: visible;
@@ -1210,18 +1215,26 @@ input[type=radio] + label::before {
   object-fit: cover;
   transform: scale(-1, 1);
 }
-
-#spinner .modal__close-btn svg {
-  fill: rgba(255, 255, 255, 0.3);
+.modal__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 30px;
 }
+
 #spinner .modal__box {
   justify-content: flex-end;
+  width: 570px;
   max-height: 570px;
   height: 100%;
   padding: 40px;
-  background-image: url(../../images/spinner/spinner-bg.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color: var(--blue, #171831);
 }
 #spinner .modal__content {
   display: flex;
@@ -1251,18 +1264,28 @@ input[type=radio] + label::before {
   color: #8F98BB;
 }
 
+#wheel {
+  overflow-x: hidden;
+}
 #wheel .modal__box {
+  width: 570px;
+  height: fit-content;
+  min-height: 450px;
   padding: 40px;
-  background-image: url(../../images/spinner/spinner-bg.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  overflow: visible;
+  gap: unset;
+  margin-top: 130px;
+  background-color: var(--blue, #171831);
 }
 #wheel .modal__content {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: -90px;
+  width: 100%;
 }
 #wheel .modal__content button {
-  background: #FFB628;
+  background: var(--yellow, #FFB628);
   color: var(--black, #2E2D2D);
 }
 #wheel .modal__item {
@@ -1278,7 +1301,254 @@ input[type=radio] + label::before {
   object-fit: cover;
   flex-shrink: 0;
 }
+#wheel .modal__result {
+  display: flex;
+  flex-direction: column;
+  color: var(--white, #fff);
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;
+}
+#wheel .modal__result-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#wheel .modal__result-title {
+  color: var(--yellow, #FFB628);
+}
+#wheel .modal__result-text {
+  color: var(--grey, #A7A7A7);
+  margin-bottom: 30px;
+  text-align: center;
+}
+#wheel .modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#wheel .modal__form input {
+  width: 100%;
+}
 
+/* общий блок для всех элементов */
+.deal-wheel {
+  /* задаём переменные блока */
+  /* размеры колеса */
+  --size: clamp(391px, 80vmin, 391px);
+  /* настройки яркости и заливки фона секторов */
+  --lg-hs: 0 3%;
+  --lg-stop: 50%;
+  --lg: linear-gradient(hsl(var(--lg-hs) 0%) 0 var(--lg-stop),
+      hsl(var(--lg-hs) 20%) var(--lg-stop) 100%);
+  /* добавляем позиционирование относительно других элементов */
+  position: relative;
+  /* подключаем сетку */
+  display: grid;
+  grid-gap: 40px;
+  /* выравниваем содержимое блока по центру */
+  align-items: center;
+  /* задаём имена областей внутри сетки */
+  grid-template-areas: "spinner" "trigger";
+  width: fit-content;
+  margin: -130px auto 0 auto;
+}
+
+/* всё, что относится ко внутренним элементам главного блока, будет находиться в области сетки с названием spinner */
+.deal-wheel > * {
+  grid-area: spinner;
+}
+
+/* сам блок и кнопка будут находиться в области сетки с названием trigger и будут выровнены по центру */
+.deal-wheel .btn-spin {
+  grid-area: trigger;
+  justify-self: center;
+}
+
+/* сектор колеса */
+.spinner {
+  /* добавляем относительное позиционирование */
+  position: relative;
+  /* подключаем сетку */
+  display: grid;
+  /* выравниваем всё по центру */
+  align-items: center;
+  /* добавляем элемент в сетку */
+  grid-template-areas: "spinner";
+  /* устанавливаем размеры */
+  width: var(--size);
+  height: var(--size);
+  /* поворачиваем элемент  */
+  transform: rotate(calc(var(--rotate, 25) * 1deg));
+  /* рисуем круглую обводку, а всё, что не поместится, — будет скрыто за кругом */
+  border-radius: 50%;
+  border: 15px solid #857067;
+}
+
+/* всё, что внутри этого блока, будет находиться в области сетки с названием spinner */
+.spinner * {
+  grid-area: spinner;
+}
+
+/* текст на секторах */
+.prize {
+  /* включаем «гибкую» вёрстку */
+  display: flex;
+  align-items: center;
+  /* задаём отступы от краёв блока */
+  padding: 0 calc(var(--size) / 10) 0 calc(var(--size) / 20);
+  /* устанавливаем размеры */
+  width: 50%;
+  height: 50%;
+  /* устанавливаем координаты, относительно которых будем вращать текст */
+  transform-origin: center right;
+  /* поворачиваем текст */
+  transform: rotate(var(--rotate));
+  /* запрещаем пользователю выделять мышкой текст на секторах */
+  user-select: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.spinner__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: var(--white, #fff);
+  border: 5px solid #857067;
+}
+.spinner__logo-img {
+  margin-top: 6px;
+  width: fit-content;
+  height: 32px;
+  object-fit: cover;
+}
+
+.circle {
+  position: relative;
+  left: 50%;
+  transform: translate(-5px, -5px);
+}
+
+.circle__item {
+  position: absolute;
+  width: 10px;
+  height: 0px;
+  background-color: black;
+  border-radius: 50%;
+}
+.circle__item-img {
+  width: 10px;
+  height: 10px;
+  object-fit: cover;
+}
+
+/* язычок */
+.ticker {
+  /* добавляем относительное позиционирование */
+  position: relative;
+  /* устанавливаем размеры */
+  left: calc(var(--size) / -15);
+  width: calc(var(--size) / 10);
+  height: 48px;
+  /* делаем так, чтобы язычок был выше колеса */
+  z-index: 1;
+  /* устанавливаем точку, относительно которой будет вращаться язычок при движении колеса */
+  transform-origin: center left;
+}
+
+.ticker__arrow {
+  width: 58px;
+  height: 48px;
+}
+
+/* кнопка запуска колеса */
+.btn-spin {
+  color: white;
+  background: black;
+  border: none;
+  /* берём размер шрифта такой же, как в колесе */
+  font-size: inherit;
+  /* добавляем отступы от текста внутри кнопки */
+  padding: 0.9rem 2rem 1rem;
+  /* скругляем углы */
+  border-radius: 0.5rem;
+  /* меняем внешний вид курсора над кнопкой на руку*/
+  cursor: pointer;
+}
+
+/* если кнопка нажата и неактивна */
+.btn-spin:disabled {
+  /* меняем внешний вид курсора */
+  cursor: progress;
+  /* делаем кнопку полупрозрачной */
+  opacity: 0.25;
+}
+
+/* анимация вращения */
+.is-spinning .spinner {
+  transition: transform 8s cubic-bezier(0.1, -0.01, 0, 1);
+}
+
+/* анимация движения язычка */
+.is-spinning .ticker {
+  animation: tick 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* эффект, когда колесо задевает язычок при вращении */
+@keyframes tick {
+  40% {
+    /* чуть поворачиваем язычок наверх в середине анимации */
+    transform: rotate(-12deg);
+  }
+}
+/* анимируем выпавший сектор */
+.prize.selected .text {
+  /* делаем текст белым */
+  color: white;
+  /* настраиваем длительность анимации */
+  animation: selected 800ms ease;
+}
+
+/* настраиваем анимацию текста на выпавшем секторе по кадрам */
+@keyframes selected {
+  /* что происходит на 25% от начала анимации */
+  25% {
+    /* увеличиваем текст в 1,25 раза */
+    transform: scale(1.25);
+    /* добавляем тексту тень */
+    text-shadow: 1vmin 1vmin 0 hsla(0, 0%, 0%, 0.1);
+  }
+  40% {
+    transform: scale(0.92);
+    text-shadow: 0 0 0 hsla(0, 0%, 0%, 0.2);
+  }
+  60% {
+    transform: scale(1.02);
+    text-shadow: 0.5vmin 0.5vmin 0 hsla(0, 0%, 0%, 0.1);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+  85% {
+    transform: scale(1);
+  }
+}
 .hero .container {
   position: relative;
 }
@@ -6909,6 +7179,12 @@ input[type=radio] + label::before {
   .supervision-page .why__content {
     gap: 20px;
   }
+  .modal__box {
+    width: auto;
+  }
+  .modal__suptitle {
+    width: 75%;
+  }
 }
 @media (max-width: 600px) {
   .head {
@@ -7167,7 +7443,16 @@ input[type=radio] + label::before {
     z-index: 1000;
     background: var(--white, #fff);
   }
-  /* projection */
+  /* modal */
+  #wheel .modal__box {
+    width: 100%;
+    margin: 230px 0 0;
+  }
+  #spinner .modal__close-btn,
+  #wheel .modal__close-btn {
+    top: 15px;
+    right: 15px;
+  }
 }
 @media (max-width: 480px) {
   .container {
@@ -7239,6 +7524,9 @@ input[type=radio] + label::before {
   }
   .modal__box {
     padding: 30px;
+    border-radius: 20px;
+  }
+  .modal__bg {
     border-radius: 20px;
   }
   .modal .modal__close-btn {
