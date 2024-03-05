@@ -65,8 +65,8 @@
           <div class="container">
             <div class="head__inner">
               <div class="head__logo">
-                <a class="head__logo-link" href="#!">
-                  <img class="head__logo-img" src="images/logo.svg" alt="logo">
+                <a class="head__logo-link" href="/">
+                  <img class="head__logo-img" src="images/logo-head.svg" alt="logo">
                 </a>
                 <div class="head__logo-item">
                   <h4 class="head__logo-title">Экологичные</h4>
@@ -105,7 +105,7 @@
                   <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
                 </div>
                 <div class="head__info-item">
-                  <button class="btn-green menu-1 modal-call" type="button" data-id="spinner">
+                  <button class="btn-green menu-1 modal-call" type="button" data-id="wheel">
                     Заказать звонок
                   </button>
                 </div>
@@ -559,6 +559,9 @@
           <a class="footer__bottom-link small" href="#!">
             Политика в отношении обработки персональных данных
           </a>
+          <a class="footer__bottom-link small" href="#!">
+            Информация
+          </a>
         </div>
         <div class="footer__social">
           <a class="footer__social-link" href="https://vk.com/dsk_vira">
@@ -646,21 +649,46 @@
   <div class="modal" id="spinner">
     <div class="modal__box">
       <button class="modal__close-btn">
-        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
-            fill="#333333" />
-          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+        <svg viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
         </svg>
       </button>
-
-      <div class="modal__head">
+      <div class="modal__content">
         <img class="modal__img" src="../images/spinner/spinner-title.png" alt="">
         <h2 class="modal__title">5 подарков от Vira получи свой</h2>
         <button class="btn-green" type="submit">Получить подарок</button>
         <p class="modal__text">При нажатии на кнопку «Получить подарок» вы соглашаетесь с условиями акции. Подробнее
           об условиях акции в разделе Информация</p>
       </div>
+    </div>
+  </div>
 
+  <div class="modal" id="wheel">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
+        </svg>
+      </button>
+
+      <!-- главный блок -->
+      <div class="deal-wheel">
+        <!-- блок с призами -->
+        <ul class="spinner"></ul>
+        <!-- язычок барабана -->
+        <div class="ticker"></div>
+      </div>
+
+      <div class="modal__content">
+        <div class="modal__item">
+          <img class="modal__item-img" src="../images/icons/spinner-gift.svg" alt="">
+          <h6 class="menu-1">Крути и получай свой подарок</h6>
+        </div>
+        <!-- кнопка -->
+        <button class="btn-spin btn-green" type="submit">Вращать рулетку</button>
+      </div>
     </div>
   </div>
 </div>
