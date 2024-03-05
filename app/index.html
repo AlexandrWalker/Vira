@@ -105,7 +105,7 @@
                   <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
                 </div>
                 <div class="head__info-item">
-                  <button class="btn-green menu-1 modal-call" type="button" data-id="spinner">
+                  <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
                     Заказать звонок
                   </button>
                 </div>
@@ -176,10 +176,10 @@
                   </ul>
                 </li>
                 <li class="menu__item">
-                  <a href="#!" class="menu__link menu-1">Вопрос-ответ</a>
+                  <a href="#!" class="menu__link menu-1 modal-call" data-id="spinner">Вопрос-ответ</a>
                 </li>
                 <li class="menu__item">
-                  <a href="#!" class="menu__link menu-1">Контакты</a>
+                  <a href="#!" class="menu__link menu-1 modal-call" data-id="wheel">Контакты</a>
                 </li>
                 <li class="menu__item">
                   <form class="menu__search" action="#">
@@ -1973,9 +1973,8 @@
     <div class="modal__box">
       <button class="modal__close-btn">
         <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
-            fill="#333333" />
-          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
         </svg>
       </button>
       <div class="modal__head">
@@ -1994,10 +1993,11 @@
           <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
         </svg>
       </button>
+      <img class="modal__bg" src="../images/spinner/spinner-bg.png" alt="">
       <div class="modal__content">
         <img class="modal__img" src="../images/spinner/spinner-title.png" alt="">
         <h2 class="modal__title">5 подарков от Vira получи свой</h2>
-        <button class="btn-green" type="submit">Получить подарок</button>
+        <button class="btn-green" type="button">Получить подарок</button>
         <p class="modal__text">При нажатии на кнопку «Получить подарок» вы соглашаетесь с условиями акции. Подробнее
           об условиях акции в разделе Информация</p>
       </div>
@@ -2005,22 +2005,309 @@
   </div>
 
   <div class="modal" id="wheel">
-    <div class="modal__box">
+    <div class="modal__box" id="wheel-box">
       <button class="modal__close-btn">
         <svg viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
           <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
         </svg>
       </button>
-
-      <div class="modal__content">
-        <div class="modal__item">
-          <img class="modal__item-img" src="../images/icons/spinner-gift.svg" alt="">
-          <h6 class="menu-1">Крути и получай свой подарок</h6>
+      <img class="modal__bg" src="../images/spinner/modal-bg.gif" alt="">
+      <!-- главный блок -->
+      <div class="deal-wheel">
+        <!-- блок с призами -->
+        <ul class="spinner"></ul>
+        <div class="spinner__logo">
+          <img class="spinner__logo-img" src="images/logo-icon.svg" alt="Vira">
         </div>
-        <!-- кнопка -->
-        <button class="btn-spin btn-green" type="submit">Вращать рулетку</button>
+        <!-- язычок барабана -->
+        <div class="ticker">
+          <svg class="ticker__arrow">
+            <use xlink:href="#ticker"></use>
+          </svg>
+        </div>
+        <!-- кружочки -->
+        <ul class="circle">
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="../images/icons/icons-circle.svg" alt="">
+          </li>
+        </ul>
+        <div class="modal__content" id="modal__content">
+          <div class="modal__item">
+            <img class="modal__item-img" src="../images/icons/spinner-gift.svg" alt="">
+            <h6 class="menu-1">Крути и получай свой подарок</h6>
+          </div>
+          <button class="btn-spin btn-green">Вращать рулетку</button>
+        </div>
+      </div>
+      <div class="modal__result" id="modal__result" style="display: none;">
+        <div class="modal__result-head">
+          <h4 class="modal__result-title">Ваш приз</h4>
+          <h3 class="modal__result-suptitle" id="result"></h3>
+        </div>
+        <h5 class="modal__result-text">Заполните форму, мы расскажем как его получить!</h5>
+        <form class="modal__form" action="">
+          <input class="callback__input small" type="text" placeholder="Имя">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Получить скидку</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // wheel
+  var circle = document.getElementsByClassName('circle__item');
+  var delta = Math.PI * 2 / circle.length;
+  var angle = 0;
+
+  for (var i = 0; i < circle.length; i++) {
+    circle[i].style.top = 195.5 * Math.cos(angle) + 'px';
+    circle[i].style.left = 195.5 * Math.sin(angle) + 'px';
+    angle += delta;
+  }
+
+  // надписи и цвета на секторах
+  const prizes = [
+    {
+      text: "Беседка открытого типа",
+      color: "#34B57D",
+    },
+    {
+      text: "50% на фундамент",
+      color: "#007B43",
+    },
+    {
+      text: "20% на мебель от партнеров",
+      color: "#0D8B53",
+    },
+    {
+      text: "Входная дверь",
+      color: "#179860",
+    },
+    {
+      text: "Бесплатный проект дома",
+      color: "#20A169",
+    }
+  ];
+
+  // создаём переменные для быстрого доступа ко всем объектам на странице — блоку в целом, колесу, кнопке и язычку
+  const wheel = document.querySelector(".deal-wheel");
+  const spinner = wheel.querySelector(".spinner");
+  const trigger = wheel.querySelector(".btn-spin");
+  const ticker = wheel.querySelector(".ticker");
+
+  // на сколько секторов нарезаем круг
+  const prizeSlice = 360 / prizes.length;
+  // на какое расстояние смещаем сектора друг относительно друга
+  const prizeOffset = Math.floor(180 / prizes.length);
+  // прописываем CSS-классы, которые будем добавлять и убирать из стилей
+  const spinClass = "is-spinning";
+  const selectedClass = "selected";
+  // получаем все значения параметров стилей у секторов
+  const spinnerStyles = window.getComputedStyle(spinner);
+
+  // переменная для анимации
+  let tickerAnim;
+  // угол вращения
+  let rotation = 0;
+  // текущий сектор
+  let currentSlice = 0;
+  // переменная для текстовых подписей
+  let prizeNodes;
+
+  // расставляем текст по секторам
+  const createPrizeNodes = () => {
+    // обрабатываем каждую подпись
+    prizes.forEach(({ text, color, reaction }, i) => {
+      // каждой из них назначаем свой угол поворота
+      const rotation = ((prizeSlice * i) * -1) - prizeOffset;
+      // добавляем код с размещением текста на страницу в конец блока spinner
+      spinner.insertAdjacentHTML(
+        "beforeend",
+        // текст при этом уже оформлен нужными стилями
+        `<li class="prize" data-reaction=${reaction} style="--rotate: ${rotation}deg">
+        <span class="text">${text}</span>
+      </li>`
+      );
+    });
+  };
+
+  // рисуем разноцветные секторы
+  const createConicGradient = () => {
+    // устанавливаем нужное значение стиля у элемента spinner
+    spinner.setAttribute(
+      "style",
+      `background: conic-gradient(
+      from -90deg,
+      ${prizes
+        // получаем цвет текущего сектора
+        .map(({ color }, i) => `${color} 0 ${(100 / prizes.length) * (prizes.length - i)}%`)
+        .reverse()
+      }
+    );`
+    );
+  };
+
+  // создаём функцию, которая нарисует колесо в сборе
+  const setupWheel = () => {
+    // сначала секторы
+    createConicGradient();
+    // потом текст
+    createPrizeNodes();
+    // а потом мы получим список всех призов на странице, чтобы работать с ними как с объектами
+    prizeNodes = wheel.querySelectorAll(".prize");
+  };
+
+  // определяем количество оборотов, которое сделает наше колесо
+  const spinertia = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  // функция запуска вращения с плавной остановкой
+  const runTickerAnimation = () => {
+    // взяли код анимации отсюда: https://css-tricks.com/get-value-of-css-rotation-through-javascript/
+    const values = spinnerStyles.transform.split("(")[1].split(")")[0].split(",");
+    const a = values[0];
+    const b = values[1];
+    let rad = Math.atan2(b, a);
+
+    if (rad < 0) rad += (2 * Math.PI);
+
+    const angle = Math.round(rad * (180 / Math.PI));
+    const slice = Math.floor(angle / prizeSlice);
+
+    // анимация язычка, когда его задевает колесо при вращении
+    // если появился новый сектор
+    if (currentSlice !== slice) {
+      // убираем анимацию язычка
+      ticker.style.animation = "none";
+      // и через 10 миллисекунд отменяем это, чтобы он вернулся в первоначальное положение
+      setTimeout(() => ticker.style.animation = null, 10);
+      // после того, как язычок прошёл сектор - делаем его текущим 
+      currentSlice = slice;
+    }
+    // запускаем анимацию
+    tickerAnim = requestAnimationFrame(runTickerAnimation);
+  };
+
+  // функция выбора призового сектора
+  const selectPrize = () => {
+    const selected = Math.floor(rotation / prizeSlice);
+    prizeNodes[selected].classList.add(selectedClass);
+    document.getElementById('result').innerHTML = prizeNodes[selected].innerText;
+  };
+
+  // отслеживаем нажатие на кнопку
+  trigger.addEventListener("click", () => {
+    // делаем её недоступной для нажатия
+    trigger.disabled = true;
+    // задаём начальное вращение колеса
+    rotation = Math.floor(Math.random() * 360 + spinertia(2000, 5000));
+    // убираем прошлый приз
+    prizeNodes.forEach((prize) => prize.classList.remove(selectedClass));
+    // добавляем колесу класс is-spinning, с помощью которого реализуем нужную отрисовку
+    wheel.classList.add(spinClass);
+    // через CSS говорим секторам, как им повернуться
+    spinner.style.setProperty("--rotate", rotation);
+    // возвращаем язычок в горизонтальную позицию
+    ticker.style.animation = "none";
+    // запускаем анимацию вращение
+    runTickerAnimation();
+  });
+
+  // отслеживаем, когда закончилась анимация вращения колеса
+  spinner.addEventListener("transitionend", () => {
+    // останавливаем отрисовку вращения
+    cancelAnimationFrame(tickerAnim);
+    // получаем текущее значение поворота колеса
+    rotation %= 360;
+    // выбираем приз
+    selectPrize();
+    // убираем класс, который отвечает за вращение
+    wheel.classList.remove(spinClass);
+    // отправляем в CSS новое положение поворота колеса
+    spinner.style.setProperty("--rotate", rotation);
+    // делаем кнопку снова активной
+    // trigger.disabled = false;
+
+    document.getElementById('modal__content').style.setProperty("display", "none");
+    document.getElementById('modal__result').style.setProperty("display", "flex");
+    document.getElementById('wheel-box').style.setProperty("margin-top", "230");
+  });
+
+  // подготавливаем всё к первому запуску
+  setupWheel();
+</script>

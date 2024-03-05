@@ -359,8 +359,6 @@
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(inputs);
 
-    
-
     // Modal
     (function () {
       var close = document.querySelectorAll('.modal__close-btn');

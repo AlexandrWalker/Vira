@@ -2640,6 +2640,14 @@
   .supervision-page .why__content {
     gap: 20px;
   }
+
+  .modal__box {
+    width: auto;
+  }
+
+  .modal__suptitle {
+    width: 75%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2972,8 +2980,17 @@
     background: var(--white, #fff);
   }
 
-  /* projection */
+  /* modal */
+  #wheel .modal__box {
+    width: 100%;
+    margin: 230px 0 0;
+  }
 
+  #spinner .modal__close-btn,
+  #wheel .modal__close-btn {
+    top: 15px;
+    right: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3067,6 +3084,10 @@
 
   .modal__box {
     padding: 30px;
+    border-radius: 20px;
+  }
+
+  .modal__bg {
     border-radius: 20px;
   }
 
