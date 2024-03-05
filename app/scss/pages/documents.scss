@@ -54,18 +54,61 @@
   }
 }
 
-.documents-page {
-  .licenses {
-    background: none;
-    margin-bottom: 60px;
-  }
+.documents-page .licenses {
+  margin-bottom: 60px;
+}
 
-  .licenses__inner {
+.licenses {
+  background: none;
+
+  &__inner {
     padding: 0;
   }
 
-  .licenses__item {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__suptitle {
+    color: var(--grey, #A7A7A7);
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    width: calc(25% - 22.5px);
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
     border: 1px solid var(--grey2, #EFEFEF);
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 30px 30px 16px;
+      background: var(--white, #fff);
+    }
+
+    &-name {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      padding: 30px;
+      background: var(--grey2, #EFEFEF);
+      text-align: center;
+    }
   }
 }
 

@@ -582,11 +582,41 @@ input[type=radio] {
     justify-content: center;
     width: 44px;
     height: 44px;
+    position: relative;
 
     &:last-child {
-      padding-top: 20px;
+      height: 54px;
+      padding-top: 10px;
       border-top: 2px solid var(--grey2, #EFEFEF);
+
+      .social__text {
+        top: 10px;
+      }
     }
+
+    &:hover .social__text {
+      overflow: visible;
+      opacity: 1;
+      transition: all 0.1s linear;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding-right: 20px;
+    background: var(--bg, #F9F9F9);
+    color: var(--black, #2E2D2D);
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 44px;
+    border-radius: 0 3px 3px 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.1s linear;
   }
 
   &__img {

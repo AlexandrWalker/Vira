@@ -26,8 +26,11 @@
   <div class="sitemap block">
     <div class="container">
       <div class="sitemap__inner">
-
-        <img class="sitemap__img" src="images/hero/hero.png" loading="lazy" alt="background">
+        <picture class="sitemap__picture">
+          <source media="(min-width: 769px)" srcset="images/hero/hero-desktop.png">
+          <source media="(max-width: 768px)" srcset="images/hero/hero-mobile.png">
+          <img class="sitemap__img" src="images/hero/hero-desktop.png" loading="lazy" alt="hero" loading="lazy">
+        </picture>
 
         <div class="sitemap__blocks">
           <div class="sitemap__block">

@@ -105,7 +105,7 @@
                   <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
                 </div>
                 <div class="head__info-item">
-                  <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
+                  <button class="btn-green menu-1 modal-call" type="button" data-id="spinner">
                     Заказать звонок
                   </button>
                 </div>
@@ -258,8 +258,14 @@
     <path d="M2 3.667L5.2 7 10 2" stroke="#179860" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
 
+  <symbol id="ticker" width="59" height="49" viewBox="0 0 59 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M55.7266 24.2258C55.7266 24.3406 55.6451 24.8285 55.1245 25.7645C54.6365 26.642 53.8829 27.7003 52.8733 28.8878C50.8584 31.2579 47.9875 33.9513 44.6754 36.4923C41.3664 39.031 37.6848 41.3654 34.0719 43.055C30.4257 44.7602 27.025 45.7258 24.2266 45.7258C12.3524 45.7258 2.72656 36.1 2.72656 24.2258C2.72656 12.3517 12.3524 2.72583 24.2266 2.72583C27.025 2.72583 30.4257 3.6915 34.0719 5.39667C37.6848 7.08629 41.3664 9.4207 44.6754 11.9593C47.9875 14.5004 50.8584 17.1938 52.8733 19.5639C53.8829 20.7513 54.6365 21.8097 55.1245 22.6871C55.6451 23.6231 55.7266 24.111 55.7266 24.2258Z"
+      fill="white" stroke="#857067" stroke-width="5" />
+  </symbol>
+
 </svg>
-<main class="main">
+<main class="main supervision-page">
   <div class="page__head">
     <div class="container">
       <div class="breadcrumbs">
@@ -316,30 +322,36 @@
         </h5>
         <ul class="supervision-advantages__list">
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Проверить качество и объем строительных работ</p>
           </li>
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Построить и ввести объект в заданный срок, без простоев</p>
           </li>
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Избежать дополнительных затрат на строительные материалы и
               услуги</p>
           </li>
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Узаконить уже сделанную перепланировку и свести штраф к
               минимуму</p>
           </li>
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Быстро и по закону сделать перепланировку квартиры и избежать
               штрафа</p>
           </li>
           <li class="supervision-advantages__item">
-            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy" alt="arrow">
+            <img class="supervision-advantages____item-img" src="images/icons/supervision-arrow.svg" loading="lazy"
+              alt="arrow">
             <p class="supervision-advantages__item-text">Проверить качество и сэкономить деньги при приемке квартиры в
               новостройке</p>
           </li>
@@ -455,7 +467,7 @@
             процессе</p>
           <button class="btn-green">Получить консультацию</button>
         </div>
-        <img class="why__img" src="images/helmet.png" loading="lazy" alt="helmet">
+        <img class="why__img" src="images/page-supervision/helmet.png" loading="lazy" alt="helmet">
       </div>
     </div>
   </div>
@@ -713,6 +725,27 @@
         <p class="modal__suptitle">За ваше доверие, мы уже набираем ваш номер</p>
       </div>
       <button class="btn-green" type="submit">Хорошо, жду</button>
+    </div>
+  </div>
+
+  <div class="modal" id="spinner">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+            fill="#333333" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+        </svg>
+      </button>
+
+      <div class="modal__head">
+        <img class="modal__img" src="../images/spinner/spinner-title.png" alt="">
+        <h2 class="modal__title">5 подарков от Vira получи свой</h2>
+        <button class="btn-green" type="submit">Получить подарок</button>
+        <p class="modal__text">При нажатии на кнопку «Получить подарок» вы соглашаетесь с условиями акции. Подробнее
+          об условиях акции в разделе Информация</p>
+      </div>
+
     </div>
   </div>
 </div>
