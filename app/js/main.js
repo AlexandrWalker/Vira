@@ -2,12 +2,11 @@
   document.addEventListener('DOMContentLoaded', () => {
 
     // case slider
-    $('.case__slider').slick({
+    $('.case__slider-1').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: true,
-      centerMode: true,
       prevArrow: false,
       nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
       responsive: [
@@ -20,15 +19,21 @@
       ]
     });
 
-    // case slide margin
-    $(document).ready(function () {
-      var slider = $('.case__slider');
-
-      slider.slick();
-
-      slider.find('.slick-slide').css('margin', '0 100px 0 0');
-
-      slider.slick('setPosition');
+    $('.case__slider-2').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: false,
+      nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            nextArrow: '<button type="button" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+          }
+        }
+      ]
     });
 
     // stages slider
@@ -349,6 +354,11 @@
       ]
     });
 
+    // inputmask
+    let inputs = document.querySelectorAll('input[type="tel"]');
+    let im = new Inputmask('+7 (999) 999-99-99');
+    im.mask(inputs);
+
     // Modal
     (function () {
       var close = document.querySelectorAll('.modal__close-btn');
@@ -435,8 +445,8 @@
         case__slider1.classList.add("active");
         case__slider2.classList.remove("active");
 
-        $('#case__slider1').slick('reinit');
-        $('#case__slider2').slick('unslick');
+        $('case__slider-1').slick('reinit');
+        $('case__slider-2').slick('unslick');
       });
 
       case__tab2.addEventListener("click", function () {
@@ -446,8 +456,8 @@
         case__slider1.classList.remove("active");
         case__slider2.classList.add("active");
 
-        $('#case__slider1').slick('unslick');
-        $('#case__slider2').slick('reinit');
+        $('case__slider-1').slick('unslick');
+        $('case__slider-2').slick('reinit');
       });
     });
 
@@ -494,117 +504,6 @@
       });
     })();
 
-    // filter dropdown
-    (function () {
-      document.querySelectorAll('.filter__item-btn').forEach((el) => {
-        el.addEventListener('click', () => {
-          el.classList.toggle('filter__item-btn--active');
-          el.parentNode.classList.toggle('filter__item-active');
-
-          let parentElement = el.parentNode;
-
-          parentElement.querySelectorAll('.filter__list-link').forEach((elem) => {
-            elem.addEventListener('click', () => {
-              let dataValue = elem.getAttribute('data-value');
-
-              if (isNaN(dataValue)) {
-                el.innerHTML = dataValue;
-              } else {
-                el.innerHTML = "Показать: " + dataValue;
-              }
-
-              el.setAttribute('data-value', dataValue);
-
-              el.classList.remove('filter__item-btn--active');
-              el.parentNode.classList.remove("filter__item-active");
-            });
-          });
-        });
-
-        el.addEventListener('click', event => {
-          event._isClickWithInMenu = true;
-        });
-        document.body.addEventListener('click', event => {
-          if (event._isClickWithInMenu) return;
-          el.classList.remove('filter__item-btn--active');
-          el.parentNode.classList.remove("filter__item-active");
-        });
-      });
-    })();
-
-    var filterBtn = document.getElementById('filterBtn'),
-      sidebar = document.getElementById('sidebar'),
-      sidebarClose = document.getElementById('sidebarClose');
-
-    filterBtn.onclick = filterOpen;
-    sidebarClose.onclick = filterClose;
-
-    function filterOpen() {
-      sidebar.classList.add('show');
-      document.body.classList.add('no-scroll');
-    };
-
-    function filterClose() {
-      sidebar.classList.remove('show');
-      document.body.classList.remove('no-scroll');
-    };
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === "Escape") {
-        filterClose();
-      }
-    });
-
-    document.getElementById("sidebar").addEventListener('click', event => {
-      event._isClickWithInMenu = true;
-    });
-    document.getElementById("filterBtn").addEventListener('click', event => {
-      event._isClickWithInMenu = true;
-    });
-    document.body.addEventListener('click', event => {
-      if (event._isClickWithInMenu) return;
-      filterClose();
-    });
-
-    document.querySelectorAll('.sidebar__checkbox').forEach((e) => {
-      e.addEventListener('click', () => {
-
-        var filterEtagi = document.getElementById('filterEtagi');
-
-        if (e.checked) {
-          let name = e.getAttribute('name');
-          let value = e.getAttribute('value');
-
-          if (name == "etagi") {
-            filterEtagi.classList.add('active');
-          }
-
-          if (value == '1') {
-            filterEtagi.innerHTML = 'Один этаж';
-          }
-
-          if (value == '2') {
-            filterEtagi.innerHTML = 'Два этажа';
-          }
-
-          if (value == '3') {
-            filterEtagi.innerHTML = 'Три этажа';
-          }
-
-          if (value == '4') {
-            filterEtagi.innerHTML = 'Больше трех';
-          }
-        } else {
-          filterEtagi.classList.remove('active');
-        }
-
-        filterEtagi.addEventListener('click', function () {
-          filterEtagi.classList.remove('active');
-          e.checked = false;
-        });
-      });
-    });
-
     // calculator
     function calculator(calcId) {
       let price = document.getElementById("pre-price");
@@ -643,6 +542,122 @@
     };
 
     calculator('econom');
+
+    // filter dropdown
+    let filter = document.querySelector('.filter');
+    if (!filter) {
+      return;
+    } else {
+      (function () {
+        document.querySelectorAll('.filter__item-btn').forEach((el) => {
+          el.addEventListener('click', () => {
+            el.classList.toggle('filter__item-btn--active');
+            el.parentNode.classList.toggle('filter__item-active');
+
+            let parentElement = el.parentNode;
+
+            parentElement.querySelectorAll('.filter__list-link').forEach((elem) => {
+              elem.addEventListener('click', () => {
+                let dataValue = elem.getAttribute('data-value');
+
+                if (isNaN(dataValue)) {
+                  el.innerHTML = dataValue;
+                } else {
+                  el.innerHTML = "Показать: " + dataValue;
+                }
+
+                el.setAttribute('data-value', dataValue);
+
+                el.classList.remove('filter__item-btn--active');
+                el.parentNode.classList.remove("filter__item-active");
+              });
+            });
+          });
+
+          el.addEventListener('click', event => {
+            event._isClickWithInMenu = true;
+          });
+          document.body.addEventListener('click', event => {
+            if (event._isClickWithInMenu) return;
+            el.classList.remove('filter__item-btn--active');
+            el.parentNode.classList.remove("filter__item-active");
+          });
+        });
+      })();
+
+      var filterBtn = document.getElementById('filterBtn'),
+        sidebar = document.getElementById('sidebar'),
+        sidebarClose = document.getElementById('sidebarClose');
+
+      filterBtn.onclick = filterOpen;
+      sidebarClose.onclick = filterClose;
+
+      function filterOpen() {
+        sidebar.classList.add('show');
+        document.body.classList.add('no-scroll');
+      };
+
+      function filterClose() {
+        sidebar.classList.remove('show');
+        document.body.classList.remove('no-scroll');
+      };
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+          filterClose();
+        }
+      });
+
+      document.getElementById("sidebar").addEventListener('click', event => {
+        event._isClickWithInMenu = true;
+      });
+      document.getElementById("filterBtn").addEventListener('click', event => {
+        event._isClickWithInMenu = true;
+      });
+      document.body.addEventListener('click', event => {
+        if (event._isClickWithInMenu) return;
+        filterClose();
+      });
+
+      document.querySelectorAll('.sidebar__checkbox').forEach((e) => {
+        e.addEventListener('click', () => {
+
+          var filterEtagi = document.getElementById('filterEtagi');
+
+          if (e.checked) {
+            let name = e.getAttribute('name');
+            let value = e.getAttribute('value');
+
+            if (name == "etagi") {
+              filterEtagi.classList.add('active');
+            }
+
+            if (value == '1') {
+              filterEtagi.innerHTML = 'Один этаж';
+            }
+
+            if (value == '2') {
+              filterEtagi.innerHTML = 'Два этажа';
+            }
+
+            if (value == '3') {
+              filterEtagi.innerHTML = 'Три этажа';
+            }
+
+            if (value == '4') {
+              filterEtagi.innerHTML = 'Больше трех';
+            }
+          } else {
+            filterEtagi.classList.remove('active');
+          }
+
+          filterEtagi.addEventListener('click', function () {
+            filterEtagi.classList.remove('active');
+            e.checked = false;
+          });
+        });
+      });
+    }
 
   });
 })();

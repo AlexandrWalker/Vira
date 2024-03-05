@@ -104,6 +104,18 @@
 
     &-item {
       padding: 40px 0 100px;
+      opacity: 0;
+      transition: opacity 0.1s ease-out;
+
+      &.slick-current.slick-active,
+      &.slick-current.slick-active+.case__slider-item {
+        opacity: 1;
+        transition: opacity 0.1s ease-out;
+      }
+
+      &.slick-current.slick-active .case__cover-btn {
+        display: none;
+      }
     }
 
     .slick-list {
@@ -146,12 +158,6 @@
 
     .slick-slide {
       margin: 0 100px 0 0;
-    }
-
-    .case__slider-item.slick-current.slick-active,
-    .case__slider-item.slick-current.slick-active+.case__slider-item {
-      opacity: 1;
-      transition: opacity 0.1s ease-out;
     }
   }
 
@@ -465,7 +471,6 @@
     &-item {
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       .small {
         color: var(--grey, #A7A7A7);

@@ -2016,14 +2016,6 @@
     padding: 20px 0 60px 0;
   }
 
-  .case__cover-btn {
-    display: none;
-  }
-
-  .case__slider-item.slick-active+.case__slider-item .case__cover-btn {
-    display: block;
-  }
-
   .case__slider {
     margin: 0;
   }
@@ -2870,6 +2862,7 @@
   .calculation__banner-item {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 60px;
     width: 100%;
   }
