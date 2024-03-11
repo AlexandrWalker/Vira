@@ -39,7 +39,7 @@
             и принятия решений по оптимизации первоначальных характеристик объекта. Итогом проектирования является
             проект — технически обоснованная и экономически эффективная модель возведения или реконструкции объекта.
           </h5>
-          <button class="btn-green">Заказать звонок</button>
+          <button class="btn-green modal-call" data-id="callback">Заказать звонок</button>
         </div>
         <img class="supervision__img" src="images/page-projection/projection-cover.png" loading="lazy" alt="cover">
       </div>
@@ -131,7 +131,7 @@
           части приводятся чертежи и схемы зданий, входящих в состав проектируемого комплекса, конструктивных элементов,
           инженерных коммуникаций, планы ландшафта и другие документы.</p>
 
-        <button class="btn-green">Получить консультацию</button>
+        <button class="btn-green modal-call" data-id="callback">Получить консультацию</button>
       </div>
     </div>
   </div>
@@ -276,18 +276,21 @@
             тоже есть и много</h5>
         </div>
         <div class="licenses__items">
-          <div class="licenses__item">
+          <a class="licenses__item" href="images/documents/licenses-full-1.png" data-type="image" data-fancybox="gallery"
+            data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-1.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
-          <div class="licenses__item">
+          </a>
+          <a class="licenses__item" href="images/documents/licenses-full-2.png" data-type="image" data-fancybox="gallery"
+            data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-2.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
-          <div class="licenses__item">
+          </a>
+          <a class="licenses__item" href="images/documents/licenses-full-3.png" data-type="image" data-fancybox="gallery"
+            data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-3.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -295,14 +298,14 @@
 
   <div class="callback block">
     <div class="container">
-      <div class="callback__inner" style="background-image: url(../images/texture/discount-texture.png);">
+      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
         <div class="callback__item">
           <h2 class="callback__title">Обязательно поможем</h2>
           <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
         </div>
         <form class="callback__form">
           <input class="callback__input small" type="tel" placeholder="Номер телефона">
-          <button class="btn-green" type="submit">Отправить</button>
+          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
         </form>
         <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
       </div>

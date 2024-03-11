@@ -43,8 +43,18 @@
 .reviews-page {
   .callback {
 
+    &__picture {
+      position: absolute;
+      bottom: -17px;
+      right: 122px;
+      z-index: 2;
+      width: 333px;
+      height: auto;
+    }
+
     &__img {
-      bottom: -16px;
+      position: relative;
+      bottom: 0;
       right: 0;
       border-radius: 0 85px 60px 0;
       width: 454px;

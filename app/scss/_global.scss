@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  height: auto;
   overflow-x: hidden;
   min-width: 320px;
   font-family: "Ubuntu", sans-serif;
@@ -12,6 +13,7 @@ body {
 }
 
 .no-scroll {
+  height: 100%;
   overflow: hidden;
 }
 
@@ -232,6 +234,8 @@ p {
     display: flex;
     align-items: center;
     gap: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 
   &__item {
@@ -246,6 +250,7 @@ p {
 
   &__link {
     color: var(--black, #2E2D2D);
+    white-space: nowrap;
   }
 
   &__arrow {
@@ -537,6 +542,11 @@ input[type=radio] {
     &.disabled {
       pointer-events: none;
       color: var(--grey2, #EFEFEF);
+
+      &::before,
+      &::after {
+        background: var(--grey2, #EFEFEF);
+      }
     }
   }
 
@@ -551,12 +561,15 @@ input[type=radio] {
     &-dots {
       border-radius: 8px;
       color: var(--black, #2E2D2D);
-      background: var(--bg, #F9F9F9);
       display: flex;
       justify-content: center;
       align-items: center;
       width: 52px;
       height: 52px;
+    }
+
+    &-link.pagination-active {
+      background: var(--bg, #F9F9F9);
     }
   }
 }

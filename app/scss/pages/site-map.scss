@@ -49,5 +49,9 @@
     padding: 10px 15px;
     border-radius: 8px;
     background: var(--bg, #F9F9F9);
+
+    &:hover {
+      color: var(--green, #179860);
+    }
   }
 }

@@ -28,6 +28,10 @@
 
     &-link {
       color: var(--black, #2E2D2D);
+
+      &:hover {
+        color: var(--green, #179860);
+      }
     }
 
     &-info {
@@ -72,9 +76,8 @@
       display: flex;
       gap: 10px;
 
-      h6 {
+      &>a {
         min-width: 100px;
-        color: var(--green, #179860);
       }
     }
 
@@ -86,6 +89,10 @@
 
     &-link {
       color: var(--black, #2E2D2D);
+
+      &:hover {
+        color: var(--green, #179860);
+      }
     }
   }
 

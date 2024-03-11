@@ -32,6 +32,7 @@
     overflow: hidden;
     position: relative;
     border: 1px solid var(--grey2, #EFEFEF);
+    color: var(--black, #2E2D2D);
 
     &-img {
       width: auto;
@@ -90,6 +91,7 @@
     overflow: hidden;
     position: relative;
     border: 1px solid var(--grey2, #EFEFEF);
+    color: var(--black, #2E2D2D);
 
     &-img {
       width: 100%;

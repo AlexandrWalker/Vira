@@ -75,6 +75,7 @@
     });
 
     $('.stages__content').slick({
+      infinite: false,
       arrows: false,
       dots: false,
       slidesToShow: 1,
@@ -230,20 +231,16 @@
     });
 
     // services slider
-    $('.services__items').slick({
+    $('.services__slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
       responsive: [
         {
-          breakpoint: 9999,
-          settings: "unslick"
-        },
-        {
           breakpoint: 769,
-          settings: {
-            slidesToShow: 1.15,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
+          slidesToShow: 1,
+          dots: true,
         }
       ]
     });
@@ -354,6 +351,11 @@
       ]
     });
 
+    // Fancybox
+    $('[data-fancybox="gallery"]').fancybox({
+      loop: true,
+    });
+
     // inputmask
     let inputs = document.querySelectorAll('input[type="tel"]');
     let im = new Inputmask('+7 (999) 999-99-99');
@@ -391,6 +393,24 @@
       });
     })();
 
+    // file
+    let inputsFile = document.querySelectorAll('input[type="file"]');
+    Array.prototype.forEach.call(inputsFile, function (input) {
+      let label = input.nextElementSibling,
+        labelVal = label.querySelector('.file__text').innerText;
+
+      input.addEventListener('change', function (e) {
+        let countFiles = '';
+        if (this.files && this.files.length >= 1)
+          countFiles = this.files.length;
+
+        if (countFiles)
+          label.querySelector('.file__text').innerText = 'Файлов: ' + countFiles;
+        else
+          label.querySelector('.file__text').innerText = labelVal;
+      });
+    });
+
     // Menu
     (function () {
       var menuLink = document.querySelectorAll('.menu__dropdown'),
@@ -411,6 +431,7 @@
       var burgerBtn = document.getElementById('burger');
       var menu = document.getElementById('menu');
       var header = document.getElementById('header');
+      var body = document.body;
 
       burgerBtn.addEventListener('click', function (e) {
         burgerBtn.classList.toggle('active');
@@ -418,7 +439,7 @@
         menu.classList.toggle('active');
         menu.parentNode.classList.toggle('active');
         header.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
+        body.classList.toggle('no-scroll');
       });
     })();
 
@@ -506,39 +527,44 @@
 
     // calculator
     function calculator(calcId) {
-      let price = document.getElementById("pre-price");
-      let slider = document.getElementById("range");
-      let output = document.getElementById("calc");
+      let calculation = document.querySelector('.calculation');
+      if (!calculation) {
+        return;
+      } else {
+        let price = document.getElementById("pre-price");
+        let slider = document.getElementById("range");
+        let output = document.getElementById("calc");
 
-      if (calcId == 'econom') var endPrice = 45000;
-      if (calcId == 'basic') var endPrice = 50000;
-      if (calcId == 'standart') var endPrice = 60000;
-      if (calcId == 'premium') var endPrice = 75000;
+        if (calcId == 'econom') var endPrice = 45000;
+        if (calcId == 'basic') var endPrice = 50000;
+        if (calcId == 'standart') var endPrice = 60000;
+        if (calcId == 'premium') var endPrice = 75000;
 
-      output.value = slider.value;
-      slider.value = output.value;
+        output.value = slider.value;
+        slider.value = output.value;
 
-      slider.oninput = function () {
-        output.value = this.value;
-        let priceValue = slider.value * endPrice;
+        slider.oninput = function () {
+          output.value = this.value;
+          let priceValue = slider.value * endPrice;
 
-        function space(priceValue) {
-          var point = "";
-          var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
+          function space(priceValue) {
+            var point = "";
+            var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
 
-          x = x.split("").reverse().join("")
-            .replace(/(\d{3})/g, "$1 ")
-            .split("").reverse().join("");
-          return x + point;
+            x = x.split("").reverse().join("")
+              .replace(/(\d{3})/g, "$1 ")
+              .split("").reverse().join("");
+            return x + point;
+          }
+
+          price.innerHTML = space(priceValue);
         }
 
-        price.innerHTML = space(priceValue);
+        output.oninput = function () {
+          slider.value = this.value;
+          price.innerHTML = slider.value * endPrice;
+        };
       }
-
-      output.oninput = function () {
-        slider.value = this.value;
-        price.innerHTML = slider.value * endPrice;
-      };
     };
 
     calculator('econom');

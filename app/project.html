@@ -8,6 +8,8 @@
   <title>Vira</title>
 
   <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- calculation input style -->
   <style>
@@ -392,8 +394,8 @@
               <img class="project__guarantee-img" src="images/icons/guarantee.svg" alt="guarantee">
               <h6 class="project__guarantee-text small"><span>Гарантия до 5 лет</span> по договору</h6>
             </div>
-            <button class="project__guarantee-btn btn-grey">Бесплатная консультация</button>
-            <button class="project__guarantee-btn btn-green">Хочу такой дом</button>
+            <button class="project__guarantee-btn btn-grey modal-call" data-id="callback">Бесплатная консультация</button>
+            <button class="project__guarantee-btn btn-green modal-call" data-id="callback">Хочу такой дом</button>
           </div>
         </div>
       </div>
@@ -526,7 +528,7 @@
           </div>
         </div>
 
-        <button class="btn-white">Условия оплаты подробнее</button>
+        <button class="btn-white modal-call" data-id="callback">Условия оплаты подробнее</button>
       </div>
     </div>
   </div>
@@ -609,7 +611,7 @@
               <h6 class="menu-1">Звоните с 9 до 18 часов</h6>
             </div>
           </div>
-          <button class="project-video__bottom-btn btn-green">Бесплатная консультация</button>
+          <button class="project-video__bottom-btn btn-green modal-call" data-id="callback">Бесплатная консультация</button>
         </div>
         <div class="project-video__video">
           <iframe width="770" height="470"
@@ -709,8 +711,8 @@
                 <p class="built__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
                   Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
                 <div class="built__item-btns">
-                  <button class="btn-green">Хочу такой дом</button>
-                  <button class="btn-grey">Что входит в постройку</button>
+                  <button class="btn-green modal-call" data-id="callback">Хочу такой дом</button>
+                  <button class="btn-grey modal-call" data-id="callback">Что входит в постройку</button>
                 </div>
               </div>
               <div class="built__options">
@@ -756,8 +758,8 @@
                 <p class="built__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
                   Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
                 <div class="built__item-btns">
-                  <button class="btn-green">Хочу такой дом</button>
-                  <button class="btn-grey">Что входит в постройку</button>
+                  <button class="btn-green modal-call" data-id="callback">Хочу такой дом</button>
+                  <button class="btn-grey modal-call" data-id="callback">Что входит в постройку</button>
                 </div>
               </div>
               <div class="built__options">
@@ -803,8 +805,8 @@
                 <p class="built__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
                   Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
                 <div class="built__item-btns">
-                  <button class="btn-green">Хочу такой дом</button>
-                  <button class="btn-grey">Что входит в постройку</button>
+                  <button class="btn-green modal-call" data-id="callback">Хочу такой дом</button>
+                  <button class="btn-grey modal-call" data-id="callback">Что входит в постройку</button>
                 </div>
               </div>
               <div class="built__options">
@@ -850,8 +852,8 @@
                 <p class="built__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
                   Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
                 <div class="built__item-btns">
-                  <button class="btn-green">Хочу такой дом</button>
-                  <button class="btn-grey">Что входит в постройку</button>
+                  <button class="btn-green modal-call" data-id="callback">Хочу такой дом</button>
+                  <button class="btn-grey modal-call" data-id="callback">Что входит в постройку</button>
                 </div>
               </div>
               <div class="built__options">
@@ -897,8 +899,8 @@
                 <p class="built__item-text">Роскошный одноэтажный дом в стиле «Шале» в каркасном исполнении.
                   Дом идеально подходит для круглогодичного проживания, для семьи из 3–4 человек.</p>
                 <div class="built__item-btns">
-                  <button class="btn-green">Хочу такой дом</button>
-                  <button class="btn-grey">Что входит в постройку</button>
+                  <button class="btn-green modal-call" data-id="callback">Хочу такой дом</button>
+                  <button class="btn-grey modal-call" data-id="callback">Что входит в постройку</button>
                 </div>
               </div>
               <div class="built__options">
@@ -943,14 +945,14 @@
 
   <div class="callback block">
     <div class="container">
-      <div class="callback__inner" style="background-image: url(../images/texture/discount-texture.png);">
+      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
         <div class="callback__item">
           <h2 class="callback__title">Обязательно поможем</h2>
           <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
         </div>
         <form class="callback__form">
           <input class="callback__input small" type="tel" placeholder="Номер телефона">
-          <button class="btn-green" type="submit">Отправить</button>
+          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
         </form>
         <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
       </div>
@@ -1007,7 +1009,7 @@
 
       <div class="footer__menu">
         <div class="footer__menu-block">
-          <h6 class="menu-1">О компании</h6>
+          <a class="footer__menu-link menu-1" href="#!">О компании</a>
           <ul class="footer__menu-list">
             <li class="footer__menu-item">
               <a class="footer__menu-link menu-1" href="#!">О нас</a>
@@ -1033,7 +1035,7 @@
           </ul>
         </div>
         <div class="footer__menu-block">
-          <h6 class="menu-1">Услуги</h6>
+          <a class="footer__menu-link menu-1" href="#!">Услуги</a>
           <ul class="footer__menu-list">
             <li class="footer__menu-item">
               <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
@@ -1136,6 +1138,7 @@
 <script defer src="libs/jquery-3.7.0.js"></script>
 <script defer src="libs/slick/slick.min.js"></script>
 <script defer src="libs/inputmask.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script defer src="js/main.js"></script>
 </body>
 

@@ -584,7 +584,7 @@
 
   &__img {
     width: 845px;
-    height: auto;
+    height: 600px;
     object-fit: cover;
     border-radius: 30px;
     margin: 0 0 0 calc((100% - 700px) - 845px);
@@ -877,6 +877,14 @@
 
       &.slick-prev {
         right: 62px;
+      }
+    }
+
+    .slick-arrow.slick-disabled {
+      background: var(--grey2, #EFEFEF);
+
+      path {
+        stroke: var(--grey, #A7A7A7);
       }
     }
 

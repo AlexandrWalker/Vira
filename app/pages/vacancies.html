@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="vacancies__body-block">
-                  <p class="vacancies__body-title">Требования:</p>
+                  <p class="vacancies__body-title">Условия:</p>
                   <ul class="vacancies__body-list">
                     <li class="vacancies__body-item">
                       <div class="vacancies__body-arrow">
@@ -117,15 +117,17 @@
                   </ul>
                 </div>
 
-                <button class="btn-green">Откликнутся на вакансию</button>
+                <button class="btn-green modal-call" data-id="callback">Откликнутся на вакансию</button>
               </div>
             </div>
 
             <div class="vacancies__resume">
               <h5 class="vacancies__resume-suptitle">Других вакансий нет</h5>
               <form class="vacancies__resume-link" action="#" method="post">
-                <label class="vacancies__resume-label" for="resume-input">Хочу отправить резюме</label>
-                <input class="vacancies__resume-input" id="resume-input" type="file" name="resume">
+                <input class="vacancies__resume-input" id="resume-input" type="file" multiple name="resume">
+                <label class="vacancies__resume-label" for="resume-input">
+                  <span class="file__text">Хочу отправить резюме</span>
+                </label>
               </form>
             </div>
           </div>
