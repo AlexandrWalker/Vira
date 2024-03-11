@@ -8,6 +8,8 @@
   <title>Vira</title>
 
   <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- calculation input style -->
   <style>
@@ -305,7 +307,7 @@
             качество работ и их соответствие проекту. Без заключения технического надзора специальные службы не разрешат
             эксплуатировать ваше здание. Кроме этого, технический надзор при строительстве объекта позволит
             вам сэкономить время и защитит от ошибок застройщика/подрядчика.</h5>
-          <button class="btn-green">Заказать звонок</button>
+          <button class="btn-green modal-call" data-id="callback">Заказать звонок</button>
         </div>
         <img class="supervision__img" src="images/page-supervision/supervision-cover.png" loading="lazy" alt="cover">
       </div>
@@ -465,7 +467,7 @@
           <p>незачем. вы запросто справитесь и с согласованием перепланировки и с приемкой новой квартиры и еще много с
             чем… но тогда вам обязательно надо знать некоторые подводные камни, с которыми вы обязательно столкнетесь в
             процессе</p>
-          <button class="btn-green">Получить консультацию</button>
+          <button class="btn-green modal-call" data-id="callback">Получить консультацию</button>
         </div>
         <img class="why__img" src="images/page-supervision/helmet.png" loading="lazy" alt="helmet">
       </div>
@@ -481,18 +483,21 @@
             тоже есть и много</h5>
         </div>
         <div class="licenses__items">
-          <div class="licenses__item">
+          <a class="licenses__item" href="images/documents/licenses-full-1.png" data-type="image" data-fancybox="gallery"
+          data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-1.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
-          <div class="licenses__item">
+          </a>
+          <a class="licenses__item" href="images/documents/licenses-full-1.png" data-type="image" data-fancybox="gallery"
+          data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-2.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
-          <div class="licenses__item">
+          </a>
+          <a class="licenses__item" href="images/documents/licenses-full-1.png" data-type="image" data-fancybox="gallery"
+          data-caption="Небольшое название данного письма">
             <img class="licenses__item-img" src="images/documents/licenses-3.png" loading="lazy" alt="licenses">
             <h6 class="licenses__item-name small">Небольшое название данного письма</h6>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -500,14 +505,14 @@
 
   <div class="callback block">
     <div class="container">
-      <div class="callback__inner" style="background-image: url(../images/discount-texture.png);">
+      <div class="callback__inner" style="background-image: url(images/discount-texture.png);">
         <div class="callback__item">
           <h2 class="callback__title">Обязательно поможем</h2>
           <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
         </div>
         <form class="callback__form">
           <input class="callback__input small" type="tel" placeholder="Номер телефона">
-          <button class="btn-green" type="submit">Отправить</button>
+          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
         </form>
         <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
       </div>
@@ -564,7 +569,7 @@
 
       <div class="footer__menu">
         <div class="footer__menu-block">
-          <h6 class="menu-1">О компании</h6>
+          <a class="footer__menu-link menu-1" href="#!">О компании</a>
           <ul class="footer__menu-list">
             <li class="footer__menu-item">
               <a class="footer__menu-link menu-1" href="#!">О нас</a>
@@ -590,7 +595,7 @@
           </ul>
         </div>
         <div class="footer__menu-block">
-          <h6 class="menu-1">Услуги</h6>
+          <a class="footer__menu-link menu-1" href="#!">Услуги</a>
           <ul class="footer__menu-list">
             <li class="footer__menu-item">
               <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
@@ -693,6 +698,7 @@
 <script defer src="libs/jquery-3.7.0.js"></script>
 <script defer src="libs/slick/slick.min.js"></script>
 <script defer src="libs/inputmask.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script defer src="js/main.js"></script>
 </body>
 
