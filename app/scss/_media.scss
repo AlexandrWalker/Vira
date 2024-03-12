@@ -636,7 +636,6 @@
     gap: 20px;
   }
 
-  .services__item,
   .construction__item {
     width: calc(33% - 13.34px);
   }
@@ -2073,7 +2072,7 @@
     justify-content: flex-start;
     width: 30px;
     height: 60px;
-    top: 25%;
+    top: calc(27% - 20px);
     right: -30px;
     border-radius: 0 15px 15px 0;
     transform: translateY(-50%);
@@ -2208,7 +2207,12 @@
   }
 
   .services__item {
-    margin-right: 12px;
+    margin: 0;
+  }
+
+  .services__slider {
+    margin: 0;
+    width: auto;
   }
 
   .construction__item {

@@ -1617,6 +1617,9 @@ input[type=radio] + label::before {
   z-index: 2;
 }
 
+.case__inner {
+  position: relative;
+}
 .case__head {
   display: flex;
   flex-direction: column;
@@ -1645,11 +1648,7 @@ input[type=radio] + label::before {
   background: var(--bg, #F9F9F9);
 }
 .case__slider {
-  display: none;
   margin-left: -500px;
-}
-.case__slider.active {
-  display: block;
 }
 .case__slider-item {
   padding: 40px 0 100px;
@@ -1697,6 +1696,18 @@ input[type=radio] + label::before {
 }
 .case__slider .slick-slide {
   margin: 0 100px 0 0;
+}
+.case .slider__wrapper {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.case .slider__wrapper.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  z-index: 1;
 }
 .case__item {
   display: grid;
@@ -2297,9 +2308,6 @@ input[type=radio] + label::before {
 .built__slider .slick-arrow.slick-prev {
   right: 62px;
 }
-.built__slider .slick-arrow.slick-disabled {
-  background: var(--grey2, #EFEFEF);
-}
 .built__slider .slick-arrow.slick-disabled path {
   stroke: var(--grey, #A7A7A7);
 }
@@ -2718,6 +2726,7 @@ input[type=radio] + label::before {
   border-radius: 8px;
   background: var(--white, #fff);
   width: fit-content;
+  height: 50px;
 }
 .callback__input::placeholder {
   color: var(--grey, #A7A7A7);
@@ -3513,6 +3522,10 @@ input[type=radio] + label::before {
   flex-wrap: wrap;
   gap: 30px;
 }
+.services__slider {
+  margin-left: -15px;
+  width: calc(100% + 30px);
+}
 .services__slider-item {
   width: calc(33% - 20px);
 }
@@ -3520,6 +3533,7 @@ input[type=radio] + label::before {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 0 15px;
 }
 .services__item-block {
   position: relative;
@@ -5651,7 +5665,6 @@ input[type=radio] + label::before {
   .construction__items {
     gap: 20px;
   }
-  .services__item,
   .construction__item {
     width: calc(33% - 13.34px);
   }
@@ -6784,7 +6797,7 @@ input[type=radio] + label::before {
     justify-content: flex-start;
     width: 30px;
     height: 60px;
-    top: 25%;
+    top: calc(27% - 20px);
     right: -30px;
     border-radius: 0 15px 15px 0;
     transform: translateY(-50%);
@@ -6890,7 +6903,11 @@ input[type=radio] + label::before {
     width: 100%;
   }
   .services__item {
-    margin-right: 12px;
+    margin: 0;
+  }
+  .services__slider {
+    margin: 0;
+    width: auto;
   }
   .construction__item {
     width: calc(50% - 10px);
