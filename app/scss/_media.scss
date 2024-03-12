@@ -1101,14 +1101,14 @@
   .project-page .built__item-content::before {
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle at right top, transparent 20px, var(--bg, #F9F9F9) 20px);
+    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
     top: -20px;
   }
 
   .project-page .built__item-content::after {
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle at right top, transparent 20px, var(--bg, #F9F9F9) 20px);
+    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
     right: -20px;
   }
 
@@ -2201,8 +2201,7 @@
   }
 
   // services
-  .services__item,
-  .construction__item {
+  .services__item {
     width: 100%;
   }
 
@@ -2226,7 +2225,20 @@
 
   // filter
   .works-page .filter {
+    margin-bottom: 15px;
+  }
+
+  .works-page .filter__items {
     display: none;
+  }
+
+  .works-page .filter__items:last-child .filter__item:first-child {
+    display: none;
+  }
+
+  .works-page .filter__items.filter__sorting,
+  .works-page .filter__items:last-child {
+    display: block;
   }
 
   .works-page .map {
@@ -2404,6 +2416,7 @@
 
   .project-video__inner {
     gap: 0;
+    grid-template-rows: auto;
   }
 
   .project-video__video {
@@ -3048,7 +3061,7 @@
     right: 15px;
   }
 
-  ф .construction__item {
+  .construction__item {
     width: 100%;
   }
 }

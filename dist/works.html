@@ -289,11 +289,68 @@
     </div>
   </div>
 
+  <div class="sorting" id="sorting">
+    <div class="sorting__inner">
+      <div class="sorting__head">
+        <h3 class="sorting__head-title">Сортировка</h3>
+        <span class="sorting__close" id="sortingClose"></span>
+      </div>
+      <div class="filter__item">
+        <button class="filter__item-btn small" data-value="По дате добавления">По дате добавления</button>
+        <ul class="filter__list">
+          <li class="filter__list-item">
+            <a class="filter__list-link small" href="#!" data-value="По цене">По цене</a>
+          </li>
+          <li class="filter__list-item">
+            <a class="filter__list-link small" href="#!" data-value="По площади">По площади</a>
+          </li>
+          <li class="filter__list-item">
+            <a class="filter__list-link small" href="#!" data-value="По дате добавления">По дате добавления</a>
+          </li>
+        </ul>
+      </div>
+      <div class="sorting__content">
+        <p class="sorting__text">
+          Кол-во комнат
+        </p>
+        <ul class="sorting__list">
+          <li class="sorting__list-item">
+            <input class="sorting__list-input" type="radio" id="radio2">
+            <label class="sorting__list-label small" for="radio2">Одноэтажные дома</label>
+          </li>
+          <li class="sorting__list-item">
+            <input class="sorting__list-input" type="radio" id="radio3">
+            <label class="sorting__list-label small" for="radio3">Двухэтажные дома</label>
+          </li>
+          <li class="sorting__list-item">
+            <input class="sorting__list-input" type="radio" id="radio4">
+            <label class="sorting__list-label small" for="radio4">Коттеджи</label>
+          </li>
+          <li class="sorting__list-item">
+            <input class="sorting__list-input" type="radio" id="radio5">
+            <label class="sorting__list-label small" for="radio5">Бани</label>
+          </li>
+          <li class="sorting__list-item">
+            <input class="sorting__list-input" type="radio" id="radio6">
+            <label class="sorting__list-label small" for="radio6">Беседки</label>
+          </li>
+        </ul>
+      </div>
+      <button class="btn-white">Сбросить фильтр</button>
+    </div>
+  </div>
+
   <div class="works block">
     <div class="container">
       <div class="works__inner">
 
         <div class="filter">
+          <div class="filter__items filter__sorting">
+            <button class="filter__btn menu-1" id="sortingBtn">
+              <img class="filter__btn-img" src="images/icons/setting.svg" alt="filter">
+              Сортировка
+            </button>
+          </div>
           <div class="filter__items">
             <div class="filter__item">
               <button class="filter__item-btn small" data-value="Одноэтажные дома">Одноэтажные дома</button>
