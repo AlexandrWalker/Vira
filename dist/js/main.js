@@ -443,6 +443,7 @@
         menu.parentNode.classList.toggle('active');
         header.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
+        e.stopPropagation();
       });
     })();
 
