@@ -7743,7 +7743,7 @@ input[type=radio] + label::before {
     top: 16.5%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .container {
     padding: 0 15px;
   }
