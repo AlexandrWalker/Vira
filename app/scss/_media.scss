@@ -203,7 +203,6 @@
   }
 
   .case__item-body {
-    padding: 40px 0;
     gap: 20px;
   }
 
@@ -251,16 +250,12 @@
     height: 20px;
   }
 
-  .case__slider {
-    margin-left: -380px;
-  }
-
   .case__slider-item {
     padding: 30px 0 80px;
   }
 
   .case__slider .slick-slide {
-    margin: 0 80px 0 0;
+    margin: 0 30px 0 0;
   }
 
   .calculation {
@@ -304,18 +299,18 @@
 
   .advantages__block {
     margin-bottom: 30px;
-    gap: 100px;
+    gap: 80px;
   }
 
   .advantages__img {
-    margin: 0 0 0 calc(100% - 560px - 630px);
+    margin: 0 0 0 calc(100% - 540px - 630px);
     width: 630px;
     height: 450px;
     border-radius: 0 20px 20px 0;
   }
 
   .advantages__block:last-child .advantages__img {
-    margin: 0 calc(100% - 560px - 630px) 0 0;
+    margin: 0 calc(100% - 540px - 630px) 0 0;
     border-radius: 20px 0 0 20px;
   }
 
@@ -1454,6 +1449,102 @@
     top: 12%;
     width: 80%;
   }
+
+
+  .case__slider-item {
+    padding: 20px 0 60px 0;
+  }
+
+  .case__slider {
+    margin: 0;
+  }
+
+  .case__slider .slick-slide {
+    margin: 0 40px 0 0;
+  }
+
+  .case__item {
+    grid-template-columns: unset;
+    gap: 20px;
+  }
+
+  .case__item-body {
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .case__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case__btns {
+    margin: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .case__btns>button {
+    width: 200px;
+  }
+
+  .case__cover-img {
+    height: auto;
+  }
+
+  .case__slider .slick-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30px;
+    height: 60px;
+    top: calc(30% - 25px);
+    right: -30px;
+    border-radius: 0 15px 15px 0;
+    transform: translateY(-50%);
+  }
+
+  .case__cover-btn {
+    width: 30px;
+    height: 60px;
+    border-radius: 0 15px 15px 0;
+  }
+
+  .case__cover-btn::before {
+    width: 15px;
+    height: 15px;
+    top: -15px;
+    background: radial-gradient(circle at right top, transparent 15px, var(--bg, #F9F9F9) 15px);
+  }
+
+  .case__cover-btn::after {
+    width: 15px;
+    height: 15px;
+    bottom: -15px;
+    background: radial-gradient(circle at right bottom, transparent 15px, var(--bg, #F9F9F9) 15px);
+  }
+
+  .case__slider .slick-arrow svg {
+    width: 14px;
+    height: auto;
+  }
+
+  .case__tab-item {
+    padding: 15px 25px 11px 25px;
+  }
+
+  .case__list {
+    width: fit-content;
+  }
+
+  .case__list-item {
+    min-width: 140px;
+  }
+
+  /* about */
+  .about-page .case__slider .slick-arrow {
+    top: calc(30% - 25px);
+  }
 }
 
 @media (max-width: 900px) {
@@ -1815,6 +1906,10 @@
     left: 12px;
   }
 
+  .case__slider .slick-arrow {
+    top: calc(28% - 25px);
+  }
+
   .calculation {
     margin-bottom: 310px;
   }
@@ -2025,59 +2120,6 @@
     padding: 30px;
   }
 
-  .case__slider-item {
-    padding: 20px 0 60px 0;
-  }
-
-  .case__slider {
-    margin: 0;
-  }
-
-  .case__slider .slick-slide {
-    margin: 0 40px 0 0;
-  }
-
-  .case__item {
-    grid-template-columns: unset;
-    gap: 20px;
-  }
-
-  .case__item-body {
-    max-width: 100%;
-    width: 100%;
-    padding: 0;
-  }
-
-  .case__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .case__btns {
-    margin: 0;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .case__btns>button {
-    width: 200px;
-  }
-
-  .case__cover-img {
-    height: auto;
-  }
-
-  .case__slider .slick-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 30px;
-    height: 60px;
-    top: calc(27% - 20px);
-    right: -30px;
-    border-radius: 0 15px 15px 0;
-    transform: translateY(-50%);
-  }
-
   .command__slider .slick-list {
     margin-bottom: 20px;
   }
@@ -2085,35 +2127,6 @@
   .command__slider .slick-dots {
     width: 100%;
     margin-left: 0;
-  }
-
-  .case__cover-btn {
-    width: 30px;
-    height: 60px;
-    border-radius: 0 15px 15px 0;
-  }
-
-  .case__cover-btn::before {
-    width: 15px;
-    height: 15px;
-    top: -15px;
-    background: radial-gradient(circle at right top, transparent 15px, var(--bg, #F9F9F9) 15px);
-  }
-
-  .case__cover-btn::after {
-    width: 15px;
-    height: 15px;
-    bottom: -15px;
-    background: radial-gradient(circle at right bottom, transparent 15px, var(--bg, #F9F9F9) 15px);
-  }
-
-  .case__slider .slick-arrow svg {
-    width: 14px;
-    height: auto;
-  }
-
-  .case__tab-item {
-    padding: 15px 25px 11px 25px;
   }
 
   .callback__inner {
@@ -2647,14 +2660,6 @@
 
   .about-page .construction {
     padding: 60px 0;
-  }
-
-  .case__list {
-    width: fit-content;
-  }
-
-  .case__list-item {
-    min-width: 140px;
   }
 
   /* projection */
