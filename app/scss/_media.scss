@@ -1543,7 +1543,7 @@
 
   /* about */
   .about-page .case__slider .slick-arrow {
-    top: calc(30% - 25px);
+    top: calc(100% - (75% - 20px));
   }
 }
 
@@ -1567,6 +1567,10 @@
   .topbar__inner,
   .topbar__item {
     gap: 20px;
+  }
+
+  .case__slider .slick-arrow {
+    top: calc(30% - 32px);
   }
 
   .advantages__block {
@@ -1653,6 +1657,11 @@
     padding: 80px 0 80px;
     width: calc(100% - 480px);
   }
+
+  /* about */
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (75% - 13px));
+  }
 }
 
 @media (max-width: 850px) {
@@ -1670,9 +1679,22 @@
     position: absolute;
     bottom: 108px;
   }
+
+  .case__slider .slick-arrow {
+    top: calc(30% - 37px);
+  }
+
+  /* about */
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (75% - 5px));
+  }
 }
 
 @media (max-width: 800px) {
+  .case__slider .slick-arrow {
+    top: calc(30% - 42px);
+  }
+
   .supervision.block {
     margin: 0;
   }
@@ -1698,6 +1720,11 @@
   .supervision-page .supervision-advantages__inner {
     padding: 189px 0 60px;
     width: 100%;
+  }
+
+  /* about */
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (76% - 5px));
   }
 }
 
@@ -1907,7 +1934,7 @@
   }
 
   .case__slider .slick-arrow {
-    top: calc(28% - 25px);
+    top: calc(28% - 29px);
   }
 
   .calculation {
@@ -2641,7 +2668,7 @@
   }
 
   .about-page .case__slider .slick-arrow {
-    top: 25%;
+    top: calc(100% - (76% - 2px));
   }
 
   .about-page .case__cover-btn::before {
@@ -2708,7 +2735,31 @@
   }
 }
 
+@media (max-width: 715px) {
+  .case__slider .slick-arrow {
+    top: calc(27% - 27px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (78% - 8px));
+  }
+}
+
+@media (max-width: 683px) {
+  .case__slider .slick-arrow {
+    top: calc(26% - 29px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (80% - 13px));
+  }
+}
+
 @media (max-width: 660px) {
+  .case__slider .slick-arrow {
+    top: calc(26% - 32px);
+  }
+
   .reviews-page .callback__picture {
     bottom: -15px;
     right: 1px;
@@ -2717,6 +2768,10 @@
   .reviews-page .callback__img {
     max-width: calc(100% + 16px);
     width: calc(100% + 16px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (80% - 9px));
   }
 }
 
@@ -2909,6 +2964,10 @@
     font-size: 20px;
   }
 
+  .case__slider .slick-arrow {
+    top: calc(26% - 40px);
+  }
+
   .discount {
     height: calc(100% - 43px);
   }
@@ -3054,6 +3113,10 @@
     background: var(--white, #fff);
   }
 
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (82% - 12px));
+  }
+
   /* modal */
   #wheel .modal__box {
     width: 100%;
@@ -3068,6 +3131,31 @@
 
   .construction__item {
     width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (83% - 12px));
+  }
+}
+
+@media (max-width: 540px) {
+
+  .case__slider .slick-arrow {
+    top: calc(25% - 41px);
+  }
+}
+
+@media (max-width: 523px) {
+
+  .case__slider .slick-arrow {
+    top: calc(24% - 40px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (84% - 8px));
   }
 }
 
@@ -3119,7 +3207,7 @@
   }
 
   .case__slider .slick-arrow {
-    top: calc(20% - 20px);
+    top: calc(20% - 25px);
   }
 
   .stages__item {
@@ -3169,6 +3257,11 @@
     bottom: -19px;
   }
 
+  // about
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (87% - 10px));
+  }
+
   // modal
   .modal__box {
     padding: 30px;
@@ -3184,10 +3277,6 @@
     top: 30px;
     right: 30px;
   }
-
-  .about-page .case__slider .slick-arrow {
-    top: 16.5%;
-  }
 }
 
 @media (max-width: 450px) {
@@ -3198,6 +3287,33 @@
   .hero__inner {
     max-width: calc(100% + 30px);
     width: calc(100% + 30px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (85% - 10px));
+  }
+
+}
+
+@media (max-width: 450px) {
+  .case__slider .slick-arrow {
+    top: calc(22% - 29px);
+  }
+}
+
+@media (max-width: 420px) {
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (85% - 5px));
+  }
+}
+
+@media (max-width: 400px) {
+  .case__slider .slick-arrow {
+    top: calc(20% - 24px);
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (86% - 7px));
   }
 }
 
@@ -3215,6 +3331,10 @@
     font-size: 18px;
   }
 
+  .case__slider .slick-arrow {
+    top: calc(18% - 21px);
+  }
+
   .built__options {
     left: 20px;
   }
@@ -3225,5 +3345,9 @@
 
   .reviews-page .callback__picture {
     bottom: -17px;
+  }
+
+  .about-page .case__slider .slick-arrow {
+    top: calc(100% - (87% - 2px));
   }
 }
