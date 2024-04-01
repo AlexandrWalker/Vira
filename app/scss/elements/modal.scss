@@ -30,6 +30,12 @@
     overflow: hidden;
   }
 
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   .modal__close-btn {
     position: absolute;
     top: 40px;
