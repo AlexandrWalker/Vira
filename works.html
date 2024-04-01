@@ -1097,15 +1097,6 @@
   </div>
 </footer>
 </div>
-
-<script defer src="libs/jquery-3.7.0.js"></script>
-<script defer src="libs/slick/slick.min.js"></script>
-<script defer src="libs/inputmask.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script defer src="js/main.js"></script>
-</body>
-
-</html>
 <div class="modals">
   <div class="modal" id="callback">
     <div class="modal__box">
@@ -1118,8 +1109,10 @@
         <h2 class="modal__title">Заказать звонок</h2>
         <h5 class="modal__suptitle">Заполните форму, мы перезвоним вам в течение рабочего дня</h5>
       </div>
-      <input class="callback__input small" type="tel" placeholder="Номер телефона">
-      <button class="btn-green" type="submit">Получить скидку</button>
+      <form class="modal__form" action="#">
+        <input class="callback__input small" type="tel" placeholder="Номер телефона">
+        <button class="btn-green" type="submit">Получить скидку</button>
+      </form>
       <img class="modal__img" src="images/callback.png" alt="callback">
     </div>
   </div>
@@ -1136,7 +1129,7 @@
         <h2 class="modal__title">Спасибо</h2>
         <p class="modal__suptitle">За ваше доверие, мы уже набираем ваш номер</p>
       </div>
-      <button class="btn-green" type="submit">Хорошо, жду</button>
+      <button class="btn-green">Хорошо, жду</button>
     </div>
   </div>
 
@@ -1280,6 +1273,11 @@
   </div>
 </div>
 
+<script defer src="libs/jquery-3.7.0.js"></script>
+<script defer src="libs/slick/slick.min.js"></script>
+<script defer src="libs/inputmask.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script defer src="js/main.js"></script>
 <script>
   // wheel
   var circle = document.getElementsByClassName('circle__item');
@@ -1466,3 +1464,7 @@
   // подготавливаем всё к первому запуску
   setupWheel();
 </script>
+
+</body>
+
+</html>
