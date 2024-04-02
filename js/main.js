@@ -761,5 +761,24 @@
       });
     }
 
+    (function () {
+      var sidebarCount = document.querySelectorAll('.sidebar__list-count'),
+        sidebarActive = document.getElementsByClassName('sidebar-active');
+
+      /*document.querySelectorAll('.sidebar__list-long').forEach((elem) => {
+        elem.insertAdjacentHTML('afterend', '<a class="sidebar__list-count" href="#!">Показать всё</a>');
+      });*/
+
+      Array.from(sidebarCount).forEach(function (item, i, sidebarCount) {
+        item.addEventListener('click', function (e) {
+          if (sidebarActive.length > 0 && sidebarActive[0] !== this)
+            sidebarActive[0].parentNode.classList.remove('sidebar-active');
+
+          this.parentNode.classList.toggle('sidebar-active');
+          this.classList.toggle('count-active');
+        });
+      });
+    })();
+
   });
 })();
