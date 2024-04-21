@@ -827,9 +827,15 @@
 
   &__form {
     display: flex;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
+    flex-direction: column;
+    gap: 30px;
+
+    &-row {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
   }
 
   &__input {
@@ -852,6 +858,10 @@
     width: auto;
     height: calc(100% + 13px);
     object-fit: cover;
+  }
+
+  .agreement {
+    max-width: 100%;
   }
 }
 
@@ -1381,9 +1391,15 @@
 
   &__form {
     display: flex;
-    gap: 20px;
-    position: relative;
-    z-index: 3;
+    flex-direction: column;
+    gap: 30px;
+
+    &-row {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      z-index: 3;
+    }
   }
 
   &__input {

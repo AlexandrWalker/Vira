@@ -606,12 +606,6 @@ input[type=radio] {
         top: 10px;
       }
     }
-
-    &:hover .social__text {
-      overflow: visible;
-      opacity: 1;
-      transition: all 0.1s linear;
-    }
   }
 
   &__text {
@@ -629,6 +623,7 @@ input[type=radio] {
     border-radius: 0 3px 3px 0;
     overflow: hidden;
     opacity: 0;
+    pointer-events: none;
     transition: all 0.1s linear;
   }
 
@@ -636,5 +631,22 @@ input[type=radio] {
     width: 18px;
     height: auto;
     object-fit: cover;
+
+    &:hover~.social__text {
+      overflow: visible;
+      opacity: 1;
+      pointer-events: all;
+      transition: all 0.1s linear;
+    }
   }
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 323px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
 }

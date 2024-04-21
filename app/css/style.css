@@ -663,11 +663,6 @@ input[type=radio] + label::before {
 .social__link:last-child .social__text {
   top: 10px;
 }
-.social__link:hover .social__text {
-  overflow: visible;
-  opacity: 1;
-  transition: all 0.1s linear;
-}
 .social__text {
   display: flex;
   align-items: center;
@@ -683,12 +678,29 @@ input[type=radio] + label::before {
   border-radius: 0 3px 3px 0;
   overflow: hidden;
   opacity: 0;
+  pointer-events: none;
   transition: all 0.1s linear;
 }
 .social__img {
   width: 18px;
   height: auto;
   object-fit: cover;
+}
+.social__img:hover ~ .social__text {
+  overflow: visible;
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.1s linear;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 323px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 .header {
@@ -2263,6 +2275,11 @@ input[type=radio] + label::before {
 }
 .discount__form {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.discount__form-row {
+  display: flex;
   gap: 20px;
   position: relative;
   z-index: 2;
@@ -2283,6 +2300,9 @@ input[type=radio] + label::before {
   width: auto;
   height: calc(100% + 13px);
   object-fit: cover;
+}
+.discount .agreement {
+  max-width: 100%;
 }
 
 .built__inner {
@@ -2722,6 +2742,11 @@ input[type=radio] + label::before {
   color: var(--grey, #A7A7A7);
 }
 .callback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.callback__form-row {
   display: flex;
   gap: 20px;
   position: relative;
@@ -4570,9 +4595,10 @@ input[type=radio] + label::before {
   color: var(--black, #2E2D2D);
 }
 .documents__item-img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  aspect-ratio: 210/304;
   padding: 30px 30px 16px;
   background: var(--white, #fff);
 }
@@ -4623,8 +4649,9 @@ input[type=radio] + label::before {
 }
 .licenses__item-img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  aspect-ratio: 210/304;
   padding: 30px 30px 16px;
   background: var(--white, #fff);
 }
@@ -7006,7 +7033,7 @@ input[type=radio] + label::before {
     gap: 30px;
     padding: 30px;
   }
-  .callback__form {
+  .callback__form-row {
     flex-direction: column;
   }
   .callback__img {

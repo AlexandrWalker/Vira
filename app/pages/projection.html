@@ -304,8 +304,16 @@
           <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
         </div>
         <form class="callback__form">
-          <input class="callback__input small" type="tel" placeholder="Номер телефона">
-          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
+          <div class="callback__form-row">
+            <input class="callback__input small" type="tel" placeholder="Номер телефона">
+            <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
+          </div>
+          <div class="agreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="agreementCallback">
+            <label class="agreement-label small" for="agreementCallback">
+              Даю свое согласие на обработку моих персональных данных
+            </label>
+          </div>
         </form>
         <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
       </div>
