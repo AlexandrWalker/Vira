@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vira</title>
+
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- calculation input style -->
+  <style>
+    input[type=range] {
+      width: 100%;
+      height: 4px;
+      border: 0;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 4px;
+      border: 0;
+      border-radius: 0;
+      background: #eaeaea !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--black, #2E2D2D);
+      background-image: url(images/icons/thumb.svg);
+      background-repeat: no-repeat;
+      background-size: 40px 20px;
+      border: 0;
+      border-radius: 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      margin-top: -8px;
+      -webkit-appearance: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="topbar">
+          <div class="container">
+            <div class="topbar__inner">
+              <h6 class="menu-2">Будние дни с 8 до 21 часа. Выходные с 10 до 18 часов</h6>
+
+              <div class="topbar__item">
+                <a class="topbar__link menu-2" href="mailto:info@dsk-vira.ru">info@dsk-vira.ru</a>
+                <h6 class="menu-2">Москва, 2-й Котельнический переулок 3</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="head">
+          <div class="container">
+            <div class="head__inner">
+              <div class="head__logo">
+                <a class="head__logo-link" href="/">
+                  <img class="head__logo-img" src="images/logo.svg" alt="logo">
+                </a>
+                <div class="head__logo-item">
+                  <h4 class="head__logo-title">Экологичные</h4>
+                  <h6 class="menu-1">каркасные дома в Москве и МО</h6>
+                </div>
+              </div>
+
+              <div class="head__item">
+                <span class="small">от</span>
+                <span class="num">48</span>
+                <span class="menu-1">дней</span>
+                <span class="small">до новоселья</span>
+              </div>
+
+              <button class="burger" id="burger">
+                <h6 class="menu-2">Меню</h6>
+                <span></span>
+              </button>
+
+              <div class="head__social">
+                <a class="head__social-link" href="viber://chat?number=89165562526">
+                  <img class="head__social-img" src="images/social/Viber.svg" alt="viber">
+                </a>
+                <a class="head__social-link" href="https://wa.me/89165562526">
+                  <img class="head__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a class="head__social-link" href="https://t.me/89165562526">
+                  <img class="head__social-img" src="images/social/telegram.svg" alt="telegram">
+                </a>
+              </div>
+              <div class="head__info">
+                <div class="head__info-item">
+                  <a class="head__info-link" href="tel:89165562526">
+                    <h4>+7 (916) 556 25 26</h4>
+                  </a>
+                  <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+                </div>
+                <div class="head__info-item">
+                  <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
+                    Заказать звонок
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="menu" class="menu">
+          <div class="container">
+            <div class="menu__inner">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Проекты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu__dropdown menu-1">Услуги
+                    <svg class="menu__arrow">
+                      <use xlink:href="#menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <ul class="menu__items">
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Индивидуальное проектирование</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Технический надзор</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Барбекю, бани, беседки, забор из дерева</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Строительство</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">Наши работы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu__dropdown menu-1">О компании
+                    <svg class="menu__arrow">
+                      <use xlink:href="#menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <ul class="menu__items">
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">О нас</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Вакансии</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Клиентский сервис и гарантии</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Партнёры</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Документы</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Способы оплаты</a>
+                    </li>
+                    <li class="menu__items-item">
+                      <a href="#!" class="menu__items-link menu-1">Отзывы</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1 modal-call" data-id="spinner">Вопрос-ответ</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1 modal-call" data-id="wheel">Контакты</a>
+                </li>
+                <li class="menu__item">
+                  <form class="menu__search" action="#">
+                    <input class="menu__search-input menu-1" type="search" autofocus tabindex="1">
+                    <label class="menu__search-label">
+                      <img class="menu__img" src="images/icons/search.svg" alt="search">
+                      <input class="menu__link menu-1" type="submit" value="Поиск">
+                    </label>
+                  </form>
+                </li>
+                <li class="menu__item">
+                  <a href="#!" class="menu__link menu-1">
+                    <img class="menu__img" src="images/icons/unlock.svg" alt="unlock">
+                    Личный кабинет
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottombar">
+          <div class="container">
+            <div class="bottombar__inner">
+              <button class="btn-green menu-1 modal-call" type="button" data-id="callback">
+                Заказать звонок
+              </button>
+              <div class="head__social">
+                <a class="head__social-link" href="viber://chat?number=89165562526">
+                  <img class="head__social-img" src="images/social/Viber.svg" alt="viber">
+                </a>
+                <a class="head__social-link" href="https://wa.me/89165562526">
+                  <img class="head__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a class="head__social-link" href="https://t.me/89165562526">
+                  <img class="head__social-img" src="images/social/telegram.svg" alt="telegram">
+                </a>
+              </div>
+              <div class="head__info">
+                <div class="head__info-item">
+                  <a class="head__info-link" href="tel:89165562526">
+                    <h4>+7 (916) 556 25 26</h4>
+                  </a>
+                  <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<svg style="display: none;">
+
+  <symbol id="faq-arrow" width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g>
+      <path d="M11 1.5l-5 5-5-5" />
+    </g>
+  </symbol>
+
+  <symbol id="menu-arrow" width="8" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 1L4.53 3.297a.793.793 0 01-1.06 0L1 1" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="breadcrumbs-arrow" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L2.83727 3.05808C3.05424 3.30114 3.05424 3.69886 2.83727 3.94192L1 6" stroke="#857067"
+      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="filter-arrow" width="8" height="4" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7 .5L4.53 2.797a.793.793 0 01-1.06 0L1 .5" stroke-miterlimit="10" stroke-linecap="round"
+      stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="li-arrow" width="12" height="9" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 3.667L5.2 7 10 2" stroke="#179860" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+
+  <symbol id="ticker" width="59" height="49" viewBox="0 0 59 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M55.7266 24.2258C55.7266 24.3406 55.6451 24.8285 55.1245 25.7645C54.6365 26.642 53.8829 27.7003 52.8733 28.8878C50.8584 31.2579 47.9875 33.9513 44.6754 36.4923C41.3664 39.031 37.6848 41.3654 34.0719 43.055C30.4257 44.7602 27.025 45.7258 24.2266 45.7258C12.3524 45.7258 2.72656 36.1 2.72656 24.2258C2.72656 12.3517 12.3524 2.72583 24.2266 2.72583C27.025 2.72583 30.4257 3.6915 34.0719 5.39667C37.6848 7.08629 41.3664 9.4207 44.6754 11.9593C47.9875 14.5004 50.8584 17.1938 52.8733 19.5639C53.8829 20.7513 54.6365 21.8097 55.1245 22.6871C55.6451 23.6231 55.7266 24.111 55.7266 24.2258Z"
+      fill="white" stroke="#857067" stroke-width="5" />
+  </symbol>
+
+</svg>
+<main class="main">
+
+  <div class="search block">
+    <div class="container">
+      <div class="search__inner">
+
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <svg class="breadcrumbs__arrow">
+                <use xlink:href="#breadcrumbs-arrow"></use>
+              </svg>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#!" class="breadcrumbs__link">Поиск</a>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="search__title">
+          Поиск
+        </h2>
+
+        <form class="search__form" action="#">
+          <input class="search__input menu-1" type="text" autofocus tabindex="2">
+          <label class="search__label">
+            <img class="search__label-img" src="images/icons/search.svg" alt="search">
+            <input class="search__label-input menu-1" type="submit" value="Поиск">
+          </label>
+        </form>
+
+        <div class="search__items">
+          <div class="search__item">
+            <img src="../images/page-search/search-1.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                Технический надзор
+              </h4>
+              <p class="search__item-text">
+                Оказываем профессиональные услуги по ведению технического надзора за строительством в Минске Технадзор
+                в строительстве — это обязательная часть каждого строительного объекта. В любом здании от квартиры и ...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-2.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-178
+              </h4>
+              <p class="search__item-text">
+                Москва, Новорублёвская улица, 2 Дом в стиле шале — одно из модных направлений в строительстве загородных
+                домов и небольших гостиниц. Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу
+                горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-3.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-124
+              </h4>
+              <p class="search__item-text">
+                Москва, улица Кулакова, 24 Дом в стиле шале — одно из модных направлений в строительстве загородных
+                домов и небольших гостиниц. Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу
+                горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-4.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                Барбекю, бани, беседки, заборы
+              </h4>
+              <p class="search__item-text">
+                Если есть желание сделать свой дом или загородный участок уютным и функциональным, мы вам поможем
+                Технадзор в строительстве — это обязательная часть каждого строительного объекта. В любом здании от
+                квартиры и жилого дома до офисного, торгового и ...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-5.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-179
+              </h4>
+              <p class="search__item-text">
+                Дом в стиле шале — одно из модных направлений в строительстве загородных домов и небольших гостиниц.
+                Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-5.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-178
+              </h4>
+              <p class="search__item-text">
+                Дом в стиле шале — одно из модных направлений в строительстве загородных домов и небольших гостиниц.
+                Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-1.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                Технический надзор
+              </h4>
+              <p class="search__item-text">
+                Оказываем профессиональные услуги по ведению технического надзора за строительством в Минске Технадзор
+                в строительстве — это обязательная часть каждого строительного объекта. В любом здании от квартиры и ...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-2.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-178
+              </h4>
+              <p class="search__item-text">
+                Москва, Новорублёвская улица, 2 Дом в стиле шале — одно из модных направлений в строительстве загородных
+                домов и небольших гостиниц. Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу
+                горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-3.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-179
+              </h4>
+              <p class="search__item-text">
+                Дом в стиле шале — одно из модных направлений в строительстве загородных домов и небольших гостиниц.
+                Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+          <div class="search__item">
+            <img src="../images/page-search/search-5.png" class="search__item-img" alt="">
+            <div class="search__item-content">
+              <h4 class="search__item-title">
+                КД-178
+              </h4>
+              <p class="search__item-text">
+                Дом в стиле шале — одно из модных направлений в строительстве загородных домов и небольших гостиниц.
+                Этот стиль пришёл из швейцарских Альп, он отражает удивительную атмосферу горных деревушек,...
+              </p>
+              <a class="search__item-link" href="#!">
+                Услуги
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <a class="pagination__btn pagination__prev small disabled" href="#!">Назад</a>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a href="#!" class="pagination__item-link pagination-first pagination-active menu-1">1</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#!" class="pagination__item-link menu-1">2</a>
+            </li>
+            <li class="pagination__item">
+              <a href="#!" class="pagination__item-link menu-1">3</a>
+            </li>
+            <li class="pagination__item">
+              <span class="pagination__item-dots menu-1">...</span>
+            </li>
+            <li class="pagination__item">
+              <a href="#!" class="pagination__item-link pagination-last menu-1">8</a>
+            </li>
+          </ul>
+          <a class="pagination__btn pagination__next small" href="#!">Вперед</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callback block">
+    <div class="container">
+      <div class="callback__inner" style="background-image: url(images/texture/discount-texture.png);">
+        <div class="callback__item">
+          <h2 class="callback__title">Обязательно поможем</h2>
+          <h5 class="callback__suptitle">Построить дом, коттедж или быть может замок? Ответим на все вопросы! </h5>
+        </div>
+        <form class="callback__form">
+          <div class="callback__form-row">
+            <input class="callback__input small" type="tel" placeholder="Номер телефона">
+            <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
+          </div>
+          <div class="agreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="agreementCallback">
+            <label class="agreement-label small" for="agreementCallback">
+              Даю свое согласие на обработку моих персональных данных
+            </label>
+          </div>
+        </form>
+        <img class="callback__img" src="images/callback.png" loading="lazy" alt="hand">
+      </div>
+    </div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div class="footer__top">
+        <a class="footer__logo" href="#!">
+          <img class="footer__logo-img" src="images/logo.svg" alt="logo">
+        </a>
+
+        <div class="footer__top-body">
+          <ul class="footer__top-list">
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Проекты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Наши работы</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Вопрос-ответ</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">Контакты</a>
+            </li>
+            <li class="footer__top-item">
+              <a class="footer__top-link menu-1" href="#!">
+                <img class="footer__top-img" src="images/icons/unlock.svg" alt="unlock">
+                Личный кабинет
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__top-info">
+            <div class="footer__contact">
+              <a class="footer__contact-link" href="tel:89165562526">
+                <h4>+7 (916) 556 25 26</h4>
+              </a>
+              <h6 class="menu-2">Звоните с 9 до 18 часов</h6>
+            </div>
+            <div class="footer__top-btn">
+              <button class="btn-green modal-call" type="button" data-id="callback">
+                Заказать звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__menu">
+        <div class="footer__menu-block">
+          <a class="footer__menu-link menu-1" href="#!">О компании</a>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Клиентский сервис и гарантии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Партнёры</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Документы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Способы оплаты</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Отзывы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu-block">
+          <a class="footer__menu-link menu-1" href="#!">Услуги</a>
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Индивидуальное проектирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Технический надзор</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Барбекю, бани, беседки, забор из дерева</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link menu-1" href="#!">Строительство</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <h6 class="small">Компания</h6>
+          <p class="footer__info-text">ООО «ДСК-Вира»</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Адрес</h6>
+          <p class="footer__info-text">Москва, 2-й Котельнический пер., 3</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">Эл. почта</h6>
+          <p class="footer__info-text">
+            <a href="mailto:dsk-vira@yandex.ru" class="footer__info-link">dsk-vira@yandex.ru</a>
+          </p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ИНН</h6>
+          <p class="footer__info-text">5044075669</p>
+        </div>
+        <div class="footer__info-item">
+          <h6 class="small">ОГРН</h6>
+          <p class="footer__info-text">56695044077436</p>
+        </div>
+      </div>
+
+      <span class="line"></span>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-item">
+          <a class="footer__bottom-link small" href="#!">
+            Сводная ведомость результатов проведения специальной оценки условий труда
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Политика в отношении обработки персональных данных
+          </a>
+          <a class="footer__bottom-link small" href="#!">
+            Информация
+          </a>
+        </div>
+        <div class="footer__social">
+          <a class="footer__social-link" href="https://vk.com/dsk_vira">
+            <img class="footer__social-img" src="images/social/vk.svg" alt="vk">
+          </a>
+          <a class="footer__social-link" href="https://youtube.com/@dsk-vira2995">
+            <img class="footer__social-img" src="images/social/youtube.svg" alt="youtube">
+          </a>
+          <span></span>
+          <a class="footer__social-link" href="viber://chat?number=89165562526">
+            <img class="footer__social-img" src="images/social/Viber.svg" alt="viber">
+          </a>
+          <a class="footer__social-link" href="https://wa.me/89165562526">
+            <img class="footer__social-img" src="images/social/whatsapp.svg" alt="whatsapp">
+          </a>
+          <a class="footer__social-link" href="https://t.me/89165562526">
+            <img class="footer__social-img" src="images/social/telegram.svg" alt="telegram">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <div class="container">
+      <div class="copyright__inner">
+        <div class="copyright__item">
+          <h6 class="small">2018 - 2023 © «ДСК-Вира»</h6>
+        </div>
+        <div class="copyright__item">
+          <h6 class="small">Создание и продвижение</h6>
+          <a class="copyright__link" href="#!">
+            <img class="copyright__img" src="images/icons/family.svg" alt="Family">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<div class="modals">
+  <div class="modal" id="callback">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L13 13.5M1 13.5L13 1.5" stroke="#A7A7A7" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal__head">
+        <h2 class="modal__title">Заказать звонок</h2>
+        <h5 class="modal__suptitle">Заполните форму, мы перезвоним вам в течение рабочего дня</h5>
+      </div>
+      <form class="modal__form" action="#">
+        <input class="callback__input small" type="tel" placeholder="Номер телефона">
+        <button class="btn-green" type="submit">Получить скидку</button>
+        <div class="agreement">
+          <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="agreement">
+          <label class="agreement-label small" for="agreement">
+            Даю свое согласие на обработку моих персональных данных
+          </label>
+        </div>
+      </form>
+      <img class="modal__img" src="images/callback.png" alt="callback">
+    </div>
+  </div>
+
+  <div class="modal" id="thanks">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
+        </svg>
+      </button>
+      <div class="modal__head">
+        <h2 class="modal__title">Спасибо</h2>
+        <p class="modal__suptitle">За ваше доверие, мы уже набираем ваш номер</p>
+      </div>
+      <button class="btn-green">Хорошо, жду</button>
+    </div>
+  </div>
+
+  <div class="modal" id="spinner">
+    <div class="modal__box">
+      <button class="modal__close-btn">
+        <svg viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
+        </svg>
+      </button>
+      <img class="modal__bg" src="images/spinner/spinner-bg.png" alt="">
+      <div class="modal__content">
+        <img class="modal__img" src="images/spinner/spinner-title.png" alt="">
+        <h2 class="modal__title">5 подарков от Vira получи свой</h2>
+        <button class="btn-green" type="button">Получить подарок</button>
+        <p class="modal__text">При нажатии на кнопку «Получить подарок» вы соглашаетесь с условиями акции. Подробнее
+          об условиях акции в разделе Информация</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="wheel">
+    <div class="modal__box" id="wheel-box">
+      <button class="modal__close-btn">
+        <svg viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z" />
+          <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" />
+        </svg>
+      </button>
+      <img class="modal__bg" src="images/spinner/modal-bg.gif" alt="">
+      <!-- главный блок -->
+      <div class="deal-wheel">
+        <!-- блок с призами -->
+        <ul class="spinner"></ul>
+        <div class="spinner__logo">
+          <img class="spinner__logo-img" src="images/logo-icon.svg" alt="Vira">
+        </div>
+        <!-- язычок барабана -->
+        <div class="ticker">
+          <svg class="ticker__arrow">
+            <use xlink:href="#ticker"></use>
+          </svg>
+        </div>
+        <!-- кружочки -->
+        <ul class="circle">
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+          <li class="circle__item">
+            <img class="circle__item-img" src="images/icons/icons-circle.svg" alt="">
+          </li>
+        </ul>
+        <div class="modal__content" id="modal__content">
+          <div class="modal__item">
+            <img class="modal__item-img" src="images/icons/spinner-gift.svg" alt="">
+            <h6 class="menu-1">Крути и получай свой подарок</h6>
+          </div>
+          <button class="btn-spin btn-green">Вращать рулетку</button>
+        </div>
+      </div>
+      <div class="modal__result" id="modal__result" style="display: none;">
+        <div class="modal__result-head">
+          <h4 class="modal__result-title">Ваш приз</h4>
+          <h3 class="modal__result-suptitle" id="result"></h3>
+        </div>
+        <h5 class="modal__result-text">Заполните форму, мы расскажем как его получить!</h5>
+        <form class="modal__form" action="">
+          <input class="callback__input small" type="text" placeholder="Имя">
+          <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <button class="btn-green" type="submit">Получить скидку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script defer src="libs/jquery-3.7.0.js"></script>
+<script defer src="libs/slick/slick.min.js"></script>
+<script defer src="libs/inputmask.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script defer src="https://api-maps.yandex.ru/2.1/?apikey=cd717dff-806d-44e1-a46d-04a850aa320f&load=Map&lang=ru_RU"
+  type="text/javascript"></script>
+<script defer src="js/main.js"></script>
+<script>
+  // wheel
+  var circle = document.getElementsByClassName('circle__item');
+  var delta = Math.PI * 2 / circle.length;
+  var angle = 0;
+
+  for (var i = 0; i < circle.length; i++) {
+    circle[i].style.top = 195.5 * Math.cos(angle) + 'px';
+    circle[i].style.left = 195.5 * Math.sin(angle) + 'px';
+    angle += delta;
+  }
+
+  // надписи и цвета на секторах
+  const prizes = [
+    {
+      text: "Беседка открытого типа",
+      color: "#34B57D",
+    },
+    {
+      text: "50% на фундамент",
+      color: "#007B43",
+    },
+    {
+      text: "20% на мебель от партнеров",
+      color: "#0D8B53",
+    },
+    {
+      text: "Входная дверь",
+      color: "#179860",
+    },
+    {
+      text: "Бесплатный проект дома",
+      color: "#20A169",
+    }
+  ];
+
+  // создаём переменные для быстрого доступа ко всем объектам на странице — блоку в целом, колесу, кнопке и язычку
+  const wheel = document.querySelector(".deal-wheel");
+  const spinner = wheel.querySelector(".spinner");
+  const trigger = wheel.querySelector(".btn-spin");
+  const ticker = wheel.querySelector(".ticker");
+
+  // на сколько секторов нарезаем круг
+  const prizeSlice = 360 / prizes.length;
+  // на какое расстояние смещаем сектора друг относительно друга
+  const prizeOffset = Math.floor(180 / prizes.length);
+  // прописываем CSS-классы, которые будем добавлять и убирать из стилей
+  const spinClass = "is-spinning";
+  const selectedClass = "selected";
+  // получаем все значения параметров стилей у секторов
+  const spinnerStyles = window.getComputedStyle(spinner);
+
+  // переменная для анимации
+  let tickerAnim;
+  // угол вращения
+  let rotation = 0;
+  // текущий сектор
+  let currentSlice = 0;
+  // переменная для текстовых подписей
+  let prizeNodes;
+
+  // расставляем текст по секторам
+  const createPrizeNodes = () => {
+    // обрабатываем каждую подпись
+    prizes.forEach(({ text, color, reaction }, i) => {
+      // каждой из них назначаем свой угол поворота
+      const rotation = ((prizeSlice * i) * -1) - prizeOffset;
+      // добавляем код с размещением текста на страницу в конец блока spinner
+      spinner.insertAdjacentHTML(
+        "beforeend",
+        // текст при этом уже оформлен нужными стилями
+        `<li class="prize" data-reaction=${reaction} style="--rotate: ${rotation}deg">
+        <span class="text">${text}</span>
+      </li>`
+      );
+    });
+  };
+
+  // рисуем разноцветные секторы
+  const createConicGradient = () => {
+    // устанавливаем нужное значение стиля у элемента spinner
+    spinner.setAttribute(
+      "style",
+      `background: conic-gradient(
+      from -90deg,
+      ${prizes
+        // получаем цвет текущего сектора
+        .map(({ color }, i) => `${color} 0 ${(100 / prizes.length) * (prizes.length - i)}%`)
+        .reverse()
+      }
+    );`
+    );
+  };
+
+  // создаём функцию, которая нарисует колесо в сборе
+  const setupWheel = () => {
+    // сначала секторы
+    createConicGradient();
+    // потом текст
+    createPrizeNodes();
+    // а потом мы получим список всех призов на странице, чтобы работать с ними как с объектами
+    prizeNodes = wheel.querySelectorAll(".prize");
+  };
+
+  // определяем количество оборотов, которое сделает наше колесо
+  const spinertia = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  // функция запуска вращения с плавной остановкой
+  const runTickerAnimation = () => {
+    // взяли код анимации отсюда: https://css-tricks.com/get-value-of-css-rotation-through-javascript/
+    const values = spinnerStyles.transform.split("(")[1].split(")")[0].split(",");
+    const a = values[0];
+    const b = values[1];
+    let rad = Math.atan2(b, a);
+
+    if (rad < 0) rad += (2 * Math.PI);
+
+    const angle = Math.round(rad * (180 / Math.PI));
+    const slice = Math.floor(angle / prizeSlice);
+
+    // анимация язычка, когда его задевает колесо при вращении
+    // если появился новый сектор
+    if (currentSlice !== slice) {
+      // убираем анимацию язычка
+      ticker.style.animation = "none";
+      // и через 10 миллисекунд отменяем это, чтобы он вернулся в первоначальное положение
+      setTimeout(() => ticker.style.animation = null, 10);
+      // после того, как язычок прошёл сектор - делаем его текущим 
+      currentSlice = slice;
+    }
+    // запускаем анимацию
+    tickerAnim = requestAnimationFrame(runTickerAnimation);
+  };
+
+  // функция выбора призового сектора
+  const selectPrize = () => {
+    const selected = Math.floor(rotation / prizeSlice);
+    prizeNodes[selected].classList.add(selectedClass);
+    document.getElementById('result').innerHTML = prizeNodes[selected].innerText;
+  };
+
+  // отслеживаем нажатие на кнопку
+  trigger.addEventListener("click", () => {
+    // делаем её недоступной для нажатия
+    trigger.disabled = true;
+    // задаём начальное вращение колеса
+    rotation = Math.floor(Math.random() * 360 + spinertia(2000, 5000));
+    // убираем прошлый приз
+    prizeNodes.forEach((prize) => prize.classList.remove(selectedClass));
+    // добавляем колесу класс is-spinning, с помощью которого реализуем нужную отрисовку
+    wheel.classList.add(spinClass);
+    // через CSS говорим секторам, как им повернуться
+    spinner.style.setProperty("--rotate", rotation);
+    // возвращаем язычок в горизонтальную позицию
+    ticker.style.animation = "none";
+    // запускаем анимацию вращение
+    runTickerAnimation();
+  });
+
+  // отслеживаем, когда закончилась анимация вращения колеса
+  spinner.addEventListener("transitionend", () => {
+    // останавливаем отрисовку вращения
+    cancelAnimationFrame(tickerAnim);
+    // получаем текущее значение поворота колеса
+    rotation %= 360;
+    // выбираем приз
+    selectPrize();
+    // убираем класс, который отвечает за вращение
+    wheel.classList.remove(spinClass);
+    // отправляем в CSS новое положение поворота колеса
+    spinner.style.setProperty("--rotate", rotation);
+    // делаем кнопку снова активной
+    // trigger.disabled = false;
+
+    document.getElementById('modal__content').style.setProperty("display", "none");
+    document.getElementById('modal__result').style.setProperty("display", "flex");
+    document.getElementById('wheel-box').style.setProperty("margin-top", "230");
+  });
+
+  // подготавливаем всё к первому запуску
+  setupWheel();
+</script>
+
+</body>
+
+</html>

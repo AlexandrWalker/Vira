@@ -922,7 +922,8 @@
 
     &-img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      aspect-ratio: 1170/500;
       object-fit: cover;
     }
 
@@ -1392,7 +1393,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px;  
 
     &-row {
       display: flex;
@@ -1422,6 +1423,10 @@
     width: 333px;
     height: auto;
     object-fit: cover;
+  }
+
+  .agreement {
+    max-width: 100%;
   }
 }
 
