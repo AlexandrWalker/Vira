@@ -1145,9 +1145,10 @@ input[type=radio] + label::before {
   border: 1px solid var(--grey2, #EFEFEF);
 }
 .footer__social span {
-  height: 100%;
+  display: block;
   width: 1px;
-  background: var(--bg, #F9F9F9);
+  height: 40px;
+  background: var(--grey2, #EFEFEF);
 }
 
 .copyright {
@@ -1365,6 +1366,9 @@ input[type=radio] + label::before {
 }
 #wheel .modal__form input {
   width: 100%;
+}
+#wheel .agreement {
+  max-width: 100%;
 }
 
 /* общий блок для всех элементов */
@@ -2346,12 +2350,14 @@ input[type=radio] + label::before {
   position: relative;
   border-radius: 30px 30px 30px 0;
   overflow: hidden;
+  height: 500px;
 }
 .built__item-img {
   width: 100%;
   height: 100%;
   aspect-ratio: 1170/500;
   object-fit: cover;
+  object-position: center;
 }
 .built__item-content {
   position: absolute;
@@ -2815,6 +2821,7 @@ input[type=radio] + label::before {
   object-fit: cover;
   stroke: var(--grey, #A7A7A7);
   stroke-width: 2px;
+  flex-shrink: 0;
 }
 .faq__item-body {
   max-height: 0;
@@ -3343,6 +3350,7 @@ input[type=radio] + label::before {
   max-width: 970px;
   width: auto;
   height: 570px;
+  color: var(--black, #2E2D2D);
 }
 .plan__item-img {
   width: auto;
@@ -3395,6 +3403,7 @@ input[type=radio] + label::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 150/66;
   opacity: 0.1;
 }
 .plan__list .slick-track {
@@ -3425,12 +3434,16 @@ input[type=radio] + label::before {
 
 .project-page .built {
   padding: 100px 0;
+  background: var(--bg, #F9F9F9);
+}
+.project-page .built__item-content {
+  background: var(--bg, #F9F9F9);
 }
 .project-page .built__item-content::before {
-  background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+  background: radial-gradient(circle at right top, transparent 30px, var(--bg, #F9F9F9) 30px);
 }
 .project-page .built__item-content::after {
-  background: radial-gradient(circle at right top, transparent 30px, var(--white, #fff) 30px);
+  background: radial-gradient(circle at right top, transparent 30px, var(--bg, #F9F9F9) 30px);
 }
 
 .characteristics__title {
@@ -3461,8 +3474,8 @@ input[type=radio] + label::before {
 }
 
 .project-video {
-  background: linear-gradient(to top, var(--black, #2E2D2D) 50%, transparent 50%);
-  padding: 100px 0;
+  background: linear-gradient(to top, var(--black, #2E2D2D) calc(50% + 50px), transparent calc(50% + 50px));
+  padding: 0 0 100px;
 }
 .project-video__inner {
   display: grid;
@@ -3964,8 +3977,9 @@ input[type=radio] + label::before {
 }
 .work__list-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  aspect-ratio: 170/86;
   opacity: 0.1;
 }
 .work__list .slick-track {
@@ -4523,11 +4537,13 @@ input[type=radio] + label::before {
   right: 0;
   border-radius: 0 85px 60px 0;
   width: 454px;
-  height: 436px;
+  height: 476px;
 }
 .reviews-page .callback__form {
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
   max-width: 710px;
 }
 .reviews-page .callback__textarea {
@@ -4591,25 +4607,26 @@ input[type=radio] + label::before {
   gap: 30px;
 }
 .documents__item {
-  display: flex;
-  justify-content: center;
+  display: block;
   width: calc(25% - 22.5px);
   border-radius: 30px;
   overflow: hidden;
   position: relative;
   border: 1px solid var(--grey2, #EFEFEF);
   color: var(--black, #2E2D2D);
+  padding: 30px 30px 16px;
 }
 .documents__item-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   aspect-ratio: 210/304;
-  padding: 30px 30px 16px;
   background: var(--white, #fff);
 }
 .documents__item-name {
   position: absolute;
+  right: 0;
+  left: 0;
   bottom: 0;
   z-index: 1;
   width: 100%;
@@ -4652,13 +4669,13 @@ input[type=radio] + label::before {
   position: relative;
   border: 1px solid var(--grey2, #EFEFEF);
   color: var(--black, #2E2D2D);
+  padding: 30px 30px 16px;
 }
 .licenses__item-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   aspect-ratio: 210/304;
-  padding: 30px 30px 16px;
   background: var(--white, #fff);
 }
 .licenses__item-name {
@@ -4688,7 +4705,7 @@ input[type=radio] + label::before {
 }
 .regulations__item {
   width: calc(25% - 22.5px);
-  height: 270px;
+  min-height: 270px;
   border-radius: 30px;
   overflow: hidden;
   background: var(--white, #fff);
@@ -5384,8 +5401,9 @@ input[type=radio] + label::before {
 }
 .search__item-img {
   width: 130px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  aspect-ratio: 130/106;
   border-radius: 10px;
 }
 .search__item-content {
@@ -5403,14 +5421,6 @@ input[type=radio] + label::before {
   color: var(--brown, #857067);
 }
 
-@media (max-width: 1920px) {
-  .advantages__img {
-    border-radius: 0 30px 30px 0;
-  }
-  .advantages__block:last-child .advantages__img {
-    border-radius: 30px 0 0 30px;
-  }
-}
 @media (max-width: 1380px) {
   .project__slider {
     max-width: 100%;
@@ -6263,7 +6273,8 @@ input[type=radio] + label::before {
     max-width: 620px;
   }
   .project-video {
-    padding: 80px 0;
+    padding: 0 0 80px;
+    background: linear-gradient(to top, var(--black, #2E2D2D) calc(50% + 40px), transparent calc(50% + 40px));
   }
   .project-video__video iframe {
     max-height: 378px;
@@ -6274,13 +6285,13 @@ input[type=radio] + label::before {
   .project-page .built__item-content::before {
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
+    background: radial-gradient(circle at right top, transparent 20px, var(--bg, #F9F9F9) 20px);
     top: -20px;
   }
   .project-page .built__item-content::after {
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle at right top, transparent 20px, var(--white, #fff) 20px);
+    background: radial-gradient(circle at right top, transparent 20px, var(--bg, #F9F9F9) 20px);
     right: -20px;
   }
   .work__list {
@@ -6401,7 +6412,7 @@ input[type=radio] + label::before {
     width: calc(50% - 5px);
   }
   .reviews-page .callback__img {
-    height: 450px;
+    height: 500px;
     border-radius: 0 80px 50px 0;
   }
   .documents__items,
@@ -6410,13 +6421,15 @@ input[type=radio] + label::before {
     gap: 20px;
   }
   .documents__item,
-  .licenses__item,
-  .regulations__item {
+  .licenses__item {
     width: calc(25% - 15px);
     height: 250px;
+    padding: 20px 20px 6px;
   }
-  .documents__item-img,
-  .licenses__item-img,
+  .regulations__item {
+    width: calc(25% - 15px);
+    min-height: 250px;
+  }
   .regulations__item-link {
     padding: 20px;
   }
@@ -7337,7 +7350,8 @@ input[type=radio] + label::before {
     margin-left: 12px;
   }
   .project-video {
-    padding: 60px 0;
+    padding: 0 0 60px;
+    background: linear-gradient(to top, var(--black, #2E2D2D) calc(50% + 30px), transparent calc(50% + 30px));
   }
   .project-video__inner {
     gap: 0;
@@ -7809,7 +7823,7 @@ input[type=radio] + label::before {
   .documents__item,
   .licenses__item,
   .regulations__item {
-    width: calc(50% - 12px);
+    width: calc(50% - 6px);
   }
   .licenses__item {
     width: calc(50% - 6px);

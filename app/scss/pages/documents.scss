@@ -25,26 +25,27 @@
   }
 
   &__item {
-    display: flex;
-    justify-content: center;
+    display: block;
     width: calc(25% - 22.5px);
     border-radius: 30px;
     overflow: hidden;
     position: relative;
     border: 1px solid var(--grey2, #EFEFEF);
     color: var(--black, #2E2D2D);
+    padding: 30px 30px 16px;
 
     &-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       aspect-ratio: 210/304;
-      padding: 30px 30px 16px;
       background: var(--white, #fff);
     }
 
     &-name {
       position: absolute;
+      right: 0;
+      left: 0;
       bottom: 0;
       z-index: 1;
       width: 100%;
@@ -93,13 +94,13 @@
     position: relative;
     border: 1px solid var(--grey2, #EFEFEF);
     color: var(--black, #2E2D2D);
+    padding: 30px 30px 16px;
 
     &-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       aspect-ratio: 210/304;
-      padding: 30px 30px 16px;
       background: var(--white, #fff);
     }
 
@@ -137,7 +138,7 @@
 
   &__item {
     width: calc(25% - 22.5px);
-    height: 270px;
+    min-height: 270px;
     border-radius: 30px;
     overflow: hidden;
     background: var(--white, #fff);

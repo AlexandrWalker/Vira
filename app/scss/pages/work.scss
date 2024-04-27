@@ -50,8 +50,9 @@
 
     &-img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
+      aspect-ratio: 170/86;
       opacity: 0.1;
     }
 

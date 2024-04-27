@@ -145,9 +145,10 @@
     }
 
     span {
-      height: 100%;
+      display: block;
       width: 1px;
-      background: var(--bg, #F9F9F9);
+      height: 40px;
+      background: var(--grey2, #EFEFEF);
     }
   }
 }

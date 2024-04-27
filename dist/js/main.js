@@ -329,6 +329,7 @@
           breakpoint: 769,
           settings: {
             vertical: false,
+            slidesToShow: 5,
           }
         },
         {
@@ -589,30 +590,39 @@
 
     // calculater tab
     (function () {
-      var calсTab = document.querySelectorAll('.calculation__tab-item'),
-        calcItem = document.querySelectorAll('.calculation__content-item'),
-        calcShow = document.getElementsByClassName('calculation__show'),
-        show = document.getElementsByClassName('show');
+      let calculation = document.querySelector('.calculation');
+      if (!calculation) {
+        return;
+      } else {
+        var calсTab = document.querySelectorAll('.calculation__tab-item'),
+          calcItem = document.querySelectorAll('.calculation__content-item'),
+          calcShow = document.getElementsByClassName('calculation__show'),
+          show = document.getElementsByClassName('show');
 
-      Array.from(calсTab).forEach(function (item, i, calсTab) {
+        Array.from(calсTab).forEach(function (item, i, calсTab) {
 
-        item.addEventListener('click', function (e) {
-          if (show.length > 0 && show[0] !== this)
-            show[0].classList.remove('show');
+          item.addEventListener('click', function (e) {
+            if (show.length > 0 && show[0] !== this)
+              show[0].classList.remove('show');
 
-          this.classList.add('show');
+            this.classList.add('show');
 
-          Array.from(calcItem).forEach(function (item, i, calcItem) {
-            if (calcShow.length > 0 && calcShow[0] !== this)
-              calcShow[0].classList.remove('calculation__show');
+            Array.from(calcItem).forEach(function (item, i, calcItem) {
+              if (calcShow.length > 0 && calcShow[0] !== this)
+                calcShow[0].classList.remove('calculation__show');
+            });
+
+            let calcId = this.getAttribute('data-id'),
+              calcPrice = this.getAttribute('data-price'),
+              sliderRange = document.getElementById("range");
+
+            document.getElementById(calcId).classList.add('calculation__show');
+            document.getElementById("pre-price").innerHTML = space(calcPrice * sliderRange.value);
+
+            calculator(calcPrice);
           });
-
-          let calcId = this.getAttribute('data-id');
-          document.getElementById(calcId).classList.add('calculation__show');
-
-          calculator(calcId);
         });
-      });
+      }
     })();
 
     // faq accardion
@@ -631,48 +641,39 @@
     })();
 
     // calculator
-    function calculator(calcId) {
-      let calculation = document.querySelector('.calculation');
-      if (!calculation) {
-        return;
-      } else {
-        let price = document.getElementById("pre-price");
-        let slider = document.getElementById("range");
-        let output = document.getElementById("calc");
+    function calculator(calcPrice) {
 
-        if (calcId == 'econom') var endPrice = 45000;
-        if (calcId == 'basic') var endPrice = 50000;
-        if (calcId == 'standart') var endPrice = 60000;
-        if (calcId == 'premium') var endPrice = 75000;
+      let price = document.getElementById("pre-price");
+      let slider = document.getElementById("range");
+      let output = document.getElementById("calc");
 
-        output.value = slider.value;
-        slider.value = output.value;
+      output.value = slider.value;
+      slider.value = output.value;
 
-        slider.oninput = function () {
-          output.value = this.value;
-          let priceValue = slider.value * endPrice;
+      slider.oninput = function () {
+        output.value = this.value;
+        let priceValue = slider.value * calcPrice;
 
-          function space(priceValue) {
-            var point = "";
-            var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
-
-            x = x.split("").reverse().join("")
-              .replace(/(\d{3})/g, "$1 ")
-              .split("").reverse().join("");
-            return x + point;
-          }
-
-          price.innerHTML = space(priceValue);
-        }
-
-        output.oninput = function () {
-          slider.value = this.value;
-          price.innerHTML = slider.value * endPrice;
-        };
+        price.innerHTML = space(priceValue);
       }
+
+      output.oninput = function () {
+        slider.value = this.value;
+        price.innerHTML = slider.value * calcPrice;
+      };
     };
 
-    calculator('econom');
+    function space(priceValue) {
+      var point = "";
+      var x = String(priceValue).replace(/(\.|,)\d+/, function (m) { point = m; return ""; });
+
+      x = x.split("").reverse().join("")
+        .replace(/(\d{3})/g, "$1 ")
+        .split("").reverse().join("");
+      return x + point;
+    };
+
+    calculator(document.querySelector('.calculation__tab-item').getAttribute('data-price'));
 
     // filter dropdown
     let filter = document.querySelector('.filter');
