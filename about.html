@@ -1256,6 +1256,12 @@
         <form class="modal__form" action="">
           <input class="callback__input small" type="text" placeholder="Имя">
           <input class="callback__input small" type="tel" placeholder="Номер телефона">
+          <div class="agreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="wheelAgreement">
+            <label class="agreement-label small" for="wheelAgreement">
+              Даю свое согласие на обработку моих персональных данных
+            </label>
+          </div>
           <button class="btn-green" type="submit">Получить скидку</button>
         </form>
       </div>
@@ -1267,6 +1273,8 @@
 <script defer src="libs/slick/slick.min.js"></script>
 <script defer src="libs/inputmask.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script defer src="https://api-maps.yandex.ru/2.1/?apikey=cd717dff-806d-44e1-a46d-04a850aa320f&load=Map&lang=ru_RU"
+  type="text/javascript"></script>
 <script defer src="js/main.js"></script>
 <script>
   // wheel
