@@ -356,6 +356,37 @@
       ]
     });
 
+    // case tab
+    $(function () {
+      let case__tab = document.querySelector(".case__tab");
+      if (!case__tab) {
+        return;
+      } else {
+        var case__tab1 = document.getElementById("case__tab1"),
+          case__tab2 = document.getElementById("case__tab2"),
+          case__wrapper_1 = document.querySelector(".slider__wrapper-1"),
+          case__wrapper_2 = document.querySelector(".slider__wrapper-2");
+
+        case__tab1.addEventListener("click", function () {
+          case__tab1.classList.add("active");
+          case__tab2.classList.remove("active");
+
+          case__wrapper_1.classList.add("active");
+          case__wrapper_2.classList.remove("active");
+          $(".case__slider-1").slick('reinit');
+        });
+
+        case__tab2.addEventListener("click", function () {
+          case__tab1.classList.remove("active");
+          case__tab2.classList.add("active");
+
+          case__wrapper_1.classList.remove("active");
+          case__wrapper_2.classList.add("active");
+          $(".case__slider-2").slick('reinit');
+        });
+      }
+    });
+
     // map
     ymaps.ready(function () {
       var map = new ymaps.Map("map", {
@@ -547,7 +578,6 @@
       }
     })();
 
-
     // built-info
     (function () {
       document.querySelectorAll('.built__options-info').forEach((element) => {
@@ -556,37 +586,6 @@
         });
       });
     })();
-
-    // case tab
-    $(function () {
-      let case__tab = document.querySelector(".case__tab");
-      if (!case__tab) {
-        return;
-      } else {
-        var case__tab1 = document.getElementById("case__tab1"),
-          case__tab2 = document.getElementById("case__tab2"),
-          case__wrapper_1 = document.querySelector(".slider__wrapper-1"),
-          case__wrapper_2 = document.querySelector(".slider__wrapper-2");
-
-        case__tab1.addEventListener("click", function () {
-          case__tab1.classList.add("active");
-          case__tab2.classList.remove("active");
-
-          case__wrapper_1.classList.add("active");
-          case__wrapper_2.classList.remove("active");
-          $(".case__slider-1").slick('reinit');
-        });
-
-        case__tab2.addEventListener("click", function () {
-          case__tab1.classList.remove("active");
-          case__tab2.classList.add("active");
-
-          case__wrapper_1.classList.remove("active");
-          case__wrapper_2.classList.add("active");
-          $(".case__slider-2").slick('reinit');
-        });
-      }
-    });
 
     // calculater tab
     (function () {
