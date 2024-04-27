@@ -4840,7 +4840,7 @@ input[type=radio] + label::before {
   color: var(--black, #2E2D2D);
 }
 
-.map {
+#map {
   position: relative;
   z-index: 1;
   width: 100%;
