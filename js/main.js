@@ -439,13 +439,18 @@
         openButton.addEventListener('click', e => {
           let modalId = e.target.getAttribute('data-id');
           document.getElementById(modalId).classList.add("open");
+          document.body.classList.add('no-scroll');
 
           Array.from(close, closeButton => {
-            closeButton.addEventListener('click', e => document.getElementById(modalId).classList.remove("open"));
+            closeButton.addEventListener('click', e => {
+              document.getElementById(modalId).classList.remove("open");
+              document.body.classList.remove('no-scroll');
+            });
 
             window.addEventListener('keydown', (e) => {
               if (e.key === "Escape") {
-                document.getElementById(modalId).classList.remove("open")
+                document.getElementById(modalId).classList.remove("open");
+                document.body.classList.remove('no-scroll');
               }
             });
 
@@ -456,6 +461,7 @@
             document.getElementById(modalId).addEventListener('click', event => {
               if (event._isClickWithInModal) return;
               event.currentTarget.classList.remove('open');
+              document.body.classList.remove('no-scroll');
             });
           });
         });
