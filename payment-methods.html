@@ -870,7 +870,7 @@
       <div class="modal__result" id="modal__result" style="display: none;">
         <div class="modal__result-head">
           <h4 class="modal__result-title">Ваш приз</h4>
-          <h3 class="modal__result-suptitle" id="result" data-prize=""></h3>
+          <h3 class="modal__result-suptitle" id="result"></h3>
         </div>
         <h5 class="modal__result-text">Заполните форму, мы расскажем как его получить!</h5>
         <form class="modal__form" action="">
@@ -882,7 +882,7 @@
               Даю свое согласие на обработку моих персональных данных
             </label>
           </div>
-          <button class="btn-green" type="submit">Получить скидку</button>
+          <button class="btn-green" id="wheelResult" type="submit" data-prize="">Получить скидку</button>
         </form>
       </div>
     </div>
@@ -1039,7 +1039,7 @@
     const selected = Math.floor(rotation / prizeSlice);
     prizeNodes[selected].classList.add(selectedClass);
     document.getElementById('result').innerHTML = prizeNodes[selected].innerText;
-    document.getElementById('result').setAttribute('data-prize', prizeNodes[selected].getAttribute('data-prize'));
+    document.getElementById('wheelResult').setAttribute('data-prize', prizeNodes[selected].getAttribute('data-prize'));
   };
 
   // отслеживаем нажатие на кнопку
