@@ -702,7 +702,7 @@
       <div class="modal__result" id="modal__result" style="display: none;">
         <div class="modal__result-head">
           <h4 class="modal__result-title">Ваш приз</h4>
-          <h3 class="modal__result-suptitle" id="result"></h3>
+          <h3 class="modal__result-suptitle" id="result" data-prize=""></h3>
         </div>
         <h5 class="modal__result-text">Заполните форму, мы расскажем как его получить!</h5>
         <form class="modal__form" action="">
@@ -799,7 +799,7 @@
       spinner.insertAdjacentHTML(
         "beforeend",
         // текст при этом уже оформлен нужными стилями
-        `<li class="prize" data-reaction=${reaction} style="--rotate: ${rotation}deg">
+        `<li class="prize" data-prize=${i} data-reaction=${reaction} style="--rotate: ${rotation}deg">
         <span class="text">${text}</span>
       </li>`
       );
@@ -871,6 +871,7 @@
     const selected = Math.floor(rotation / prizeSlice);
     prizeNodes[selected].classList.add(selectedClass);
     document.getElementById('result').innerHTML = prizeNodes[selected].innerText;
+    document.getElementById('result').setAttribute('data-prize', prizeNodes[selected].getAttribute('data-prize'));
   };
 
   // отслеживаем нажатие на кнопку

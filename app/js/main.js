@@ -389,30 +389,34 @@
 
     // map
     ymaps.ready(function () {
-      var map = new ymaps.Map("map", {
-        center: [55.743796, 37.647989],
-        zoom: 16
-      });
-
-      if (map) {
-        ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
-          var placemark = new Placemark([55.743796, 37.647989], {}, {
-            iconLayout: 'default#image',
-            iconImageHref: '//f.nodacdn.net/577874',
-            iconImageSize: [60, 68],
-            iconImageOffset: [-59, -67],
-          });
-
-          map.controls.remove('geolocationControl'); // удаляем геолокацию
-          map.controls.remove('searchControl'); // удаляем поиск
-          map.controls.remove('trafficControl'); // удаляем контроль трафика
-          map.controls.remove('typeSelector'); // удаляем тип
-          map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-          map.controls.remove('rulerControl'); // удаляем контрол правил
-          map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
-          map.geoObjects.add(placemark);
+      let mapBlock = document.getElementById('map');
+      if (!mapBlock) {
+        return;
+      } else {
+        var map = new ymaps.Map("map", {
+          center: [55.743796, 37.647989],
+          zoom: 16
         });
+        if (map) {
+          ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
+            var placemark = new Placemark([55.743796, 37.647989], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: '//f.nodacdn.net/577874',
+              iconImageSize: [60, 68],
+              iconImageOffset: [-59, -67],
+            });
+
+            map.controls.remove('geolocationControl'); // удаляем геолокацию
+            map.controls.remove('searchControl'); // удаляем поиск
+            map.controls.remove('trafficControl'); // удаляем контроль трафика
+            map.controls.remove('typeSelector'); // удаляем тип
+            map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+            map.controls.remove('rulerControl'); // удаляем контрол правил
+            map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+            map.geoObjects.add(placemark);
+          });
+        }
       }
     });
 
@@ -672,7 +676,14 @@
       return x + point;
     };
 
-    calculator(document.querySelector('.calculation__tab-item').getAttribute('data-price'));
+    (function () {
+      let calculation = document.querySelector('.calculation');
+      if (!calculation) {
+        return;
+      } else {
+        calculator(document.querySelector('.calculation__tab-item').getAttribute('data-price'));
+      }
+    });
 
     // filter dropdown
     let filter = document.querySelector('.filter');
