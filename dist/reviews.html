@@ -341,9 +341,10 @@
           <h5 class="callback__suptitle">Нам важно ваше мнение, о проделанной нами работе</h5>
         </div>
         <form class="callback__form">
-          <textarea class="callback__textarea" name="textarea" id="" cols="30" rows="10"
+          <textarea class="callback__textarea small" name="textarea" id="" cols="30" rows="10"
             placeholder="Выскажите свое мнение"></textarea>
-          <input class="callback__input callback__input-name small" type="name" placeholder="Ваше имя">
+          <input class="callback__input callback__input-name small" type="name" placeholder="Ваше имя"
+            oninput="this.value=this.value.replace(/[0-9]/g,'');">
           <input class="callback__input callback__input-tel small" type="tel" placeholder="Номер телефона">
           <div class="input__file">
             <input class="callback__file small" id="input__file" type="file" multiple placeholder="Прикрепить файл">
@@ -354,9 +355,10 @@
               <span class="input__file-text file__text small">Прикрепить файл</span>
             </label>
           </div>
-          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
+          <button class="btn-green modal-call" data-id="thanks" type="submit">Отправить</button>
           <div class="agreement">
-            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="reviewsAgreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" required
+              id="reviewsAgreement">
             <label class="agreement-label small" for="reviewsAgreement">
               Даю свое согласие на обработку моих персональных данных
             </label>
@@ -564,7 +566,7 @@
         <input class="callback__input small" type="tel" placeholder="Номер телефона">
         <button class="btn-green" type="submit">Получить скидку</button>
         <div class="agreement">
-          <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="agreement">
+          <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" required id="agreement">
           <label class="agreement-label small" for="agreement">
             Даю свое согласие на обработку моих персональных данных
           </label>
@@ -721,15 +723,17 @@
         </div>
         <h5 class="modal__result-text">Заполните форму, мы расскажем как его получить!</h5>
         <form class="modal__form" action="">
-          <input class="callback__input small" type="text" placeholder="Имя">
+          <input class="callback__input small" type="text" placeholder="Имя" maxlength="20"
+            oninput="this.value=this.value.replace(/[0-9]/g,'');">
           <input class="callback__input small" type="tel" placeholder="Номер телефона">
           <div class="agreement">
-            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="wheelAgreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" required
+              id="wheelAgreement">
             <label class="agreement-label small" for="wheelAgreement">
               Даю свое согласие на обработку моих персональных данных
             </label>
           </div>
-          <button class="btn-green" id="wheelResult" type="submit" data-prize="">Получить скидку</button>
+          <button class="btn-green" type="submit">Получить скидку</button>
         </form>
       </div>
     </div>
@@ -814,7 +818,7 @@
       spinner.insertAdjacentHTML(
         "beforeend",
         // текст при этом уже оформлен нужными стилями
-        `<li class="prize" data-prize=${i} data-reaction=${reaction} style="--rotate: ${rotation}deg">
+        `<li class="prize" data-reaction=${reaction} style="--rotate: ${rotation}deg">
         <span class="text">${text}</span>
       </li>`
       );
@@ -886,7 +890,6 @@
     const selected = Math.floor(rotation / prizeSlice);
     prizeNodes[selected].classList.add(selectedClass);
     document.getElementById('result').innerHTML = prizeNodes[selected].innerText;
-    document.getElementById('wheelResult').setAttribute('data-prize', prizeNodes[selected].getAttribute('data-prize'));
   };
 
   // отслеживаем нажатие на кнопку

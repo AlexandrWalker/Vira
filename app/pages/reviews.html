@@ -74,9 +74,10 @@
           <h5 class="callback__suptitle">Нам важно ваше мнение, о проделанной нами работе</h5>
         </div>
         <form class="callback__form">
-          <textarea class="callback__textarea" name="textarea" id="" cols="30" rows="10"
+          <textarea class="callback__textarea small" name="textarea" id="" cols="30" rows="10"
             placeholder="Выскажите свое мнение"></textarea>
-          <input class="callback__input callback__input-name small" type="name" placeholder="Ваше имя">
+          <input class="callback__input callback__input-name small" type="name" placeholder="Ваше имя"
+            oninput="this.value=this.value.replace(/[0-9]/g,'');">
           <input class="callback__input callback__input-tel small" type="tel" placeholder="Номер телефона">
           <div class="input__file">
             <input class="callback__file small" id="input__file" type="file" multiple placeholder="Прикрепить файл">
@@ -87,9 +88,10 @@
               <span class="input__file-text file__text small">Прикрепить файл</span>
             </label>
           </div>
-          <button class="btn-green modal-call" data-id="thanks" type="button">Отправить</button>
+          <button class="btn-green modal-call" data-id="thanks" type="submit">Отправить</button>
           <div class="agreement">
-            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" id="reviewsAgreement">
+            <input class="agreement-checkbox" name="agree" value="agreement" type="checkbox" required
+              id="reviewsAgreement">
             <label class="agreement-label small" for="reviewsAgreement">
               Даю свое согласие на обработку моих персональных данных
             </label>

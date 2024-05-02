@@ -430,44 +430,6 @@
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(inputs);
 
-    // Modal
-    (function () {
-      var close = document.querySelectorAll('.modal__close-btn');
-      var openBtn = document.querySelectorAll('.modal-call');
-
-      Array.from(openBtn, openButton => {
-        openButton.addEventListener('click', e => {
-          let modalId = e.target.getAttribute('data-id');
-          document.getElementById(modalId).classList.add("open");
-          document.body.classList.add('no-scroll');
-
-          Array.from(close, closeButton => {
-            closeButton.addEventListener('click', e => {
-              document.getElementById(modalId).classList.remove("open");
-              document.body.classList.remove('no-scroll');
-            });
-
-            window.addEventListener('keydown', (e) => {
-              if (e.key === "Escape") {
-                document.getElementById(modalId).classList.remove("open");
-                document.body.classList.remove('no-scroll');
-              }
-            });
-
-            document.querySelector(".modal.open .modal__box").addEventListener('click', event => {
-              event._isClickWithInModal = true;
-            });
-
-            document.getElementById(modalId).addEventListener('click', event => {
-              if (event._isClickWithInModal) return;
-              event.currentTarget.classList.remove('open');
-              document.body.classList.remove('no-scroll');
-            });
-          });
-        });
-      });
-    })();
-
     // file
     let inputsFile = document.querySelectorAll('input[type="file"]');
     Array.prototype.forEach.call(inputsFile, function (input) {
@@ -810,10 +772,6 @@
     (function () {
       var sidebarCount = document.querySelectorAll('.sidebar__list-count'),
         sidebarActive = document.getElementsByClassName('sidebar-active');
-
-      /*document.querySelectorAll('.sidebar__list-long').forEach((elem) => {
-        elem.insertAdjacentHTML('afterend', '<a class="sidebar__list-count" href="#!">Показать всё</a>');
-      });*/
 
       Array.from(sidebarCount).forEach(function (item, i, sidebarCount) {
         item.addEventListener('click', function (e) {
