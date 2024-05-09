@@ -148,7 +148,6 @@
   .modal__box {
     width: 570px;
     height: fit-content;
-    min-height: 450px;
     padding: 40px;
     overflow: visible;
     gap: unset;
@@ -159,9 +158,8 @@
   .modal__content {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    bottom: -90px;
     width: 100%;
+    grid-row: 2 / 3;
 
     button {
       background: var(--yellow, #FFB628);
