@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="libs/slick/slick.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- calculation input style -->
   <style>
@@ -367,162 +368,179 @@
           <h5 class="case__subtitle">Более 18 готовых проектов</h5>
         </div>
 
-        <div class="case__slider case__slider-1 active">
-          <div class="case__slider-item">
-            <div class="case__item">
-              <div class="case__cover">
-                <picture class="case__picture">
-                  <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
-                  <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
-                  <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
-                  <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case" loading="lazy">
-                </picture>
-                <span class="case__cover-btn"></span>
-              </div>
-              <div class="case__item-body">
-                <div class="case__item-head">
-                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
-                  <h2 class="case__item-title">КД-178</h2>
-                </div>
-                <ul class="case__list">
-                  <li class="case__list-item">
-                    <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
-                    <p>1 этаж</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
-                    <p>3 комнаты</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
-                    <p>106м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
-                    <p>Терасса 6х3м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
-                    <p>10х16м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
-                    <p>2 санузла</p>
-                  </li>
-                </ul>
-                <div class="case__desc">
-                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
-                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
-                </div>
-                <div class="case__btns">
-                  <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
-                  <button class="case__btn btn-white modal-call" data-id="callback">Что входит в постройку</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="case__slider-item">
-            <div class="case__item">
-              <div class="case__cover">
-                <picture class="case__picture">
-                  <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
-                  <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
-                  <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
-                  <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case" loading="lazy">
-                </picture>
-                <span class="case__cover-btn"></span>
-              </div>
-              <div class="case__item-body">
-                <div class="case__item-head">
-                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
-                  <h2 class="case__item-title">КД-178</h2>
-                </div>
-                <ul class="case__list">
-                  <li class="case__list-item">
-                    <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
-                    <p>1 этаж</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
-                    <p>3 комнаты</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
-                    <p>106м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
-                    <p>Терасса 6х3м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
-                    <p>10х16м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
-                    <p>2 санузла</p>
-                  </li>
-                </ul>
-                <div class="case__desc">
-                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
-                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
-                </div>
-                <div class="case__btns">
-                  <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
-                  <button class="case__btn btn-white modal-call" data-id="callback">Что входит в постройку</button>
+        <div class="case__slider about__case__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="case__slider-item">
+                <div class="case__item">
+                  <div class="case__cover">
+                    <picture class="case__picture">
+                      <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
+                      <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
+                      <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
+                      <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case"
+                        loading="lazy">
+                    </picture>
+                    <span class="case__cover-btn">
+                      <div class="swiper-button-next"></div>
+                    </span>
+                  </div>
+                  <div class="case__item-body">
+                    <div class="case__item-head">
+                      <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                      <h2 class="case__item-title">КД-178</h2>
+                    </div>
+                    <ul class="case__list">
+                      <li class="case__list-item">
+                        <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
+                        <p>1 этаж</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
+                        <p>3 комнаты</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
+                        <p>106м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
+                        <p>Терасса 6х3м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
+                        <p>10х16м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
+                        <p>2 санузла</p>
+                      </li>
+                    </ul>
+                    <div class="case__desc">
+                      <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                        для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                    </div>
+                    <div class="case__btns">
+                      <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
+                      <button class="case__btn btn-grey">Что входит в постройку</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="case__slider-item">
-            <div class="case__item">
-              <div class="case__cover">
-                <picture class="case__picture">
-                  <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
-                  <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
-                  <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
-                  <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case" loading="lazy">
-                </picture>
-                <span class="case__cover-btn"></span>
+            <div class="swiper-slide">
+              <div class="case__slider-item">
+                <div class="case__item">
+                  <div class="case__cover">
+                    <picture class="case__picture">
+                      <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
+                      <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
+                      <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
+                      <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case"
+                        loading="lazy">
+                    </picture>
+                    <span class="case__cover-btn">
+                      <div class="swiper-button-next"></div>
+                    </span>
+                  </div>
+                  <div class="case__item-body">
+                    <div class="case__item-head">
+                      <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                      <h2 class="case__item-title">КД-178</h2>
+                    </div>
+                    <ul class="case__list">
+                      <li class="case__list-item">
+                        <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
+                        <p>1 этаж</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
+                        <p>3 комнаты</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
+                        <p>106м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
+                        <p>Терасса 6х3м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
+                        <p>10х16м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
+                        <p>2 санузла</p>
+                      </li>
+                    </ul>
+                    <div class="case__desc">
+                      <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                        для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                    </div>
+                    <div class="case__btns">
+                      <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
+                      <button class="case__btn btn-grey">Что входит в постройку</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="case__item-body">
-                <div class="case__item-head">
-                  <h5 class="case__item-suptitle">Проект каркасого дома</h5>
-                  <h2 class="case__item-title">КД-178</h2>
-                </div>
-                <ul class="case__list">
-                  <li class="case__list-item">
-                    <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
-                    <p>1 этаж</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
-                    <p>3 комнаты</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
-                    <p>106м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
-                    <p>Терасса 6х3м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
-                    <p>10х16м</p>
-                  </li>
-                  <li class="case__list-item">
-                    <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
-                    <p>2 санузла</p>
-                  </li>
-                </ul>
-                <div class="case__desc">
-                  <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
-                    для круглогодичного проживания, для семьи из 3–4 человек.</p>
-                </div>
-                <div class="case__btns">
-                  <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
-                  <button class="case__btn btn-white modal-call" data-id="callback">Что входит в постройку</button>
+            </div>
+            <div class="swiper-slide">
+              <div class="case__slider-item">
+                <div class="case__item">
+                  <div class="case__cover">
+                    <picture class="case__picture">
+                      <source media="(min-width: 1025px)" srcset="images/case/case-1.png">
+                      <source media="(min-width: 601px)" srcset="images/case/case-1-planshet.png">
+                      <source media="(max-width: 600px)" srcset="images/case/case-1-mobile.png">
+                      <img class="case__cover-img" src="images/case/case-1.png" loading="lazy" alt="case"
+                        loading="lazy">
+                    </picture>
+                    <span class="case__cover-btn">
+                      <div class="swiper-button-next"></div>
+                    </span>
+                  </div>
+                  <div class="case__item-body">
+                    <div class="case__item-head">
+                      <h5 class="case__item-suptitle">Проект каркасого дома</h5>
+                      <h2 class="case__item-title">КД-178</h2>
+                    </div>
+                    <ul class="case__list">
+                      <li class="case__list-item">
+                        <img src="images/icons/этажи.svg" loading="lazy" alt="etagi" class="case__list-img">
+                        <p>1 этаж</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/комнаты.svg" loading="lazy" alt="room" class="case__list-img">
+                        <p>3 комнаты</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/метраж.svg" loading="lazy" alt="metrazh" class="case__list-img">
+                        <p>106м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/терасса.svg" loading="lazy" alt="terassa" class="case__list-img">
+                        <p>Терасса 6х3м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/площадь.svg" loading="lazy" alt="ploshad" class="case__list-img">
+                        <p>10х16м</p>
+                      </li>
+                      <li class="case__list-item">
+                        <img src="images/icons/сортиры.svg" loading="lazy" alt="wc" class="case__list-img">
+                        <p>2 санузла</p>
+                      </li>
+                    </ul>
+                    <div class="case__desc">
+                      <p>Роскошный двухэтажный дом в стиле «Шале» в каркасном исполнении. Этот дом идеально подходит
+                        для круглогодичного проживания, для семьи из 3–4 человек.</p>
+                    </div>
+                    <div class="case__btns">
+                      <button class="case__btn btn-green modal-call" data-id="callback">Оставить заявку</button>
+                      <button class="case__btn btn-grey">Что входит в постройку</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1277,6 +1295,7 @@
 <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script defer src="https://api-maps.yandex.ru/2.1/?apikey=cd717dff-806d-44e1-a46d-04a850aa320f&load=Map&lang=ru_RU"
   type="text/javascript"></script>
+<script src="libs/swiper/swiper-bundle.min.js"></script>
 <script defer src="js/main.js"></script>
 <script>
   // wheel

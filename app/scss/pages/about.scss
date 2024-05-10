@@ -153,16 +153,9 @@
 .about-page {
 
   .case {
-    &__slider-item {
-      padding: 0;
-      opacity: 0;
-      
-      &.slick-slide.slick-current .case__cover-btn {
-        display: none;
-      }
-    }
 
-    &__slider .slick-track {
+    &__slider-item {
+      padding: 0 40px 0 0;
       background: transparent;
     }
 
@@ -170,8 +163,8 @@
       background: var(--white, #fff);
     }
 
-    &__slider .slick-arrow {
-      top: 50%;
+    &__slider .swiper-slide {
+      background: transparent;
     }
 
     &__cover-btn::before {
