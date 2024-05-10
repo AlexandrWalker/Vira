@@ -1,41 +1,6 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
-    // case slider
-    $('.case__slider-1').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: false,
-      nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 971,
-          settings: {
-            nextArrow: '<button type="button" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-          }
-        }
-      ]
-    });
-
-    $('.case__slider-2').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      prevArrow: false,
-      nextArrow: '<button type="button" class="slick-next"><svg width="24" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2l20 20L2 42" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 971,
-          settings: {
-            nextArrow: '<button type="button" class="slick-next"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12 12L2 22" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-          }
-        }
-      ]
-    });
-
     // stages slider
     $('.stages__slider').slick({
       infinite: false,
@@ -270,90 +235,112 @@
     });
 
     // plan slider
-    $('.plan__slider').slick({
-      arrows: false,
-      dots: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: false,
-      asNavFor: '.plan__list',
-    });
-    $('.plan__list').slick({
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      dots: false,
-      centerMode: false,
-      focusOnSelect: true,
-      vertical: true,
-      asNavFor: '.plan__slider',
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 7L8 2L2 7" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 2L8 7L2 2" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 2,
-            vertical: false,
-          }
+    const planSliderThumbs = new Swiper('.plan__slider__thumbs .swiper-container', {
+      loop: true,
+      direction: 'vertical',
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev'
+      },
+      freeMode: true,
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+          slidesPerView: 2,
+        },
+        600: {
+          direction: 'horizontal',
+          slidesPerView: 4,
+        },
+        769: {
+          direction: 'vertical',
+          slidesPerView: 5,
         }
-      ]
+      }
+    });
+
+    const planSliderImages = new Swiper('.plan__slider__images .swiper-container', {
+      loop: true,
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 32,
+      mousewheel: true,
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev'
+      },
+      grabCursor: true,
+      thumbs: {
+        swiper: planSliderThumbs
+      },
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+        },
+        769: {
+          direction: 'vertical',
+        }
+      }
+    });
+
+    var swiper = new Swiper(".case__slider", {
+      loop: true,
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+      },
     });
 
     // work slider
-    $('.work__slider').slick({
-      arrows: false,
-      dots: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: false,
-      asNavFor: '.work__list',
-    });
-    $('.work__list').slick({
-      infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      dots: false,
-      centerMode: false,
-      focusOnSelect: true,
-      vertical: true,
-      asNavFor: '.work__slider',
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 7L8 2L2 7" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none"><path d="M14 2L8 7L2 2" stroke="#2E2D2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            vertical: false,
-            slidesToShow: 5,
-          }
+    const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', {
+      loop: true,
+      direction: 'vertical',
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev'
+      },
+      freeMode: true,
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+          slidesPerView: 2,
         },
-        {
-          breakpoint: 630,
-          settings: {
-            vertical: false,
-            slidesToShow: 4,
-          }
+        600: {
+          direction: 'horizontal',
+          slidesPerView: 4,
         },
-        {
-          breakpoint: 530,
-          settings: {
-            vertical: false,
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 530,
-          settings: {
-            vertical: false,
-            slidesToShow: 2,
-          }
+        769: {
+          direction: 'vertical',
+          slidesPerView: 5,
         }
-      ]
+      }
+    });
+
+    const sliderImages = new Swiper('.slider__images .swiper-container', {
+      loop: true,
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 32,
+      mousewheel: true,
+      navigation: {
+        nextEl: '.slider__next',
+        prevEl: '.slider__prev'
+      },
+      grabCursor: true,
+      thumbs: {
+        swiper: sliderThumbs
+      },
+      breakpoints: {
+        0: {
+          direction: 'horizontal',
+        },
+        769: {
+          direction: 'vertical',
+        }
+      }
     });
 
     // case tab
@@ -373,7 +360,6 @@
 
           case__wrapper_1.classList.add("active");
           case__wrapper_2.classList.remove("active");
-          $(".case__slider-1").slick('reinit');
         });
 
         case__tab2.addEventListener("click", function () {
@@ -382,7 +368,6 @@
 
           case__wrapper_1.classList.remove("active");
           case__wrapper_2.classList.add("active");
-          $(".case__slider-2").slick('reinit');
         });
       }
     });
