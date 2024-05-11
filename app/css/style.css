@@ -3515,7 +3515,7 @@ input[type=radio] + label::before {
   gap: 30px 130px;
 }
 .project-video__head {
-  max-width: 270px;
+  max-width: 300px;
   grid-row: 1/2;
 }
 .project-video__suptitle {
@@ -3530,7 +3530,7 @@ input[type=radio] + label::before {
   flex-direction: column;
   justify-content: flex-end;
   gap: 30px;
-  max-width: 270px;
+  max-width: 300px;
   grid-row: 3/4;
 }
 .project-video__bottom-items {
@@ -3553,16 +3553,19 @@ input[type=radio] + label::before {
   color: var(--white, #fff);
 }
 .project-video__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 770px;
   width: 100%;
   height: auto;
-  border-radius: 30px;
-  overflow: hidden;
   grid-column: 2/3;
   grid-row: 1/4;
 }
 .project-video__video iframe {
   width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .project-stages__inner {
@@ -6357,6 +6360,7 @@ input[type=radio] + label::before {
   }
   .project-video__video iframe {
     max-height: 378px;
+    border-radius: 20px;
   }
   .project-page .built {
     padding: 80px 0;

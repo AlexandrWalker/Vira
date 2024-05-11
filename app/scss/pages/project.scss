@@ -484,7 +484,7 @@
   }
 
   &__head {
-    max-width: 270px;
+    max-width: 300px;
     grid-row: 1/2;
   }
 
@@ -502,7 +502,7 @@
     flex-direction: column;
     justify-content: flex-end;
     gap: 30px;
-    max-width: 270px;
+    max-width: 300px;
     grid-row: 3/4;
   }
 
@@ -530,16 +530,19 @@
   }
 
   &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 770px;
     width: 100%;
     height: auto;
-    border-radius: 30px;
-    overflow: hidden;
     grid-column: 2/3;
     grid-row: 1/4;
 
     iframe {
       width: 100%;
+      border-radius: 30px;
+      overflow: hidden;
     }
   }
 }
