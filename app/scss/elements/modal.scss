@@ -120,8 +120,10 @@
     position: relative;
     right: unset;
     bottom: unset;
-    width: auto;
-    height: 140px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 389/140;
+    object-fit: cover;
     transform: unset;
     margin-bottom: 75px;
   }

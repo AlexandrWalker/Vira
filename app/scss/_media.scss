@@ -3121,6 +3121,7 @@
   }
 
   /* modal */
+  #spinner .modal__box,
   #wheel .modal__box {
     width: 100%;
     padding: 20px 10px;
@@ -3133,13 +3134,11 @@
     right: 15px;
   }
 
-  #spinner .modal__close-btn,
   #wheel .modal__close-btn {
     top: -100px;
     right: 10px;
   }
 
-  #spinner .modal__close-btn svg,
   #wheel .modal__close-btn svg {
     fill: #2E2D2D;
   }
@@ -3295,6 +3294,11 @@
     position: absolute;
     top: 30px;
     right: 30px;
+  }
+
+  #spinner .modal__box {
+    margin: auto;
+    width: 90%;
   }
 }
 
